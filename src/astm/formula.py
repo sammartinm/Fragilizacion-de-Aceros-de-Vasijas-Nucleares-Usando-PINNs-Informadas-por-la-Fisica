@@ -37,41 +37,39 @@ def astm_e900_15(cu, ni, p, mn, temp_c, fluence, product_form):
     fluence = np.array(fluence, dtype=float)
     product_form = np.array(product_form, dtype=str)
 
-    # Conversión de Temperatura: Celsius -> Fahrenheit -> Rankine (para la fórmula)
-    T_f = temp_c * 1.8 + 32.0
-    T_R = T_f + 460.67
+    # Conversiones de unidades
+    fluence = fluence * 1e4
+
+    # Se calcula la primera parte de la fórmula
+    condiciones_A = [
+        product_form == 'W',  # ¿Es Soldadura?
+        product_form == 'F'   # ¿Es Forja?
+    ]
+    valores_A = [
+        0.919,  # Valor si es Soldadura
+        1.011   # Valor si es Forja
+    ]
+    A_coeff = np.select(condiciones_A, valores_A, default=1.080)
+
+    TTS1 = A_coeff * 5/9 * 1.8943e-12 * fluence **(0.5695) * \
+        ((1.8*temp_c+32)/550)**(-5.47) * (0.09 + p/0.012)**0.216 * \
+        (1.66+(ni**8.54/0.63))**0.39 * (mn/1.36)**0.3 
     
-    # --- 2. TÉRMINO A: MECANISMOS DE ENDURECIMIENTO DE MATRIZ (SMD) ---
-    A_coeff = np.where(product_form == 'W', 6.7e-18, 6.7e-18)  
-    term_A = A_coeff * np.exp(20730 / T_R) * fluence ** 0.5076
-
-
-    # --- 3. TÉRMINO B: PRECIPITACIÓN DE COBRE (CRP) ---
-    # Se crea la función G(flux)
-    G = 1/2+1/2*np.tanh((np.log10(fluence)-18.24)/1.052)
-
-    # Se crea la funcion F de cobre efectivo
-    F = np.maximum(cu - 0.072, 0) ** 0.577
-
+    # Se calcula la segunda parte de la fórmula
     condiciones = [
         product_form == 'W',  # ¿Es Soldadura?
         product_form == 'F'   # ¿Es Forja?
     ]
-
     valores = [
-        234.0,  # Valor si es Soldadura
-        128.0   # Valor si es Forja
+        0.968,  # Valor si es Soldadura
+        0.738   # Valor si es Forja
     ]
+    B_coeff = np.select(condiciones, valores, default=0.819)
 
-    B_coeff = np.select(condiciones, valores, default=208.0)
-    term_B = B_coeff * (1.0 + 2.106 * ni **1.173) * F * G
-
-
-    # --- 4. RESULTADO FINAL ---
-    # TTS total en Fahrenheit
-    tts_fahrenheit = term_A + term_B
+    M = B_coeff * np.maximum( np.minimum(113.87*(np.log(fluence) - \
+        np.log(4.5e+20)), 612.6), 0) * ((1.8*temp_c+32)/550)**(-5.45) * \
+        (0.1+p/0.012)**(-0.098) * (0.168+(ni**0.58)/0.63)**0.73
     
-    # Convertir TTS de Fahrenheit a Celsius (Delta F / 1.8 = Delta C)
-    tts_celsius = tts_fahrenheit / 1.8
-    
-    return tts_celsius
+    TTS2 = 5/9 * M * np.maximum(np.minimum(cu,0.28)-0.053,0)
+
+    return TTS1 + TTS2
