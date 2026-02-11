@@ -35,6 +35,5 @@ Script creado para poder usar el paquete "casero" source de forma formal.
 
 Crear una env que cumpla los requerimientos, personalmente recomiendo usar mamba. Después, escribir en terminal ```pip install -e .```. El argumento ```-e``` crea un enlace simbólico dentro de la carpeta de librerías de Python que apunta a la carpeta src.
 
-# 3. Método Experimental
+# 2. Paquete ```src```
 
-# 4. Análisis de los Datos
