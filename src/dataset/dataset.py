@@ -2,11 +2,11 @@
 
 import pandas as pd
 import torch
-from torch.utils import data
+from torch.utils.data import Dataset, Subset
 from sklearn import model_selection
 
 
-class RadiationDataset(data.Dataset):
+class RadiationDataset(Dataset):
   """Clase Dataset de PyTorch para datos de fragilización por radiación.
 
   Esta clase gestiona la carga de datos desde un archivo CSV, permite la
@@ -15,7 +15,8 @@ class RadiationDataset(data.Dataset):
   """
 
   def __init__(self, csv_path):
-    """Inicializa el dataset cargando el archivo CSV.
+    """
+    Inicializa el dataset cargando el archivo CSV.
 
     Args:
       csv_path: Cadena con la ruta al archivo CSV del dataset.
@@ -45,41 +46,24 @@ class RadiationDataset(data.Dataset):
     sample = self.data.iloc[idx].values
     return torch.tensor(sample, dtype=torch.float32)
 
-  def split_data(self, test_factor, val_factor=None):
-    """Divide el dataset en subconjuntos de train, val y test.
-
-    Los subconjuntos devueltos son objetos 'Subset', lo que significa que
-    apuntan directamente a la memoria de este objeto dataset. Si se modifican
-    los valores en 'self.data', los subconjuntos reflejarán el cambio.
-
-    Args:
-      test_factor: Proporción del conjunto total para test (entre 0 y 1).
-      val_factor: Proporción opcional para el conjunto de validación.
-
-    Returns:
-      Una tupla con los objetos Subset: (train, val, test) o (train, test).
-    """
+  def data_split(self, test_factor, val_factor=None):
     indices = list(range(len(self)))
-
+      
     if val_factor:
-      # Primero separamos el conjunto de test.
       train_val_idx, test_idx = model_selection.train_test_split(
-          indices, test_size=test_factor, random_state=42
-      )
-      # Ajustamos el factor de validación sobre el remanente.
+        indices, test_size=test_factor, random_state=42
+        )
       adj_val_factor = val_factor / (1 - test_factor)
       train_idx, val_idx = model_selection.train_test_split(
-          train_val_idx, test_size=adj_val_factor, random_state=42
-      )
-      return (data.Subset(self, train_idx),
-              data.Subset(self, val_idx),
-              data.Subset(self, test_idx))
+        train_val_idx, test_size=adj_val_factor, random_state=42
+        )
+      return Subset(self, train_idx), Subset(self, val_idx), Subset(self, test_idx)
 
-    # División simple en entrenamiento y test.
+      # Si no hay val_factor, devolvemos None en el medio
     train_idx, test_idx = model_selection.train_test_split(
-        indices, test_size=test_factor, random_state=42
+      indices, test_size=test_factor, random_state=42
     )
-    return data.Subset(self, train_idx), data.Subset(self, test_idx)
+    return Subset(self, train_idx), None, Subset(self, test_idx)
 
   def preprocess(self, train_set, preprocessor):
     """Entrena un preprocesador con el conjunto de train y escala todo el dataset.
@@ -106,21 +90,3 @@ class RadiationDataset(data.Dataset):
     self.data.iloc[:, :] = transformed_values
 
 
-# Ejemplo de uso tal como lo solicitaste:
-if __name__ == "__main__":
-  from sklearn.preprocessing import StandardScaler
-
-  # 1. Crear el objeto de la clase.
-  dataset = RadiationDataset('df_plotter_cm2.csv')
-
-  # 2. Dividir en conjuntos (ej. 70% train, 15% val, 15% test).
-  # Los conjuntos devueltos son 'vistas' del dataset original.
-  train, val, test = dataset.split_data(test_factor=0.15, val_factor=0.15)
-
-  # 3. El usuario activa el preprocesado manualmente.
-  scaler = StandardScaler()
-  dataset.preprocess(train, scaler)
-
-  # Ahora 'train', 'val' y 'test' devuelven valores normalizados.
-  print(f"Muestra de train normalizada: {train[0]}")
-  print(f"Muestra de test normalizada: {test[0]}")
