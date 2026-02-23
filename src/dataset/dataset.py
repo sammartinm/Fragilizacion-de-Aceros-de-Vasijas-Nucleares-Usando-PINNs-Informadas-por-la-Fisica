@@ -62,7 +62,8 @@ class RadiationDataset(Dataset):
       train_idx, val_idx = model_selection.train_test_split(
         train_val_idx, test_size=adj_val_factor, random_state=42
         )
-      return Subset(self, train_idx), Subset(self, val_idx), Subset(self, test_idx)
+      return Subset(self, train_idx), Subset(self, val_idx), Subset(self, 
+                                                                    test_idx)
 
       # Si no hay val_factor, devolvemos None en el medio
     train_idx, test_idx = model_selection.train_test_split(
@@ -71,25 +72,28 @@ class RadiationDataset(Dataset):
     return Subset(self, train_idx), None, Subset(self, test_idx)
 
   def preprocess(self, train_set, preprocessor=StandardScaler()):
-    """Entrena un preprocesador con el conjunto de train y escala todo el dataset.
+    """Entrena un preprocesador con el conjunto de train y escala todo el 
+    dataset.
 
-    Este método debe ser llamado manualmente por el usuario tras crear el objeto.
-    Al modificar el DataFrame interno 'self.data', todos los objetos Subset
-    creados anteriormente se verán afectados automáticamente.
+    Este método debe ser llamado manualmente por el usuario tras crear el 
+    objeto. Al modificar el DataFrame interno 'self.data', todos los objetos 
+    Subset creados anteriormente se verán afectados automáticamente.
 
     Args:
       train_set: El objeto Subset que representa los datos de entrenamiento.
       preprocessor: Objeto con métodos fit/transform (ej. StandardScaler).
     """
     # Extraemos los índices del subconjunto de entrenamiento.
+    self.preprocessor = preprocessor
     train_indices = train_set.indices
     train_data = self.data.iloc[train_indices]
 
     # Entrenamos el preprocesador con los datos de entrenamiento.
-    preprocessor.fit(train_data)
+    self.preprocessor.fit(train_data)
 
-    # Transformamos el dataset completo (esto devuelve un numpy array de floats).
-    transformed_values = preprocessor.transform(self.data)
+    # Transformamos el dataset completo (esto devuelve un numpy array de 
+    # floats).
+    transformed_values = self.preprocessor.transform(self.data)
     
     # En lugar de usar iloc[:, :], reconstruimos el DataFrame.
     # Esto evita el conflicto de tipos (int8 vs float64).
@@ -100,8 +104,10 @@ class RadiationDataset(Dataset):
     )
     
 
-  def inverse_transform_y(self, y_scaled, target_col='DT41J_Celsius', preprocessor=None):
-    """Convierte predicciones normalizadas de vuelta a su escala original (Celsius)."""
+  def inverse_transform_y(self, y_scaled, target_col='DT41J_Celsius', 
+                          preprocessor=None):
+    """Convierte predicciones normalizadas de vuelta a su escala original 
+    (Celsius)."""
     if preprocessor is None:
         raise ValueError("Se requiere el preprocesador entrenado.")
       
@@ -111,6 +117,16 @@ class RadiationDataset(Dataset):
     std_y = preprocessor.scale_[target_idx]
       
     return (y_scaled * std_y) + mean_y
+  
+  def despreprocess(self, y_test, y_scaled):
+        """Convierte predicciones normalizadas de vuelta a su escala original 
+        (Celsius)."""
+
+        target_col_name = 'DT41J_Celsius'
+        preds_real = self.inverse_transform_y(y_scaled, target_col=target_col_name, preprocessor=self.preprocessor)
+        y_test_real = self.inverse_transform_y(y_test, target_col=target_col_name, preprocessor=self.preprocessor)
+        
+        return preds_real, y_test_real
     
 
 

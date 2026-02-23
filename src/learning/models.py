@@ -9,6 +9,7 @@ import os
 import xgboost as xgb
 import numpy as np
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
+import torch.nn as nn
 
 class BaselineXGBoost:
     """Clase para entrenar y evaluar un modelo XGBoost como línea base."""
@@ -86,39 +87,19 @@ class BaselineXGBoost:
         # Accedemos al modelo real de la librería para guardar
         self.model.save_model(filepath)
         print(f"Modelo guardado en: {filepath}")
-    
-def save_xgboost_model(model, model_name, folder='../models/baselines'):
-    """
-    Guarda un modelo XGBoost en formato JSON nativo.
-    
-    Args:
-        model: El objeto XGBRegressor ya entrenado.
-        model_name: Nombre del archivo (ej: 'xgb_v1.json').
-        folder: Carpeta donde se almacenará.
-    """
-    if not os.path.exists(folder):
-        os.makedirs(folder)
-    
-    # Aseguramos la extensión .json para compatibilidad nativa
-    if not model_name.endswith('.json'):
-        model_name += '.json'
-        
-    filepath = os.path.join(folder, model_name)
-    model.save_model(filepath)
-    print(f"Modelo XGBoost guardado en: {filepath}")
 
-def load_xgboost_model(filepath):
-    """
-    Carga un modelo XGBoost desde un archivo JSON.
+class MLPInicial(nn.Module):
+    """Clase para un perceptrón multicapa inicial."""
     
-    Returns:
-        model: El modelo cargado listo para predecir.
-    """
-    if not os.path.exists(filepath):
-        raise FileNotFoundError(f"No se encontró el modelo en {filepath}")
-        
-    # Instanciamos un objeto vacío del mismo tipo (Regresor)
-    model = xgb.XGBRegressor()
-    model.load_model(filepath)
-    print(f"Modelo cargado correctamente desde {filepath}")
-    return model
+    def __init__(self, input_dim, hidden_dim=64, output_dim=1):
+        super(MLPInicial, self).__init__()
+        self.net = nn.Sequential(
+            nn.Linear(input_dim, hidden_dim),
+            nn.ReLU(),
+            nn.Linear(hidden_dim, hidden_dim),
+            nn.ReLU(),
+            nn.Linear(hidden_dim, output_dim)
+        )
+    
+    def forward(self, x):
+        return self.net(x)
