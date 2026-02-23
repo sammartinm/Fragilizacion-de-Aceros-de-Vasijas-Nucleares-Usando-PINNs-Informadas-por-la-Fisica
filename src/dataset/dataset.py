@@ -3,9 +3,11 @@ Modulo: dataset.py
 """
 
 import pandas as pd
+import numpy as np
 import torch
 from torch.utils.data import Dataset, Subset
 from sklearn import model_selection
+from sklearn.preprocessing import StandardScaler
 
 
 class RadiationDataset(Dataset):
@@ -24,6 +26,7 @@ class RadiationDataset(Dataset):
       csv_path: Cadena con la ruta al archivo CSV del dataset.
     """
     self.data = pd.read_csv(csv_path)
+    #self.data['Fluence_n_cm2'] = np.log10(self.data['Fluence_n_cm2'])
 
     # Convertimos categorías a códigos numéricos para permitir cálculos.
     if 'Product_Form' in self.data.columns:
@@ -67,7 +70,7 @@ class RadiationDataset(Dataset):
     )
     return Subset(self, train_idx), None, Subset(self, test_idx)
 
-  def preprocess(self, train_set, preprocessor):
+  def preprocess(self, train_set, preprocessor=StandardScaler()):
     """Entrena un preprocesador con el conjunto de train y escala todo el dataset.
 
     Este método debe ser llamado manualmente por el usuario tras crear el objeto.
@@ -85,10 +88,45 @@ class RadiationDataset(Dataset):
     # Entrenamos el preprocesador con los datos de entrenamiento.
     preprocessor.fit(train_data)
 
-    # Transformamos el dataset completo para mantener la coherencia.
+    # Transformamos el dataset completo (esto devuelve un numpy array de floats).
     transformed_values = preprocessor.transform(self.data)
     
-    # Sobrescribimos el DataFrame interno con los nuevos valores.
-    self.data.iloc[:, :] = transformed_values
+    # En lugar de usar iloc[:, :], reconstruimos el DataFrame.
+    # Esto evita el conflicto de tipos (int8 vs float64).
+    self.data = pd.DataFrame(
+        transformed_values, 
+        columns=self.data.columns, 
+        index=self.data.index
+    )
+    
 
+  def inverse_transform_y(self, y_scaled, target_col='DT41J_Celsius', preprocessor=None):
+    """Convierte predicciones normalizadas de vuelta a su escala original (Celsius)."""
+    if preprocessor is None:
+        raise ValueError("Se requiere el preprocesador entrenado.")
+      
+    # Buscamos la posición de la columna objetivo
+    target_idx = list(self.data.columns).index(target_col)
+    mean_y = preprocessor.mean_[target_idx]
+    std_y = preprocessor.scale_[target_idx]
+      
+    return (y_scaled * std_y) + mean_y
+    
+
+
+def subset_to_numpy(subset, target_col='DT41J_Celsius'):
+    """
+    Convierte un Subset de PyTorch a arrays de NumPy (X, y).
+    Busca el índice real de la columna objetivo.
+    """
+    # Buscamos el índice de la columna objetivo en el dataframe original
+    target_idx = list(subset.dataset.data.columns).index(target_col)
+    
+    data = np.array([subset[i].numpy() for i in range(len(subset))])
+    
+    # Extraemos X e Y correctamente
+    X = np.delete(data, target_idx, axis=1)
+    y = data[:, target_idx]
+    
+    return X, y
 
