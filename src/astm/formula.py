@@ -2,13 +2,15 @@
 # -*- coding: utf-8 -*-
 """
 Módulo: formula.py
-Descripción: Implementación de la ecuación de correlación ASTM E900 para predecir 
-             el desplazamiento de la temperatura de transición (TTS) en aceros de vasija.
+Descripción: Implementación de la ecuación de correlación ASTM E900 para 
+    predecir el desplazamiento de la temperatura de transición (TTS) en aceros 
+    de vasija.
 Autor: Samuel Martín Martínez
 Fecha: 2026
 """
 
 import numpy as np
+import torch
 
 def astm_e900_15(cu, ni, p, mn, temp_c, fluence, product_form):
     """

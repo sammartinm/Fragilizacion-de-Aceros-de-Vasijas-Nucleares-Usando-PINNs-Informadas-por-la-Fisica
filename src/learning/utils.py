@@ -1,5 +1,6 @@
 import os
 import xgboost as xgb
+import torch
 
 def save_xgboost_model(model, model_name, folder='../models/baselines'):
     """
