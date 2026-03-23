@@ -1,0 +1,15 @@
+{
+    "trial_number": 122,
+    "best_rmse_val": 0.1207480888068676,
+    "hiperparametros": {
+        "num_layers": 3,
+        "hidden_dim": 96,
+        "activation": "GELU",
+        "learning_rate": 0.0029549607810257224,
+        "lambda_mono": 0.36408455929105954,
+        "weight_decay": 7.010115160487686e-05
+    },
+    "optimal_epochs_val": 50,
+    "final_epochs_calibrated": 57,
+    "datetime": "2026-02-28 16:58:34"
+}
