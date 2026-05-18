@@ -1,4 +1,4 @@
-\documentclass[a4paper, 12pt]{book}
+\documentclass[a4paper, 12pt, twocolumn]{book}
 
 % Configuración de idioma y codificación
 \usepackage[utf8]{inputenc}
@@ -27,8 +27,8 @@
 \usepackage{caption}
 
 % Bibliografía APA
-\usepackage[style=apa, backend=biber]{biblatex}
-\addbibresource{references.bib}
+\usepackage[backend=biber, style=apa]{biblatex} % Carga el paquete (puedes cambiar apa por ieee, numeric, etc.)
+\addbibresource{referencias.bib}
 
 \begin{document}
 
@@ -74,32 +74,129 @@ Loren Ipsum
 
 \tableofcontents
 
-\chapter{Introducción}
+\chapter{Introducción (4 páginas max)}
+
+\section{Motivación (.3)}
+
+La energía nuclear es fundamental en el mix energético global al aportar estabilidad y generación masiva libre de emisiones. Dado que muchas centrales actuales se aproximan o superan su vida útil de diseño, las demandas energéticas impulsan estrategias de Operación a Largo Plazo (LTO). Sin embargo, la viabilidad de la LTO depende estrictamente de garantizar la integridad estructural de los componentes críticos —frente a fenómenos como la fragilización de la vasija del reactor— durante este periodo de extensión.\\
+
+En los reactores de agua ligera, la vasija a presión es el componente de seguridad más crítico e insustituible al encargarse de la contención del núcleo. Durante su vida en servicio, la exposición continua a la fluencia neutrónica de la fisión induce daños microestructurales que merman las propiedades mecánicas del acero. Esta fragilización eleva la temperatura de transición del material y reduce su capacidad de absorber energía, un fenómeno cuya magnitud depende de la radiación acumulada y de la composición química original, especialmente de la presencia de cobre, níquel, manganeso y fósforo.\\
+
+Cuantificar y predecir esta pérdida de tenacidad es vital en el contexto de la LTO, lo que plantea un problema de series temporales y predicción a futuro bajo regímenes de fluencia excepcionalmente altos. Históricamente, este seguimiento se ha realizado mediante correlaciones empíricas como la norma ASTM E900-15, que modela la degradación en función de variables químicas, térmicas y de fluencia. Aunque es una herramienta consolidada, su enfoque determinista puede verse superado por la complejidad y la no linealidad de las interacciones químicas y neutrónicas a gran escala. Por otro lado, los modelos de aprendizaje automático no informados (como XGBoost o Perceptrones Multicapa) destacan al capturar las interacciones no lineales entre las variables metalúrgicas y de fluencia \parencite{liu2022machine}. Sin embargo, su alta precisión se limita a la interpolación debido a una fuerte dependencia de la densidad de los datos de entrenamiento. Dado que en regímenes de alta fluencia la información experimental es escasa, estos modelos fracasan al extrapolar, asimilando patrones sin rigor que derivan en pronósticos físicamente imposibles sobre la degradación real del material.\\
+
+Ante la debilidad para extrapolar de los modelos de Machine Learning tradicionales por la falta de datos a altas fluencias y frente a las limitaciones de los modelos puramente analíticos, la motivación de este trabajo se asienta en el desarrollo de un modelo híbrido avanzado. De esta forma, el presente TFM se enfoca en el desarrollo y aplicación de Redes Neuronales Informadas por Física (PINNs, Physics-Informed Neural Networks) \parencite{karniadakis2021}. A diferencia de las aproximaciones clásicas, las PINNs integran el conocimiento fenomenológico a través del modelo analítico (como el descrito por ASTM) directamente en la función de pérdida matemática. De este modo, la red penaliza aquellas predicciones que violen el comportamiento físico subyencente, restringiendo el aprendizaje a soluciones físicamente viables y reales.
+
+\section{Problemática (.5)}
+
+La viabilidad de la LTO depende de la gestión del envejecimiento de la Vasija de Presión (RPV), elemento insustituible cuya degradación irreversible limita la vida útil de la central. Bajo la fluencia neutrónica, el acero experimenta alteraciones microestructurales —como la formación de defectos y nano-precipitados— que derivan en la fragilización por irradiación. Este proceso eleva la temperatura de transición ($TTS$) y merma la tenacidad a la fractura, estableciendo el desafío técnico fundamental para garantizar la integridad estructural en el marco de la operación extendida.\\
+
+Esta fragilización no es universal, sino que está íntimamente ligada a la composición química del acero. Elementos traza y de aleación desempeñan roles determinantes: el cobre (Cu) forma clústeres que bloquean el movimiento de dislocaciones, mientras que el níquel (Ni), manganeso (Mn) y fósforo (P) potencian la formación de fases ricas en solutos que aceleran la degradación \parencite{dagata2025}. Predecir el comportamiento de una vasija específica requiere un conocimiento preciso de cómo su química interactúa con la temperatura y la dosis acumulada de neutrones.\\
+
+Históricamente, la industria gestiona este riesgo mediante programas de vigilancia que alimentan modelos analíticos, siendo la norma ASTM E900-15 el estándar predominante. Aunque robusta, esta norma es una simplificación determinista empírica. Al basarse en correlaciones globales, presenta incertidumbres significativas aplicadas a coladas específicas y, por su rigidez, limita su capacidad para asimilar las complejas tendencias de los datos experimentales recientes \parencite{odette2019history}.\\
+
+La integración de Machine Learning (ML), como XGBoost o Perceptrones Multicapa (MLP), ofrece una solución para modelar estas relaciones no lineales sin predefinir funciones. No obstante, el ML "no informado$"$ conlleva un riesgo de extrapolación no física. Validar la LTO requiere predecir el estado de la vasija a altas fluencias neutrónicas, donde los datos experimentales escasean. Un modelo convencional entrenado en este entorno prioriza minimizar el error estadístico; al extrapolar hacia el futuro operativo de la central, tiende a divergir. Así, puede ofrecer resultados matemáticamente óptimos pero físicamente imposibles —como predecir una recuperación de tenacidad a fluencias extremas—, un error inasumible para la seguridad nuclear.\\
+
+Esta brecha define el núcleo del problema técnico de este TFM. Ante la escasez de datos a alta fluencia:
+
+\begin{itemize}
+    \item Los modelos analíticos (ASTM) son estables pero inflexibles ante datos complejos.
+    \item El ML tradicional es preciso en interpolación, pero peligrosamente inestable extrapolando para la LTO.
+    \item Subestimar la degradación irreversible podría causar un fallo catastrófico por choque térmico presurizado (PTS).
+\end{itemize}
+
+Por lo tanto, la problemática que este trabajo busca resolver es la creación de un marco predictivo que "sepa" física. Es imperativo utilizar el modelo ASTM como una restricción infranqueable que impida a la red neuronal violar las leyes de degradación donde los datos no pueden guiarla. La integración de Redes Neuronales Informadas por Física (PINNs) surge como respuesta directa \parencite{raissi2019physics}. Este trabajo aborda el desafío de la LTO mediante la hibridación de conocimiento: suplir la escasez de información futura con el rigor de las ecuaciones analíticas. Uniendo la capacidad de aprendizaje del MLP y el rigor normativo de la ASTM, se garantiza que la predicción de la vida útil de las centrales se asiente sobre una base científicamente coherente y segura.
+
+\section{Objetivos (.2)}
+
+El propósito central de este Trabajo de Fin de Máster es el desarrollo, implementación y validación de un modelo predictivo híbrido basado en Redes Neuronales Informadas por la Física (PINNs) para cuantificar la fragilización por irradiación en los aceros de las vasijas de presión de reactores nucleares. Este estudio se enmarca en la necesidad crítica de garantizar la integridad estructural durante la Operación a Largo Plazo (LTO) de las centrales nucleares, donde la capacidad de predicción a altas fluencias —zonas con notable escasez de datos experimentales— resulta determinante para la extensión segura de su vida útil.\\
+
+Para alcanzar este propósito fundamental, se definen los siguientes objetivos específicos, estructurados según las fases de desarrollo técnico documentadas en la investigación:
+
+\begin{itemize}
+    \item Establecimiento de líneas base analíticas y empíricas: Implementar y evaluar la capacidad predictiva del modelo analítico ASTM E900-15 como referencia física primaria. Este modelo servirá como el estándar sobre el cual se integrará la información en la red neuronal, permitiendo comparar el desempeño de las aproximaciones tradicionales frente a las nuevas técnicas de aprendizaje profundo.
+
+    \item Desarrollo de modelos de aprendizaje automático no informados: Entrenar y testear algoritmos de Machine Learning convencionales, específicamente XGBoost y Perceptrones Multicapa (MLP), para establecer una base de comparación puramente dirigida por datos (data-driven). Este objetivo busca identificar las limitaciones de los modelos estándar cuando se enfrentan a problemas de extrapolación y series temporales con datos escasos.
+
+    \item Diseño e implementación de la arquitectura PINN: Desarrollar una arquitectura de red neuronal que incorpore términos de penalización en su función de pérdida basados en el modelo analítico ASTM. El objetivo es hibridar la potencia de aprendizaje de las redes neuronales con el rigor del modelo analítico, forzando a la red a respetar las tendencias físicas de la degradación de materiales incluso en ausencia de muestras experimentales.
+
+    \item Optimización de hiperparámetros mediante búsqueda inteligente: Aplicar técnicas de optimización automatizada (utilizando herramientas como Optuna) para identificar la configuración óptima de la red (número de capas, dimensiones ocultas, tasas de aprendizaje y pesos de la función de pérdida PINN). Se busca asegurar la robustez del modelo frente a la variabilidad de las composiciones químicas de las probetas.
+
+    \item Validación en escenarios de extrapolación a altas fluencias: Evaluar el rendimiento del modelo híbrido específicamente en regímenes de fluencia neutrónica elevada. Se pretende demostrar que la inclusión de información física permite una generalización superior a la de los modelos ML convencionales, reduciendo el error en la predicción de la temperatura de transición (TTS) en condiciones de operación extendida.
+
+    \item Análisis de la influencia de la composición química y la fluencia: Estudiar cómo el modelo asimila la degradación inducida por la interacción entre la fluencia neutrónica y los elementos químicos clave (Cobre, Níquel, Manganeso y Fósforo). Se busca verificar que las predicciones del modelo PINN mantienen coherencia con la fenomenología conocida de la fragilización de aceros ferríticos bajo irradiación.
+\end{itemize}
+
+A través de la consecución de estos objetivos, se pretende proporcionar una herramienta computacional avanzada que complemente los modelos actuales de vigilancia, ofreciendo predicciones de alta fidelidad que faciliten la toma de decisiones estratégicas en el contexto de la gestión del envejecimiento y la seguridad nuclear a largo plazo.
+
+\chapter{Estado del Arte (5 páginas max)}
 
 Loren Ipsum
 
-\section{Motivación}
+\section{Fragilización de Vasijas Nucleares}
 
 Loren Ipsum
 
-\section{Objetivos}
+\section{Modelo Físico Analítico}
 
 Loren Ipsum
 
-\chapter{Metodología Experimental}
+\section{Machine Learning y PINNs}
 
 Loren Ipsum
 
-\chapter{Resultados y Análisis}
+\chapter{Metodología Experimental (8 páginas max)}
 
 Loren Ipsum
 
-\chapter{Discusión}
+\section{Descripción y Procesamiento del Dataset}
 
 Loren Ipsum
 
-\chapter{Conclusiones}
+\section{Definición del Baseline Físico}
 
 Loren Ipsum
+
+\section{Modelos ML no Informados}
+
+Loren Ipsum
+
+\chapter{Redes Neuronales Informadas por la Física (PINNs) (9 páginas max)}
+
+Loren Ipsum
+
+\section{Arquitectura del Modelo PINN}
+
+Loren Ipsum
+
+\section{Función de Pérdida Personalizada}
+
+Loren Ipsum
+
+\section{Optimización de Hiperparámetros}
+
+Loren Ipsum
+
+\chapter{Resultados y Discusión (8 páginas min)}
+
+Loren Ipsum
+
+\section{Comparativa Global de Modelos}
+
+Loren Ipsum
+
+\section{Evaluación en Escenarios LTO (Altas Fluencias)}
+
+Loren Ipsum
+
+\section{Discusión}
+
+Loren Ipsum
+
+\chapter{Conclusiones y Trabajo Futuro (3 páginas max)}
+
+Loren Ipsum
+
+\nocite{*}
+\printbibliography[title={Bibliografía}]
 
 \end{document}

@@ -1,14 +1,14 @@
 # Fdb version 4
-["biber document"] 0 "document.bcf" "document.bbl" "document" 1777490070.37675 -1
-  "document.bcf" 1777490070.33 132525 75b46d2786b19f3e7251a9627d1bf9d7 "pdflatex"
-  "references.bib" 1777487631.54 0 d41d8cd98f00b204e9800998ecf8427e ""
+["biber document"] 1779111341.04708 "document.bcf" "document.bbl" "document" 1779111343.98058 0
+  "document.bcf" 1779111343.92 133291 b4b1673b4f1495ca4d2f7eca3e69d890 "pdflatex"
+  "referencias.bib" 1779111340.88 7319 f511668e0fb152f363de786f3ca0484f ""
   (generated)
   "document.bbl"
   "document.blg"
   (rewritten before read)
-["pdflatex"] 1777490069.69752 "/media/lonelywolf/6AC0-196F/USB/Uni/DS/TFM/TFM-PINNs/docs/document.tex" "document.pdf" "document" 1777490070.37706 0
+["pdflatex"] 1779111343.2115 "/media/lonelywolf/6AC0-196F/USB/Uni/DS/TFM/TFM-PINNs/docs/document.tex" "document.pdf" "document" 1779111343.98087 0
   "/etc/texmf/web2c/texmf.cnf" 1767717699.77612 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/media/lonelywolf/6AC0-196F/USB/Uni/DS/TFM/TFM-PINNs/docs/document.tex" 1777490069.52 1808 2589f6c2dcb6759c4a3aadf86f086a32 ""
+  "/media/lonelywolf/6AC0-196F/USB/Uni/DS/TFM/TFM-PINNs/docs/document.tex" 1779111246.4 13582 853e7e68b28d2e5dcd41329501571175 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -26,6 +26,8 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1248133631 36741 fa121aac0049305630cf160b86157ee4 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb" 1136849748 44729 811d6c62865936705a31c797a1d5dada ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb" 1136849748 46026 6dab18b61c907687b520c72847215a68 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb" 1136849748 45458 a3faba884469519614ca56ba5f6b1de1 ""
@@ -88,11 +90,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1767717714.8379 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1767717764 8213907 c328eef9e6b8b2e4720bb95b60f453a2 ""
-  "document.aux" 1777490070.33 1569 bc1512deb612aea3f36bc72066ec1963 "pdflatex"
-  "document.bbl" 1777488605.4 466 ee04f40f768daeed26442158e95aba61 "biber document"
-  "document.run.xml" 1777490070.33 2387 9c20953abe00557ccf8b7aa05564e1f6 "pdflatex"
-  "document.tex" 1777490069.52 1808 2589f6c2dcb6759c4a3aadf86f086a32 ""
-  "document.toc" 1777490070.33 546 c49dfb53cf3b0bdb03eda39f80062380 "pdflatex"
+  "document.aux" 1779111343.92 4780 813550a7c9eac3498244da7fef309fa5 "pdflatex"
+  "document.bbl" 1779111341.64 27162 023b4dadb62114490ba782e805698069 "biber document"
+  "document.run.xml" 1779111343.92 2388 e5d1b9f8ce3d51d3da9bdd4708c8647a "pdflatex"
+  "document.tex" 1779111246.4 13582 853e7e68b28d2e5dcd41329501571175 ""
+  "document.toc" 1779111343.92 1805 8a8510f68291c3b74a824b7312444d56 "pdflatex"
   (generated)
   "document.aux"
   "document.bcf"
