@@ -25,6 +25,8 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{caption}
+% Paquetes matemáticos
+\usepackage{amsmath,amssymb,amsfonts}
 
 % Bibliografía APA
 \usepackage[backend=biber, style=apa]{biblatex} % Carga el paquete (puedes cambiar apa por ieee, numeric, etc.)
@@ -76,7 +78,7 @@ Loren Ipsum
 
 \chapter{Introducción (4 páginas max)}
 
-\section{Motivación (.3)}
+\section{Motivación}
 
 La energía nuclear es fundamental en el mix energético global al aportar estabilidad y generación masiva libre de emisiones. Dado que muchas centrales actuales se aproximan o superan su vida útil de diseño, las demandas energéticas impulsan estrategias de Operación a Largo Plazo (LTO). Sin embargo, la viabilidad de la LTO depende estrictamente de garantizar la integridad estructural de los componentes críticos —frente a fenómenos como la fragilización de la vasija del reactor— durante este periodo de extensión.\\
 
@@ -86,7 +88,7 @@ Cuantificar y predecir esta pérdida de tenacidad es vital en el contexto de la 
 
 Ante la debilidad para extrapolar de los modelos de Machine Learning tradicionales por la falta de datos a altas fluencias y frente a las limitaciones de los modelos puramente analíticos, la motivación de este trabajo se asienta en el desarrollo de un modelo híbrido avanzado. De esta forma, el presente TFM se enfoca en el desarrollo y aplicación de Redes Neuronales Informadas por Física (PINNs, Physics-Informed Neural Networks) \parencite{karniadakis2021}. A diferencia de las aproximaciones clásicas, las PINNs integran el conocimiento fenomenológico a través del modelo analítico (como el descrito por ASTM) directamente en la función de pérdida matemática. De este modo, la red penaliza aquellas predicciones que violen el comportamiento físico subyencente, restringiendo el aprendizaje a soluciones físicamente viables y reales.
 
-\section{Problemática (.5)}
+\section{Problemática}
 
 La viabilidad de la LTO depende de la gestión del envejecimiento de la Vasija de Presión (RPV), elemento insustituible cuya degradación irreversible limita la vida útil de la central. Bajo la fluencia neutrónica, el acero experimenta alteraciones microestructurales —como la formación de defectos y nano-precipitados— que derivan en la fragilización por irradiación. Este proceso eleva la temperatura de transición ($TTS$) y merma la tenacidad a la fractura, estableciendo el desafío técnico fundamental para garantizar la integridad estructural en el marco de la operación extendida.\\
 
@@ -106,7 +108,7 @@ Esta brecha define el núcleo del problema técnico de este TFM. Ante la escasez
 
 Por lo tanto, la problemática que este trabajo busca resolver es la creación de un marco predictivo que "sepa" física. Es imperativo utilizar el modelo ASTM como una restricción infranqueable que impida a la red neuronal violar las leyes de degradación donde los datos no pueden guiarla. La integración de Redes Neuronales Informadas por Física (PINNs) surge como respuesta directa \parencite{raissi2019physics}. Este trabajo aborda el desafío de la LTO mediante la hibridación de conocimiento: suplir la escasez de información futura con el rigor de las ecuaciones analíticas. Uniendo la capacidad de aprendizaje del MLP y el rigor normativo de la ASTM, se garantiza que la predicción de la vida útil de las centrales se asiente sobre una base científicamente coherente y segura.
 
-\section{Objetivos (.2)}
+\section{Objetivos}
 
 El propósito central de este Trabajo de Fin de Máster es el desarrollo, implementación y validación de un modelo predictivo híbrido basado en Redes Neuronales Informadas por la Física (PINNs) para cuantificar la fragilización por irradiación en los aceros de las vasijas de presión de reactores nucleares. Este estudio se enmarca en la necesidad crítica de garantizar la integridad estructural durante la Operación a Largo Plazo (LTO) de las centrales nucleares, donde la capacidad de predicción a altas fluencias —zonas con notable escasez de datos experimentales— resulta determinante para la extensión segura de su vida útil.\\
 
@@ -130,21 +132,75 @@ A través de la consecución de estos objetivos, se pretende proporcionar una he
 
 \chapter{Estado del Arte (5 páginas max)}
 
-Loren Ipsum
-
 \section{Fragilización de Vasijas Nucleares}
 
-Loren Ipsum
+La Vasija de Presión del Reactor (RPV) es, sin duda, el elemento más crítico en la seguridad de cualquier central nuclear de agua ligera. Dado que alberga el núcleo y mantiene el refrigerante a alta presión, funciona como una barrera de contención primaria que resulta materialmente imposible de sustituir. A diferencia de las bombas o las tuberías, que pueden cambiarse o repararse durante las paradas de recarga, la vasija debe aguantar intacta toda la vida útil de la planta. Por eso, mantener su integridad estructural no es solo una cuestión de eficiencia operativa, sino un requisito innegociable de seguridad.\\
+
+Con el reactor en marcha, el acero ferrítico de la pared interior sufre un bombardeo continuo de neutrones rápidos procedentes de la fisión. Esta exposición, que solemos cuantificar a través de la fluencia neutrónica, acaba provocando daños severos en la microestructura del material. Al chocar con la red cristalina del hierro, los neutrones de alta energía desplazan a los átomos de sus sitios originales, desencadenando cascadas de colisiones y creando pares de Frenkel (vacantes e intersticiales). Con el paso del tiempo y a las elevadas temperaturas de operación, estos defectos se agrupan. Forman así lazos de dislocación y nano-precipitados que, a efectos prácticos, bloquean el movimiento natural de las dislocaciones dentro del metal \parencite{bonny2013}.\\
+
+El ritmo y la gravedad de este daño no dependen solo de la dosis de radiación que reciba el acero, sino que su composición química de fábrica juega un papel decisivo. Elementos traza como el cobre (Cu) son especialmente problemáticos, ya que tienden a precipitar bajo la irradiación y forman agregados que endurecen muchísimo la matriz férrica. A su vez, el níquel (Ni) y el manganeso (Mn) actúan en sinergia para acelerar estas fases, mientras que el fósforo (P) se acumula en los límites de grano, debilitando la cohesión entre ellos y haciendo que la aleación pierda ductilidad.\\
+
+A nivel macroscópico, todo este daño interno se traduce en una pérdida evidente de propiedades mecánicas. Lo más preocupante es el aumento del límite elástico, que trae consigo una inevitable caída en la tenacidad a la fractura. En los laboratorios, esto se ve claramente como un desplazamiento de la curva de energía de impacto hacia temperaturas más altas. Dicho desplazamiento se parametriza mediante la Temperatura de Transición ($TTS$). Si este valor sube demasiado, corremos el riesgo de que la vasija se vuelva frágil a temperaturas de operación normales o durante enfriamientos bruscos, lo que dispara la probabilidad de un fallo catastrófico por choque térmico presurizado (PTS).\\
+
+En el contexto actual, alargar la vida útil de las centrales es una estrategia clave para mantener la estabilidad de la red eléctrica. Sin embargo, la fragilización por radiación es el gran cuello de botella. Para que los organismos reguladores aprueben la Operación a Largo Plazo (LTO), hay que demostrar con números que la $TTS$ se mantendrá en niveles seguros, incluso para fluencias neutrónicas que los diseños originales nunca llegaron a contemplar. Acertar con estas predicciones es vital: una estimación demasiado optimista comprometería la seguridad de la planta, mientras que ser excesivamente conservador obligaría a cerrar antes de tiempo instalaciones energéticas perfectamente útiles.
 
 \section{Modelo Físico Analítico}
 
-Loren Ipsum
+La gestión del envejecimiento nuclear depende de los programas de vigilancia, donde se insertan cápsulas con probetas del acero original en zonas de alto flujo. Su rotura periódica en ensayos Charpy (CVN) es el estándar para cuantificar la pérdida de tenacidad. A partir de estos datos, la industria ha consolidado bases de datos globales que permiten predecir el comportamiento de las vasijas mediante la norma ASTM E900-15. Este estándar no es un modelo físico de primeros principios, sino una regresión fenomenológica que estima el desplazamiento de la Temperatura de Transición ($\Delta TTS$) sumando el daño en la matriz ($TTS_1$) y el de los precipitados ($TTS_2$):\\
+$$ TTS = TTS_1 + TTS_2 $$\\
+
+El daño de matriz ($TTS_1$) agrupa las dislocaciones y defectos puntuales. Su formulación refleja una dependencia no lineal con la fluencia ($\Phi$) y la química ($P, Ni, Mn$):\\
+{\small\begin{align*}
+TTS_1 = & A \cdot \frac{5}{9} \cdot 1.89 \cdot 10^{-12} \cdot \Phi^{0.57} \\
+& \cdot \left( \frac{1.8T+32}{550} \right)^{-5.47} \cdot \left( 0.09 + \frac{P}{0.012} \right)^{0.22} \\
+& \cdot \left( 1.66 + \frac{Ni^{8.54}}{0.63} \right)^{0.39} \cdot \left( \frac{Mn}{1.36} \right)^{0.3}
+\end{align*}}\\
+
+El término $TTS_2$ captura el endurecimiento por precipitados de cobre, cuya cinética se satura tras alcanzar cierta fluencia, utilizando funciones de saturación:\\
+$$ TTS_2 = \frac{5}{9} \cdot \max \left[ \min (Cu, 0.28) - 0.053, 0 \right] \cdot M $$
+
+Donde $M$ se define mediante las funciones auxiliares de influencia $\mathcal{F}(\Phi)$, $\mathcal{T}(T)$ y $\mathcal{G}(P, Ni)$:\\
+
+\begin{equation}
+M = B \cdot \mathcal{F}(\Phi) \cdot \mathcal{T}(T) \cdot \mathcal{G}(P, Ni)
+\end{equation}\\
+
+Siendo los componentes definidos como:\\
+
+{\small
+\begin{align*}
+\mathcal{F}(\Phi) &= \max \bigg\{ \min \Big[ 113.87 \ln \Big( \frac{\Phi}{4.5 \times 10^{20}} \Big), \\
+& \quad \quad 612 \Big], 0 \bigg\} \\[6pt]
+\mathcal{T}(T) &= \left( \frac{1.8T + 32}{550} \right)^{-5.45} \\[6pt]
+\mathcal{G}(P, Ni) &= \left( 0.1 + \frac{P}{0.012} \right)^{-0.098} \\
+& \quad \cdot \left( 0.168 + \frac{Ni^{0.58}}{0.63} \right)^{0.73}
+\end{align*}
+}\\
+
+Este enfoque es robusto y cuenta con la aceptación regulatoria necesaria, pero su validez técnica enfrenta límites infranqueables al proyectar la integridad estructural hacia regímenes de LTO. El modelo ASTM trata la fragilización como un proceso determinista, asumiendo que los coeficientes empíricos —ajustados sobre datos históricos— son universales para cualquier colada. Esta simplificación ignora la heterogeneidad microscópica inherente a los procesos de soldadura y forja, que pueden alterar radicalmente la respuesta del material ante el mismo flujo neutrónico \parencite{eason2013}.\\
+
+Más crítico aún es el problema de la incertidumbre de extrapolación. Las regresiones de la norma E900-15 se han calibrado principalmente sobre datos de reactores con ciclos de vida de 40 a 50 años. Al intentar aplicar estas correlaciones a 60 u 80 años de operación, el modelo se adentra en un territorio de fluencias neutrónicas donde la escasez de datos experimentales impide validar la física de los precipitados. \\
+
+El modelo asume que las funciones de saturación seguirán comportándose de forma monótona, ignorando que a fluencias extremas podrían activarse nuevos mecanismos de degradación microestructural, como la formación de precipitados rutilos o cambios en la fase de solutos que la ASTM no contempla. Al forzar los datos en funciones rígidas de potencia, el modelo ignora posibles transiciones de fase o comportamientos no lineales que surgen exclusivamente en el régimen de operación extendida. Ante este escenario, la comunidad científica ha reconocido que la aproximación analítica tradicional ya no es suficiente; requerimos modelos que no solo se ajusten a los datos, sino que comprendan las restricciones termodinámicas del sistema para evitar proyecciones que, aunque estadísticamente posibles, resulten físicamente inviables.
 
 \section{Machine Learning y PINNs}
 
-Loren Ipsum
+En años recientes, la ciencia de materiales nucleares ha virado hacia el uso de Machine Learning (ML). Ante la ingente cantidad de datos de vigilancia, algoritmos como XGBoost y los Perceptrones Multicapa (MLP) han demostrado una capacidad superior para mapear interacciones no lineales que las regresiones paramétricas no logran captar. Mientras que XGBoost destaca por su capacidad de encontrar sinergias químicas mediante ensamblajes de árboles, los MLP utilizan el Teorema de Aproximación Universal para mapear entradas complejas hacia el valor de $TTS$. Sin embargo, el valor de estas herramientas en el ámbito nuclear siempre ha sido cuestionado por su naturaleza de "caja negra" (*black-box*): la falta de interpretabilidad y de coherencia física es, a menudo, inaceptable para los estándares de seguridad nuclear \parencite{ma2020}.\\
 
-\chapter{Metodología Experimental (8 páginas max)}
+El desafío real no es la precisión, sino la generalización. Los modelos puramente dirigidos por datos (*data-driven*) presentan una debilidad crítica: el colapso predictivo en la extrapolación. Al entrenarse mediante la minimización del riesgo empírico (ERM), estos modelos ajustan sus pesos buscando reducir el error en el dominio de datos conocido ($\mathcal{D}_{train}$), pero carecen de cualquier mecanismo para validar la coherencia física en el dominio de la Operación a Largo Plazo (LTO). En estos regímenes de alta fluencia, donde los datos experimentales escasean, un modelo convencional tiende a sobreajustarse al ruido estadístico, proyectando trayectorias que, aunque ajustadas matemáticamente, resultan termodinámicamente inviables.\\
+
+Para solventar esta limitación, la frontera del conocimiento ha integrado leyes fundamentales directamente en la arquitectura mediante las Redes Neuronales Informadas por la Física (PINNs) \parencite{pang2020}. La innovación radica en transformar el entrenamiento de un problema estadístico a uno de optimización restringida. La red no solo minimiza el error frente a las observaciones ($\mathcal{L}_{data}$), sino que es forzada a satisfacer el conocimiento fenomenológico subyacente mediante un término de penalización física ($\mathcal{L}_{phys}$):\\
+$$\mathcal{L}_{total} = \mathcal{L}_{data} + \lambda_{phys} \mathcal{L}_{phys}$$\\
+
+El término $\mathcal{L}_{phys}$ actúa como un regularizador matemático severo. Mediante la diferenciación automática (*Autograd*), la PINN evalúa el residuo de las ecuaciones rectoras (como las restricciones de la norma ASTM) sobre la arquitectura de la red en cada iteración. Si la predicción $\hat{y}$ viola la física, el residuo de la función $\mathcal{F}$ diverge:\\
+
+$$\mathcal{L}_{phys} = \frac{1}{M} \sum_{j=1}^{M} \left| \mathcal{F}(\hat{y}_j, \Phi, T, \dots) \right|^2$$\\
+
+A diferencia del ML tradicional, donde el espacio de hipótesis es libre, las PINNs restringen el aprendizaje a un subespacio donde las leyes físicas se cumplen. Este \textit{inductive bias} físico es lo que permite que el modelo extrapole con seguridad: al obligar a la red a respetar las asíntotas y las saturaciones de daño conocidas, el modelo no puede divergir hacia comportamientos absurdos. \\
+
+Esta hibridación representa el marco predictivo definitivo para el envejecimiento nuclear. Combina la expresividad geométrica del *Deep Learning* para el modelado preciso de coladas específicas con la robustez dogmática de las ecuaciones de materiales. El resultado no es simplemente una herramienta de predicción, sino un modelo que interpola con alta precisión estadística y, de forma crítica, extrapola bajo el estricto gobierno de la física. Para el análisis de integridad estructural a largo plazo, esta aproximación garantiza proyecciones que son, por diseño, científicamente coherentes y regulatoriamente defendibles.
+
+\chapter{Metodología Experimental (17 páginas max)}
 
 Loren Ipsum
 
@@ -157,10 +213,6 @@ Loren Ipsum
 Loren Ipsum
 
 \section{Modelos ML no Informados}
-
-Loren Ipsum
-
-\chapter{Redes Neuronales Informadas por la Física (PINNs) (9 páginas max)}
 
 Loren Ipsum
 

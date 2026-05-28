@@ -3064,7 +3064,11 @@
     <bcf:citekey order="3" intorder="1">dagata2025</bcf:citekey>
     <bcf:citekey order="4" intorder="1">odette2019history</bcf:citekey>
     <bcf:citekey order="5" intorder="1">raissi2019physics</bcf:citekey>
-    <bcf:citekey order="6" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">bonny2013</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">eason2013</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">ma2020</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">pang2020</bcf:citekey>
+    <bcf:citekey order="10" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">

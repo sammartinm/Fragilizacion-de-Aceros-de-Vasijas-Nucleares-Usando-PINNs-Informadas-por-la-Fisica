@@ -2,23 +2,22 @@
 \contentsline {section}{Resumen}{2}{}%
 \contentsline {section}{Abstract}{2}{}%
 \contentsline {chapter}{\numberline {1}Introducción (4 páginas max)}{5}{}%
-\contentsline {section}{\numberline {1.1}Motivación (.3)}{5}{}%
-\contentsline {section}{\numberline {1.2}Problemática (.5)}{6}{}%
-\contentsline {section}{\numberline {1.3}Objetivos (.2)}{7}{}%
+\contentsline {section}{\numberline {1.1}Motivación}{5}{}%
+\contentsline {section}{\numberline {1.2}Problemática}{6}{}%
+\contentsline {section}{\numberline {1.3}Objetivos}{7}{}%
 \contentsline {chapter}{\numberline {2}Estado del Arte (5 páginas max)}{9}{}%
 \contentsline {section}{\numberline {2.1}Fragilización de Vasijas Nucleares}{9}{}%
-\contentsline {section}{\numberline {2.2}Modelo Físico Analítico}{9}{}%
-\contentsline {section}{\numberline {2.3}Machine Learning y PINNs}{9}{}%
-\contentsline {chapter}{\numberline {3}Metodología Experimental (8 páginas max)}{11}{}%
-\contentsline {section}{\numberline {3.1}Descripción y Procesamiento del Dataset}{11}{}%
-\contentsline {section}{\numberline {3.2}Definición del Baseline Físico}{11}{}%
-\contentsline {section}{\numberline {3.3}Modelos ML no Informados}{11}{}%
-\contentsline {chapter}{\numberline {4}Redes Neuronales Informadas por la Física (PINNs) (9 páginas max)}{13}{}%
-\contentsline {section}{\numberline {4.1}Arquitectura del Modelo PINN}{13}{}%
-\contentsline {section}{\numberline {4.2}Función de Pérdida Personalizada}{13}{}%
-\contentsline {section}{\numberline {4.3}Optimización de Hiperparámetros}{13}{}%
-\contentsline {chapter}{\numberline {5}Resultados y Discusión (8 páginas min)}{15}{}%
-\contentsline {section}{\numberline {5.1}Comparativa Global de Modelos}{15}{}%
-\contentsline {section}{\numberline {5.2}Evaluación en Escenarios LTO (Altas Fluencias)}{15}{}%
-\contentsline {section}{\numberline {5.3}Discusión}{15}{}%
-\contentsline {chapter}{\numberline {6}Conclusiones y Trabajo Futuro (3 páginas max)}{17}{}%
+\contentsline {section}{\numberline {2.2}Modelo Físico Analítico}{10}{}%
+\contentsline {section}{\numberline {2.3}Machine Learning y PINNs}{11}{}%
+\contentsline {chapter}{\numberline {3}Metodología Experimental (17 páginas max)}{15}{}%
+\contentsline {section}{\numberline {3.1}Descripción y Procesamiento del Dataset}{15}{}%
+\contentsline {section}{\numberline {3.2}Definición del Baseline Físico}{15}{}%
+\contentsline {section}{\numberline {3.3}Modelos ML no Informados}{15}{}%
+\contentsline {section}{\numberline {3.4}Arquitectura del Modelo PINN}{15}{}%
+\contentsline {section}{\numberline {3.5}Función de Pérdida Personalizada}{15}{}%
+\contentsline {section}{\numberline {3.6}Optimización de Hiperparámetros}{15}{}%
+\contentsline {chapter}{\numberline {4}Resultados y Discusión (8 páginas min)}{17}{}%
+\contentsline {section}{\numberline {4.1}Comparativa Global de Modelos}{17}{}%
+\contentsline {section}{\numberline {4.2}Evaluación en Escenarios LTO (Altas Fluencias)}{17}{}%
+\contentsline {section}{\numberline {4.3}Discusión}{17}{}%
+\contentsline {chapter}{\numberline {5}Conclusiones y Trabajo Futuro (3 páginas max)}{19}{}%
