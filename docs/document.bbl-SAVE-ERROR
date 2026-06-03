@@ -1,0 +1,1027 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{bonny2013}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4f5a8053b24be7f04efe54f0ea8f9beb}{%
+           family={Bonny},
+           familyi={B\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d83c2e80908dd42fb71ff5a992f08e92}{%
+           family={Terentyev},
+           familyi={T\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d533b0ddc942ac030f024255feba7e7}{%
+           family={Bakaev},
+           familyi={B\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{c7b4381366b4091bad6d893c27dca985}
+      \strng{fullhash}{a17dfbc25cf1a18d4847baae112bcded}
+      \strng{bibnamehash}{a17dfbc25cf1a18d4847baae112bcded}
+      \strng{authorbibnamehash}{a17dfbc25cf1a18d4847baae112bcded}
+      \strng{authornamehash}{c7b4381366b4091bad6d893c27dca985}
+      \strng{authorfullhash}{a17dfbc25cf1a18d4847baae112bcded}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Nuclear Materials}
+      \field{title}{Ab initio based modelling of dislocation mobility in Fe-Cu alloys}
+      \field{volume}{433}
+      \field{year}{2013}
+      \field{pages}{324\bibrangedash 331}
+      \range{pages}{8}
+    \endentry
+    \entry{dagata2025}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0c014f7ea6ce9b4608b1337f747faf62}{%
+           family={D’Agata},
+           familyi={D\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor & Francis}%
+      }
+      \strng{namehash}{574d9c8a1b58e6c85bb1d467a49debc5}
+      \strng{fullhash}{574d9c8a1b58e6c85bb1d467a49debc5}
+      \strng{bibnamehash}{574d9c8a1b58e6c85bb1d467a49debc5}
+      \strng{authorbibnamehash}{574d9c8a1b58e6c85bb1d467a49debc5}
+      \strng{authornamehash}{574d9c8a1b58e6c85bb1d467a49debc5}
+      \strng{authorfullhash}{574d9c8a1b58e6c85bb1d467a49debc5}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nuclear Science and Engineering}
+      \field{title}{The LYRA-10 Experiment: Irradiation of Light Water Reactor Pressure Vessel Steels...}
+      \field{year}{2025}
+      \field{pages}{1\bibrangedash 17}
+      \range{pages}{17}
+    \endentry
+    \entry{eason2013}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=95649e7169900c8b4939435c5ca6b2d0}{%
+           family={Eason},
+           familyi={E\bibinitperiod},
+           given={E.\bibnamedelimi D.},
+           giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=308ffbcb2c0b8b45575ec194f3d1d151}{%
+           family={Odette},
+           familyi={O\bibinitperiod},
+           given={G.\bibnamedelimi R.},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79521f89fc24296e483c329a519abd1e}{%
+           family={Nanstad},
+           familyi={N\bibinitperiod},
+           given={R.\bibnamedelimi K.},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {ASTM International}%
+      }
+      \strng{namehash}{b0368423bf5c6dd84bcc6cb252c884a7}
+      \strng{fullhash}{c222fa28a2340736068101f775fc7551}
+      \strng{bibnamehash}{c222fa28a2340736068101f775fc7551}
+      \strng{authorbibnamehash}{c222fa28a2340736068101f775fc7551}
+      \strng{authornamehash}{b0368423bf5c6dd84bcc6cb252c884a7}
+      \strng{authorfullhash}{c222fa28a2340736068101f775fc7551}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ASTM Special Technical Publication}
+      \field{title}{Attenuation of radiation damage in reactor pressure vessel steels}
+      \field{volume}{1559}
+      \field{year}{2013}
+      \field{pages}{1\bibrangedash 20}
+      \range{pages}{20}
+    \endentry
+    \entry{karniadakis2021}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=bfaf154b1f300f885a75adce4c6b773e}{%
+           family={Karniadakis},
+           familyi={K\bibinitperiod},
+           given={George\bibnamedelima Em},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6724128bc20ba35122214b84fa281063}{%
+           family={Kevrekidis},
+           familyi={K\bibinitperiod},
+           given={Ioannis\bibnamedelima G},
+           giveni={I\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6f6f1357e5a7fb658e3e9c999886ce83}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Lu},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=197d71332633e07aa578718628fdc405}{%
+           family={Perdikaris},
+           familyi={P\bibinitperiod},
+           given={Paris},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=15db674b3efc6848f40514aa0034717a}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Sifan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=13b67d4d83b1d3002d9480fa84cdc9ee}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Liu},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{0ca376f95d5378ee9091f725b7c83175}
+      \strng{fullhash}{f60a0a5b39f53a61a153afd70f5530c7}
+      \strng{bibnamehash}{f60a0a5b39f53a61a153afd70f5530c7}
+      \strng{authorbibnamehash}{f60a0a5b39f53a61a153afd70f5530c7}
+      \strng{authornamehash}{0ca376f95d5378ee9091f725b7c83175}
+      \strng{authorfullhash}{f60a0a5b39f53a61a153afd70f5530c7}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Reviews Physics}
+      \field{number}{6}
+      \field{title}{Physics-informed machine learning}
+      \field{volume}{3}
+      \field{year}{2021}
+      \field{pages}{422\bibrangedash 440}
+      \range{pages}{19}
+    \endentry
+    \entry{liu2022machine}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=fe0eb8f00333659ded5eeab90b06e918}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yu-chen},
+           giveni={Y\bibinithyphendelim c\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f45f099736441ee39bd4171d482757ee}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Henry},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9858388fc304313f41a32cb56aee445e}{%
+           family={Mayeshiba},
+           familyi={M\bibinitperiod},
+           given={Tam},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=615868f2db0f373edcb5efc65dffbace}{%
+           family={Afflerbach},
+           familyi={A\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b0d6cf07d11ed51e5613f26384aa4619}{%
+           family={Jacobs},
+           familyi={J\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a127c13625020d008870aa72cfc13894}{%
+           family={Perry},
+           familyi={P\bibinitperiod},
+           given={Josh},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3620abd198359312f978d905d4b36748}{%
+           family={George},
+           familyi={G\bibinitperiod},
+           given={Jerit},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4338b0ee59b7baf96bacb367dc249e5}{%
+           family={Cordell},
+           familyi={C\bibinitperiod},
+           given={Josh},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=56a479ced62cd8ef7e1034bd669550c8}{%
+           family={Xia},
+           familyi={X\bibinitperiod},
+           given={Jinyu},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e7ec601c27f7ec7eb2d564022321cbc8}{%
+           family={Yuan},
+           familyi={Y\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{ddb15fd01c51c564a9b58f0229a502b7}
+      \strng{fullhash}{2746a0b566b096d92787c06dd1593e8d}
+      \strng{bibnamehash}{2746a0b566b096d92787c06dd1593e8d}
+      \strng{authorbibnamehash}{2746a0b566b096d92787c06dd1593e8d}
+      \strng{authornamehash}{ddb15fd01c51c564a9b58f0229a502b7}
+      \strng{authorfullhash}{2746a0b566b096d92787c06dd1593e8d}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{npj Computational Materials}
+      \field{number}{1}
+      \field{title}{Machine learning predictions of irradiation embrittlement in reactor pressure vessel steels}
+      \field{volume}{8}
+      \field{year}{2022}
+      \field{pages}{85}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41524-022-00760-4
+      \endverb
+    \endentry
+    \entry{ma2020}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=dc76eef66c89440e4e5275de607ffbfe}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{a558cb408b65cfdb901bc6482aba2a2a}
+      \strng{fullhash}{a558cb408b65cfdb901bc6482aba2a2a}
+      \strng{bibnamehash}{a558cb408b65cfdb901bc6482aba2a2a}
+      \strng{authorbibnamehash}{a558cb408b65cfdb901bc6482aba2a2a}
+      \strng{authornamehash}{a558cb408b65cfdb901bc6482aba2a2a}
+      \strng{authorfullhash}{a558cb408b65cfdb901bc6482aba2a2a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Materials Today}
+      \field{title}{Deep learning for accelerated discovery of high-entropy alloys}
+      \field{volume}{38}
+      \field{year}{2020}
+      \field{pages}{85\bibrangedash 93}
+      \range{pages}{9}
+    \endentry
+    \entry{mathew2018reactor}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=2910a2b51d8409cac59796cdfb98a001}{%
+           family={Mathew},
+           familyi={M\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c18452d9bd1a31eed95d33e0f003c3dc}{%
+           family={Parfitt},
+           familyi={P\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a3f96ab1484d8a049ccb880e675dfd40}{%
+           family={Riddle},
+           familyi={R\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5f47d232d6760e31f3381ad4c30eab7f}{%
+           family={Chard-Tuckey},
+           familyi={C\bibinithyphendelim T\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{beba79bb79b25a646643f0bbce71bf15}
+      \strng{fullhash}{40b9a4b3b9746ea18a8aa6b3bb4e55ed}
+      \strng{bibnamehash}{40b9a4b3b9746ea18a8aa6b3bb4e55ed}
+      \strng{authorbibnamehash}{40b9a4b3b9746ea18a8aa6b3bb4e55ed}
+      \strng{authornamehash}{beba79bb79b25a646643f0bbce71bf15}
+      \strng{authorfullhash}{40b9a4b3b9746ea18a8aa6b3bb4e55ed}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Nuclear Materials}
+      \field{title}{Reactor pressure vessel embrittlement: Insights from neural network modelling}
+      \field{volume}{502}
+      \field{year}{2018}
+      \true{nocite}
+      \field{pages}{311\bibrangedash 322}
+      \range{pages}{12}
+    \endentry
+    \entry{odette2019history}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=308ffbcb2c0b8b45575ec194f3d1d151}{%
+           family={Odette},
+           familyi={O\bibinitperiod},
+           given={G.\bibnamedelimi R.},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79521f89fc24296e483c329a519abd1e}{%
+           family={Nanstad},
+           familyi={N\bibinitperiod},
+           given={R.\bibnamedelimi K.},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=853b74728a6ca9e2a609f0703adcd9a1}{%
+           family={Server},
+           familyi={S\bibinitperiod},
+           given={W.\bibnamedelimi L.},
+           giveni={W\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95649e7169900c8b4939435c5ca6b2d0}{%
+           family={Eason},
+           familyi={E\bibinitperiod},
+           given={E.\bibnamedelimi D.},
+           giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{e74020cfbba42010d8cf12378cf51e6f}
+      \strng{fullhash}{f5fd3a1ba07445088c2a24112ba7e3f0}
+      \strng{bibnamehash}{f5fd3a1ba07445088c2a24112ba7e3f0}
+      \strng{authorbibnamehash}{f5fd3a1ba07445088c2a24112ba7e3f0}
+      \strng{authornamehash}{e74020cfbba42010d8cf12378cf51e6f}
+      \strng{authorfullhash}{f5fd3a1ba07445088c2a24112ba7e3f0}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Nuclear Materials}
+      \field{title}{On the history and status of reactor pressure vessel steel ductile to brittle transition temperature shift prediction models}
+      \field{volume}{526}
+      \field{year}{2019}
+      \field{pages}{151863}
+      \range{pages}{1}
+    \endentry
+    \entry{pang2020}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=ab9b6d6c9b3e41ec5b4bf6b1924e0413}{%
+           family={Pang},
+           familyi={P\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=299b9a25f5bd97c358ecf21f51232bb7}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c2f5930e36485e8d38a87746769fdcc}{%
+           family={Karniadakis},
+           familyi={K\bibinitperiod},
+           given={G.\bibnamedelimi E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {SIAM}%
+      }
+      \strng{namehash}{8ccab053bf282beba9aa0e2fd0808f67}
+      \strng{fullhash}{f76d268a7c72732a13c9b8c519128801}
+      \strng{bibnamehash}{f76d268a7c72732a13c9b8c519128801}
+      \strng{authorbibnamehash}{f76d268a7c72732a13c9b8c519128801}
+      \strng{authornamehash}{8ccab053bf282beba9aa0e2fd0808f67}
+      \strng{authorfullhash}{f76d268a7c72732a13c9b8c519128801}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SIAM Journal on Scientific Computing}
+      \field{number}{4}
+      \field{title}{fPINNs: Fractional physics-informed neural networks}
+      \field{volume}{42}
+      \field{year}{2020}
+      \field{pages}{A2603\bibrangedash A2630}
+      \range{pages}{-1}
+    \endentry
+    \entry{raissi2019physics}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=95a17c39168b9e6b8812f207b4e036c1}{%
+           family={Raissi},
+           familyi={R\bibinitperiod},
+           given={Maziar},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=197d71332633e07aa578718628fdc405}{%
+           family={Perdikaris},
+           familyi={P\bibinitperiod},
+           given={Paris},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9aae361c2be63ce52bc98112e2a2fffa}{%
+           family={Karniadakis},
+           familyi={K\bibinitperiod},
+           given={George\bibnamedelima E},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{d313186ef90b9962b2cc1c7bc257c3f7}
+      \strng{fullhash}{93ae6c4ff4235c02057fbd439fa964f6}
+      \strng{bibnamehash}{93ae6c4ff4235c02057fbd439fa964f6}
+      \strng{authorbibnamehash}{93ae6c4ff4235c02057fbd439fa964f6}
+      \strng{authornamehash}{d313186ef90b9962b2cc1c7bc257c3f7}
+      \strng{authorfullhash}{93ae6c4ff4235c02057fbd439fa964f6}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Computational Physics}
+      \field{title}{Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations}
+      \field{volume}{378}
+      \field{year}{2019}
+      \field{pages}{686\bibrangedash 707}
+      \range{pages}{22}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{bonny2013}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4f5a8053b24be7f04efe54f0ea8f9beb}{%
+           family={Bonny},
+           familyi={B\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d83c2e80908dd42fb71ff5a992f08e92}{%
+           family={Terentyev},
+           familyi={T\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d533b0ddc942ac030f024255feba7e7}{%
+           family={Bakaev},
+           familyi={B\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{c7b4381366b4091bad6d893c27dca985}
+      \strng{fullhash}{a17dfbc25cf1a18d4847baae112bcded}
+      \strng{bibnamehash}{a17dfbc25cf1a18d4847baae112bcded}
+      \strng{authorbibnamehash}{a17dfbc25cf1a18d4847baae112bcded}
+      \strng{authornamehash}{c7b4381366b4091bad6d893c27dca985}
+      \strng{authorfullhash}{a17dfbc25cf1a18d4847baae112bcded}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Nuclear Materials}
+      \field{title}{Ab initio based modelling of dislocation mobility in Fe-Cu alloys}
+      \field{volume}{433}
+      \field{year}{2013}
+      \field{pages}{324\bibrangedash 331}
+      \range{pages}{8}
+    \endentry
+    \entry{dagata2025}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0c014f7ea6ce9b4608b1337f747faf62}{%
+           family={D’Agata},
+           familyi={D\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor & Francis}%
+      }
+      \strng{namehash}{574d9c8a1b58e6c85bb1d467a49debc5}
+      \strng{fullhash}{574d9c8a1b58e6c85bb1d467a49debc5}
+      \strng{bibnamehash}{574d9c8a1b58e6c85bb1d467a49debc5}
+      \strng{authorbibnamehash}{574d9c8a1b58e6c85bb1d467a49debc5}
+      \strng{authornamehash}{574d9c8a1b58e6c85bb1d467a49debc5}
+      \strng{authorfullhash}{574d9c8a1b58e6c85bb1d467a49debc5}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nuclear Science and Engineering}
+      \field{title}{The LYRA-10 Experiment: Irradiation of Light Water Reactor Pressure Vessel Steels...}
+      \field{year}{2025}
+      \field{pages}{1\bibrangedash 17}
+      \range{pages}{17}
+    \endentry
+    \entry{eason2013}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=95649e7169900c8b4939435c5ca6b2d0}{%
+           family={Eason},
+           familyi={E\bibinitperiod},
+           given={E.\bibnamedelimi D.},
+           giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=308ffbcb2c0b8b45575ec194f3d1d151}{%
+           family={Odette},
+           familyi={O\bibinitperiod},
+           given={G.\bibnamedelimi R.},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79521f89fc24296e483c329a519abd1e}{%
+           family={Nanstad},
+           familyi={N\bibinitperiod},
+           given={R.\bibnamedelimi K.},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {ASTM International}%
+      }
+      \strng{namehash}{b0368423bf5c6dd84bcc6cb252c884a7}
+      \strng{fullhash}{c222fa28a2340736068101f775fc7551}
+      \strng{bibnamehash}{c222fa28a2340736068101f775fc7551}
+      \strng{authorbibnamehash}{c222fa28a2340736068101f775fc7551}
+      \strng{authornamehash}{b0368423bf5c6dd84bcc6cb252c884a7}
+      \strng{authorfullhash}{c222fa28a2340736068101f775fc7551}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ASTM Special Technical Publication}
+      \field{title}{Attenuation of radiation damage in reactor pressure vessel steels}
+      \field{volume}{1559}
+      \field{year}{2013}
+      \field{pages}{1\bibrangedash 20}
+      \range{pages}{20}
+    \endentry
+    \entry{karniadakis2021}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=bfaf154b1f300f885a75adce4c6b773e}{%
+           family={Karniadakis},
+           familyi={K\bibinitperiod},
+           given={George\bibnamedelima Em},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6724128bc20ba35122214b84fa281063}{%
+           family={Kevrekidis},
+           familyi={K\bibinitperiod},
+           given={Ioannis\bibnamedelima G},
+           giveni={I\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6f6f1357e5a7fb658e3e9c999886ce83}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Lu},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=197d71332633e07aa578718628fdc405}{%
+           family={Perdikaris},
+           familyi={P\bibinitperiod},
+           given={Paris},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=15db674b3efc6848f40514aa0034717a}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Sifan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=13b67d4d83b1d3002d9480fa84cdc9ee}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Liu},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{0ca376f95d5378ee9091f725b7c83175}
+      \strng{fullhash}{f60a0a5b39f53a61a153afd70f5530c7}
+      \strng{bibnamehash}{f60a0a5b39f53a61a153afd70f5530c7}
+      \strng{authorbibnamehash}{f60a0a5b39f53a61a153afd70f5530c7}
+      \strng{authornamehash}{0ca376f95d5378ee9091f725b7c83175}
+      \strng{authorfullhash}{f60a0a5b39f53a61a153afd70f5530c7}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature Reviews Physics}
+      \field{number}{6}
+      \field{title}{Physics-informed machine learning}
+      \field{volume}{3}
+      \field{year}{2021}
+      \field{pages}{422\bibrangedash 440}
+      \range{pages}{19}
+    \endentry
+    \entry{liu2022machine}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=fe0eb8f00333659ded5eeab90b06e918}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yu-chen},
+           giveni={Y\bibinithyphendelim c\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f45f099736441ee39bd4171d482757ee}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Henry},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9858388fc304313f41a32cb56aee445e}{%
+           family={Mayeshiba},
+           familyi={M\bibinitperiod},
+           given={Tam},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=615868f2db0f373edcb5efc65dffbace}{%
+           family={Afflerbach},
+           familyi={A\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b0d6cf07d11ed51e5613f26384aa4619}{%
+           family={Jacobs},
+           familyi={J\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a127c13625020d008870aa72cfc13894}{%
+           family={Perry},
+           familyi={P\bibinitperiod},
+           given={Josh},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3620abd198359312f978d905d4b36748}{%
+           family={George},
+           familyi={G\bibinitperiod},
+           given={Jerit},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4338b0ee59b7baf96bacb367dc249e5}{%
+           family={Cordell},
+           familyi={C\bibinitperiod},
+           given={Josh},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=56a479ced62cd8ef7e1034bd669550c8}{%
+           family={Xia},
+           familyi={X\bibinitperiod},
+           given={Jinyu},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e7ec601c27f7ec7eb2d564022321cbc8}{%
+           family={Yuan},
+           familyi={Y\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{ddb15fd01c51c564a9b58f0229a502b7}
+      \strng{fullhash}{2746a0b566b096d92787c06dd1593e8d}
+      \strng{bibnamehash}{2746a0b566b096d92787c06dd1593e8d}
+      \strng{authorbibnamehash}{2746a0b566b096d92787c06dd1593e8d}
+      \strng{authornamehash}{ddb15fd01c51c564a9b58f0229a502b7}
+      \strng{authorfullhash}{2746a0b566b096d92787c06dd1593e8d}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{npj Computational Materials}
+      \field{number}{1}
+      \field{title}{Machine learning predictions of irradiation embrittlement in reactor pressure vessel steels}
+      \field{volume}{8}
+      \field{year}{2022}
+      \field{pages}{85}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41524-022-00760-4
+      \endverb
+    \endentry
+    \entry{ma2020}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=dc76eef66c89440e4e5275de607ffbfe}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{a558cb408b65cfdb901bc6482aba2a2a}
+      \strng{fullhash}{a558cb408b65cfdb901bc6482aba2a2a}
+      \strng{bibnamehash}{a558cb408b65cfdb901bc6482aba2a2a}
+      \strng{authorbibnamehash}{a558cb408b65cfdb901bc6482aba2a2a}
+      \strng{authornamehash}{a558cb408b65cfdb901bc6482aba2a2a}
+      \strng{authorfullhash}{a558cb408b65cfdb901bc6482aba2a2a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Materials Today}
+      \field{title}{Deep learning for accelerated discovery of high-entropy alloys}
+      \field{volume}{38}
+      \field{year}{2020}
+      \field{pages}{85\bibrangedash 93}
+      \range{pages}{9}
+    \endentry
+    \entry{mathew2018reactor}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=2910a2b51d8409cac59796cdfb98a001}{%
+           family={Mathew},
+           familyi={M\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c18452d9bd1a31eed95d33e0f003c3dc}{%
+           family={Parfitt},
+           familyi={P\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a3f96ab1484d8a049ccb880e675dfd40}{%
+           family={Riddle},
+           familyi={R\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5f47d232d6760e31f3381ad4c30eab7f}{%
+           family={Chard-Tuckey},
+           familyi={C\bibinithyphendelim T\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{beba79bb79b25a646643f0bbce71bf15}
+      \strng{fullhash}{40b9a4b3b9746ea18a8aa6b3bb4e55ed}
+      \strng{bibnamehash}{40b9a4b3b9746ea18a8aa6b3bb4e55ed}
+      \strng{authorbibnamehash}{40b9a4b3b9746ea18a8aa6b3bb4e55ed}
+      \strng{authornamehash}{beba79bb79b25a646643f0bbce71bf15}
+      \strng{authorfullhash}{40b9a4b3b9746ea18a8aa6b3bb4e55ed}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Nuclear Materials}
+      \field{title}{Reactor pressure vessel embrittlement: Insights from neural network modelling}
+      \field{volume}{502}
+      \field{year}{2018}
+      \true{nocite}
+      \field{pages}{311\bibrangedash 322}
+      \range{pages}{12}
+    \endentry
+    \entry{odette2019history}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=308ffbcb2c0b8b45575ec194f3d1d151}{%
+           family={Odette},
+           familyi={O\bibinitperiod},
+           given={G.\bibnamedelimi R.},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79521f89fc24296e483c329a519abd1e}{%
+           family={Nanstad},
+           familyi={N\bibinitperiod},
+           given={R.\bibnamedelimi K.},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=853b74728a6ca9e2a609f0703adcd9a1}{%
+           family={Server},
+           familyi={S\bibinitperiod},
+           given={W.\bibnamedelimi L.},
+           giveni={W\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95649e7169900c8b4939435c5ca6b2d0}{%
+           family={Eason},
+           familyi={E\bibinitperiod},
+           given={E.\bibnamedelimi D.},
+           giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{e74020cfbba42010d8cf12378cf51e6f}
+      \strng{fullhash}{f5fd3a1ba07445088c2a24112ba7e3f0}
+      \strng{bibnamehash}{f5fd3a1ba07445088c2a24112ba7e3f0}
+      \strng{authorbibnamehash}{f5fd3a1ba07445088c2a24112ba7e3f0}
+      \strng{authornamehash}{e74020cfbba42010d8cf12378cf51e6f}
+      \strng{authorfullhash}{f5fd3a1ba07445088c2a24112ba7e3f0}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Nuclear Materials}
+      \field{title}{On the history and status of reactor pressure vessel steel ductile to brittle transition temperature shift prediction models}
+      \field{volume}{526}
+      \field{year}{2019}
+      \field{pages}{151863}
+      \range{pages}{1}
+    \endentry
+    \entry{pang2020}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=ab9b6d6c9b3e41ec5b4bf6b1924e0413}{%
+           family={Pang},
+           familyi={P\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=299b9a25f5bd97c358ecf21f51232bb7}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c2f5930e36485e8d38a87746769fdcc}{%
+           family={Karniadakis},
+           familyi={K\bibinitperiod},
+           given={G.\bibnamedelimi E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {SIAM}%
+      }
+      \strng{namehash}{8ccab053bf282beba9aa0e2fd0808f67}
+      \strng{fullhash}{f76d268a7c72732a13c9b8c519128801}
+      \strng{bibnamehash}{f76d268a7c72732a13c9b8c519128801}
+      \strng{authorbibnamehash}{f76d268a7c72732a13c9b8c519128801}
+      \strng{authornamehash}{8ccab053bf282beba9aa0e2fd0808f67}
+      \strng{authorfullhash}{f76d268a7c72732a13c9b8c519128801}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SIAM Journal on Scientific Computing}
+      \field{number}{4}
+      \field{title}{fPINNs: Fractional physics-informed neural networks}
+      \field{volume}{42}
+      \field{year}{2020}
+      \field{pages}{A2603\bibrangedash A2630}
+      \range{pages}{-1}
+    \endentry
+    \entry{raissi2019physics}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=95a17c39168b9e6b8812f207b4e036c1}{%
+           family={Raissi},
+           familyi={R\bibinitperiod},
+           given={Maziar},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=197d71332633e07aa578718628fdc405}{%
+           family={Perdikaris},
+           familyi={P\bibinitperiod},
+           given={Paris},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9aae361c2be63ce52bc98112e2a2fffa}{%
+           family={Karniadakis},
+           familyi={K\bibinitperiod},
+           given={George\bibnamedelima E},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{d313186ef90b9962b2cc1c7bc257c3f7}
+      \strng{fullhash}{93ae6c4ff4235c02057fbd439fa964f6}
+      \strng{bibnamehash}{93ae6c4ff4235c02057fbd439fa964f6}
+      \strng{authorbibnamehash}{93ae6c4ff4235c02057fbd439fa964f6}
+      \strng{authornamehash}{d313186ef90b9962b2cc1c7bc257c3f7}
+      \strng{authorfullhash}{93ae6c4ff4235c02057fbd439fa964f6}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Computational Physics}
+      \field{title}{Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations}
+      \field{volume}{378}
+      \field{year}{2019}
+      \field{pages}{686\bibrangedash 707}
+      \range{pages}{22}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -61,31 +61,52 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Descripción y Procesamiento del Dataset}{15}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Definición del Baseline Físico}{15}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Modelos ML no Informados}{15}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Arquitectura del Modelo PINN}{15}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Función de Pérdida Personalizada}{15}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}Optimización de Hiperparámetros}{15}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Resultados y Discusión (8 páginas min)}{17}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Ingesta y Naturaleza de los Datos}{15}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Preprocesamiento y Transformación de Variables}{16}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Matriz de correlación entre las variables del dataset. Se observa una fuerte correlación positiva entre la fluencia neutrónica ($\Phi $) y el desplazamiento de la temperatura de transición (\texttt  {DT41J\_Celsius}), lo que es consistente con la física del problema.}}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Estrategia de Partición (Data Splitting)}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}Normalización y Prevención de Fuga de Información}{17}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.5}Transformación Inversa de Predicciones}{17}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Definición del Baseline Físico}{18}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Modelos ML no Informados}{19}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Modelo de Ensamblaje: XGBoost}{20}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Aprendizaje Profundo: Perceptrón Multicapa (MLP Inicial)}{21}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Minimización del Riesgo Empírico y Justificación Metodológica}{21}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Arquitectura del Modelo PINN}{22}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Diseño Topológico y Dinámico}{22}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Flujo Tensorial y Estrategia de Aprendizaje Residual}{23}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Motor de Diferenciación Automática (Autograd)}{23}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.4}Entorno Computacional y Aceleración de Hardware}{24}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Función de Pérdida Personalizada}{24}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Formulación Matemática de la Pérdida Combinada}{25}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}La Restricción Física: Monotonía respecto a la Fluencia}{25}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Algoritmo y Penalización Diferencial Continua}{26}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.4}Justificación Metodológica y Generalización}{27}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Optimización de Hiperparámetros}{27}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.1}Justificación de la Búsqueda Bayesiana}{28}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.2}Definición del Espacio de Búsqueda Paramétrico}{28}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.3}Estrategia de Validación y Función Objetivo}{29}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.4}Gestión de Memoria y Aceleración en VRAM}{29}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Resultados y Discusión (8 páginas min)}{31}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Comparativa Global de Modelos}{17}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Evaluación en Escenarios LTO (Altas Fluencias)}{17}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Discusión}{17}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Comparativa Global de Modelos}{31}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Evaluación en Escenarios LTO (Altas Fluencias)}{31}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Discusión}{31}{}\protected@file@percent }
 \abx@aux@nociteall
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusiones y Trabajo Futuro (3 páginas max)}{19}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusiones y Trabajo Futuro (3 páginas max)}{33}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\abx@aux@page{10}{21}
-\abx@aux@page{11}{21}
-\abx@aux@page{12}{21}
-\abx@aux@page{13}{21}
-\abx@aux@page{14}{21}
-\abx@aux@page{15}{21}
-\abx@aux@page{16}{21}
-\abx@aux@page{17}{21}
-\abx@aux@page{18}{21}
-\abx@aux@page{19}{21}
+\abx@aux@page{10}{35}
+\abx@aux@page{11}{35}
+\abx@aux@page{12}{35}
+\abx@aux@page{13}{35}
+\abx@aux@page{14}{35}
+\abx@aux@page{15}{35}
+\abx@aux@page{16}{35}
+\abx@aux@page{17}{35}
+\abx@aux@page{18}{35}
+\abx@aux@page{19}{35}
 \abx@aux@read@bbl@mdfivesum{97134C218DE9D15252EDE82C342D7C30}
 \abx@aux@defaultrefcontext{0}{bonny2013}{apa/global//global/global}
 \abx@aux@defaultrefcontext{0}{dagata2025}{apa/global//global/global}
@@ -97,4 +118,4 @@
 \abx@aux@defaultrefcontext{0}{odette2019history}{apa/global//global/global}
 \abx@aux@defaultrefcontext{0}{pang2020}{apa/global//global/global}
 \abx@aux@defaultrefcontext{0}{raissi2019physics}{apa/global//global/global}
-\gdef \@abspage@last{21}
+\gdef \@abspage@last{35}
