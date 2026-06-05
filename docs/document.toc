@@ -38,6 +38,6 @@
 \contentsline {subsection}{\numberline {3.6.4}Gestión de Memoria y Aceleración en VRAM}{29}{}%
 \contentsline {chapter}{\numberline {4}Resultados y Discusión (8 páginas min)}{31}{}%
 \contentsline {section}{\numberline {4.1}Comparativa Global de Modelos}{31}{}%
-\contentsline {section}{\numberline {4.2}Evaluación en Escenarios LTO (Altas Fluencias)}{31}{}%
-\contentsline {section}{\numberline {4.3}Discusión}{31}{}%
-\contentsline {chapter}{\numberline {5}Conclusiones y Trabajo Futuro (3 páginas max)}{33}{}%
+\contentsline {section}{\numberline {4.2}Evaluación en Escenarios LTO (Altas Fluencias)}{32}{}%
+\contentsline {section}{\numberline {4.3}Discusión}{33}{}%
+\contentsline {chapter}{\numberline {5}Conclusiones y Trabajo Futuro (3 páginas max)}{35}{}%

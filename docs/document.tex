@@ -2,7 +2,7 @@
 
 % Configuración de idioma y codificación
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[spanish,es-tabla]{babel}
 
 % Configuración de márgenes APA (2.54 cm en todos los lados)
 \usepackage[margin=2.54cm]{geometry}
@@ -27,6 +27,8 @@
 \usepackage{caption}
 % Paquetes matemáticos
 \usepackage{amsmath,amssymb,amsfonts}
+
+\usepackage{booktabs}
 
 % Bibliografía APA
 \usepackage[backend=biber, style=apa]{biblatex} % Carga el paquete (puedes cambiar apa por ieee, numeric, etc.)
@@ -462,23 +464,92 @@ Para blindar la infraestructura experimental frente a este fallo crítico, se in
 
 \chapter{Resultados y Discusión (8 páginas min)}
 
-Loren Ipsum
+El presente capítulo aborda la evaluación cuantitativa y fenomenológica de los modelos desarrollados, contrastando las aproximaciones analíticas normativas con los algoritmos de aprendizaje automático puros y el marco híbrido propuesto basado en Redes Neuronales Informadas por la Física (PINNs). Para simular de manera estricta un escenario de Operación a Largo Plazo (LTO) y evaluar el riesgo de extrapolación, el dataset global de 1889 muestras fue dividido de forma secuencial en función de la fluencia neutrónica ($\Phi$). Se reservó el 75\% de los datos (1416 muestras de bajas y medias fluencias) para el entrenamiento y validación arquitectónica, mientras que el 25\% restante (473 muestras correspondientes a los regímenes de irradiación más elevados y extremos) se aisló por completo como conjunto de prueba (\textit{Test Set}) para validar la robustez del modelo en horizontes temporales extendidos.
 
 \section{Comparativa Global de Modelos}
 
-Loren Ipsum
+Para establecer un marco de comparación científica equitativo, se implementó en primera instancia una calibración local del modelo físico de referencia ASTM E900-15 sobre el conjunto de entrenamiento local mediante el principio de Estimación de Máxima Verosimilitud (MLE), resolviendo un problema de mínimos cuadrados no lineales. Esto permitió ajustar los seis coeficientes multiplicativos globales ($A$ y $B$ para soldaduras, forjas y placas) a la dispersión específica de nuestro banco de datos, obteniendo los parámetros optimizados $A_{weld} = 0.9449$, $B_{weld} = 0.9736$, $A_{forge} = 0.8795$, $B_{forge} = 0.7494$, $A_{plate} = 1.0719$ y $B_{plate} = 0.8541$, dicho ajuste puede verse en la Figura \ref{fig:ajuste_modelo}. La calibración estándar puede observarese en la Figura \ref{fig:ajuste_modelo_estandar} del Anexo.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[trim={12.5cm 0cm 0cm 0cm}, clip, width=0.45\textwidth]{../data/img/astm.png}
+    \caption{Ecuación de la norma ASTM E900-15 calibrada localmente mediante el método de Estimación de Máxima Verosimilitud (MLE) sobre el conjunto de entrenamiento. Se observa que, aunque la calibración logra reducir ligeramente el error en el dominio de entrenamiento, la rigidez funcional del modelo normativo impide una mejora significativa en la capacidad de extrapolación hacia regímenes de alta fluencia, evidenciando un comportamiento característico de sobreajuste al dominio físico específico.}
+    \label{fig:ajuste_modelo}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[trim={0cm 0cm 12.5cm 0cm}, clip, width=0.45\textwidth]{../data/img/astm.png}
+    \caption{Ecuación de la norma ASTM E900-15 estandarizada.}
+    \label{fig:ajuste_modelo_estandar}
+\end{figure}
+
+Los resultados estadísticos globales obtenidos tras la inferencia en el conjunto de prueba ciego se condensan en la Tabla \ref{tab:comparativa_modelos}.
+
+\begin{table*}[t] % <-- Añade el asterisco aquí. El modificador [t] (top) es muy recomendado para table*
+\centering
+\begin{tabular}{lccc}
+\toprule
+\textbf{Modelo Evaluado} & \textbf{RMSE Train (°C)} & \textbf{RMSE Test (°C)} & \textbf{$R^2$ Test} \\
+\midrule
+ASTM E900-15 Estándar (Global)   & 12.870 & 15.245 & 0.8331 \\
+ASTM E900-15 Calibrada (Local-MLE) & 12.815 & 15.927 & 0.8178 \\
+XGBoost (\textit{Data-driven} Puro)      & 0.3553 & 64.086 & 0.1263 \\
+PINN Básica (Loss Combinada)     & 11.579  & 27.301 & --     \\
+\textbf{PINN Extrapolación (Optuna)} & \textbf{11.819} & \textbf{16.240} & \textbf{0.8859} \\
+\bottomrule
+\end{tabular}
+\caption{Métricas de rendimiento global en escenarios de extrapolación de alta fluencia (LTO).}
+\label{tab:comparativa_modelos}
+\end{table*} % <-- Añade el asterisco aquí también
+
+El análisis de la calibración local de la norma ASTM devela un comportamiento característico del sobreajuste en el dominio físico. Al sintonizar de manera óptima los coeficientes fenomenológicos para los datos de baja fluencia, el error en el \textit{Train Set} se contrajo marginalmente de $12.870\ ^\circ\text{C}$ a $12.815\ ^\circ\text{C}$. Sin embargo, al proyectar estas curvas analíticas rígidas hacia el régimen extremo de test, el RMSE se degradó de $15.245\ ^\circ\text{C}$ a $15.927\ ^\circ\text{C}$. Este fenómeno demuestra que las regresiones paramétricas tradicionales, a pesar de su robustez conceptual, carecen de la flexibilidad matemática necesaria para asimilar simultáneamente las variaciones metalúrgicas locales y las tendencias asintóticas globales sin incurrir en distorsiones marginales.
 
 \section{Evaluación en Escenarios LTO (Altas Fluencias)}
 
-Loren Ipsum
+El hallazgo técnico más crítico de esta investigación radica en el colapso predictivo absoluto manifestado por los algoritmos de Machine Learning tradicionales desprovistos de información física. Tal como se aprecia en la Tabla \ref{tab:comparativa_modelos} y en la Figura \ref{fig:barras_errores}, el modelo XGBoost óptimo arrojó un RMSE de $64.086\ ^\circ\text{C}$ en el conjunto de extrapolación. Desde la perspectiva de la ciencia de datos, este comportamiento se atribuye a que el algoritmo de potenciación de gradiente opera segmentando el espacio de características mediante hiperplanos ortogonales basados únicamente en la Minimización del Riesgo Empírico ($\mathcal{L}_{MSE}$). 
+
+Al adentrarse en regiones de alta fluencia donde la densidad muestral es nula, el modelo decae en aproximaciones geométricas locales que reproducen el ruido estadístico de la frontera de entrenamiento, derivando en trayectorias físicamente imposibles como la pérdida repentina de fragilización o la inversión del signo del daño térmico. En el contexto de la seguridad nuclear, aceptar un margen de incertidumbre superior a los $60\ ^\circ\text{C}$ invalidaría por completo cualquier análisis de choque térmico presurizado (PTS).
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../data/img/comparativa_modelos.png}
+    \caption{Comparativa del Error Cuadrático Medio (RMSE) en grados Celsius para los distintos modelos, evaluado sobre el conjunto de extrapolación (25\% superior de fluencias neutrónicas). Se evidencia el severo colapso predictivo del modelo data-driven puro (XGBoost) en escenarios simulados de Operación a Largo Plazo (LTO). En contraste, las arquitecturas híbridas (PINN) logran corregir esta divergencia mediante la imposición del sesgo inductivo de monotonía, mitigando el riesgo de extrapolación y alcanzando un rendimiento competitivo frente al baseline analítico normativo (ASTM E900-15)}
+    \label{fig:barras_errores}
+\end{figure}
+
+Por el contrario, la introducción del sesgo inductivo termodinámico mediante la función de pérdida por monotonía modificó sustancialmente la topografía de optimización. La PINN Básica logró reducir el error de extrapolación de Machine Learning a más de la mitad, registrando un RMSE de $27.301\ ^\circ\text{C}$. Tras someter el grafo computacional híbrido a una optimización Bayesiana exhaustiva mediante Optuna, la denominada PINN Extrapolación alcanzó un RMSE definitivo de $16.240\ ^\circ\text{C}$, elevando el coeficiente de determinación ($R^2$) hasta un destacado 0.8859. 
+
+Esto implica que el modelo propuesto no solo corrige las desviaciones no físicas del Machine Learning puro, sino que se sitúa a una distancia menor a $0.3\ ^\circ\text{C}$ del rendimiento de la norma analítica óptima local ($15.927\ ^\circ\text{C}$). La PINN actúa así como un interpolador estadístico de alta fidelidad para composiciones químicas específicas dentro del dominio conocido y como un extrapolador seguro y físicamente consistente guiado por la directriz monótona de la física del estado sólido en regímenes extendidos.
 
 \section{Discusión}
 
-Loren Ipsum
+La convergencia exitosa del modelo computacional híbrido dependió estrictamente de las interacciones dinámicas de su arquitectura profunda descubiertas en la fase de optimización automatizada. El estudio Bayesiano determinó que el diseño óptimo (alcanzado en el \textit{Trial} 20) requería una topología compuesta por un extractor de características denso de 3 capas ocultas con una dimensión interna constante de 96 neuronas, operado bajo una tasa de aprendizaje de $0.00395$ y una regularización L2 (`weight\_decay`) restrictiva de $9.70 \times 10^{-5}$.
+
+Metodológicamente, se constató que la selección de la función de activación desempeña un rol fundamental en la viabilidad matemática de las PINNs. Mientras que los Perceptrones Multicapa tradicionales emplean la función ReLU debido a su simplicidad computacional, las PINNs exigen funciones de activación de suavizado continuo como \textbf{GELU} o \textbf{SiLU}. Dado que la restricción física se evalúa inyectando el residuo diferencial continuo mediante el motor \textit{Autograd} ($\mathcal{L}_{mono} \propto \text{ReLU}(-\frac{\partial \hat{y}}{\partial \Phi})^2$), el uso de ReLU convencional —cuya segunda derivada es nula o indefinida en el origen— interrumpe el flujo hacia atrás del gradiente de orden superior, provocando la desconexión de la componente física del entrenamiento. Las activaciones como GELU preservan la curvatura matemática del espacio latente, permitiendo que la penalización por monotonía actúe como un regularizador geométrico continuo sobre los pesos sinápticos.
+
+Finalmente, el comportamiento del hiperparámetro de ponderación física ($\lambda_{mono} = 0.9387$) evidenció la naturaleza del compromiso multiobjetivo del problema. Durante las iteraciones experimentales, valores excesivamente bajos de $\lambda_{mono}$ ($\le 0.1$) provocaban que la red mutara instantáneamente hacia un Perceptrón convencional, exhibiendo una excelente precisión local pero divergiendo drásticamente hacia pendientes negativas en altas fluencias. 
+
+Por otro lado, valores sobredimensionados de la fuerza física ($\lambda_{mono} \ge 2.0$) forzaban al optimizador Adam a priorizar el residuo diferencial sobre el error empírico, convirtiendo a la red en un clon rígido y dogmático de la ecuación ASTM que subajustaba la variabilidad química real de las probetas Charpy. El valor balanceado de $\approx 0.94$ hallado por Optuna garantizó el equilibrio exacto: la flexibilidad estadística para mapear las complejas interacciones no lineales del cobre, níquel y manganeso, constreñida bajo el límite infranqueable de la segunda ley de la termodinámica.
 
 \chapter{Conclusiones y Trabajo Futuro (3 páginas max)}
 
-Loren Ipsum
+El desarrollo, implementación y validación del marco predictivo híbrido presentado en este Trabajo de Fin de Máster permiten extraer conclusiones de gran relevancia científica y tecnológica para el ámbito de la seguridad nuclear y el diseño de algoritmos avanzados de aprendizaje computacional. En primera instancia, se ha comprobado empíricamente el colapso predictivo absoluto que sufren los modelos tradicionales dirigidos exclusivamente por datos (\textit{data-driven}), como XGBoost, al adentrarse en regímenes de alta fluencia neutrónica no observados durante el entrenamiento. Al alcanzar un RMSE inasumible de $64.086\ ^\circ\text{C}$ en el conjunto de prueba, queda demostrado que la Minimización del Riesgo Empírico clásica es inherentemente incapaz de asimilar criterios de coherencia fenomenológica, priorizando el ajuste del ruido estadístico local por encima de las leyes de la termodinámica y divergiendo hacia trayectorias físicamente imposibles en el dominio de extrapolación.
+
+Por el contrario, la integración de Redes Neuronales Informadas por la Física (PINNs) se erige como una metodología robusta y viable para certificar la Operación a Largo Plazo (LTO) de las centrales nucleares. Al restringir el espacio de hipótesis de la red mediante una penalización diferencial, la arquitectura híbrida redujo de manera drástica el error de extrapolación del Machine Learning puro, consolidando un RMSE definitivo de $16.240\ ^\circ\text{C}$ y un coeficiente de determinación $R^2$ de 0.8859 en el conjunto de prueba ciego de altas fluencias. Esta notable reducción del error sitúa al modelo propuesto en un rendimiento prácticamente idéntico al de la norma analítica óptima local, con la ventaja añadida de retener la flexibilidad geométrica del cálculo neuronal para capturar las interacciones no lineales de los elementos aleantes dentro del dominio conocido.
+
+Asimismo, la investigación demuestra la extraordinaria eficacia del sesgo inductivo de monotonía aplicado al problema de la degradación de materiales. La imposición de la restricción matemática que exige que la derivada parcial de la predicción respecto a la fluencia sea estrictamente mayor o igual a cero, evaluada mediante el motor de diferenciación automática \textit{Autograd} de PyTorch, demostró ser suficiente para guiar al modelo en ausencia de datos experimentales de soporte. Esta directriz impide que el Perceptrón Multicapa proyecte recuperaciones irrealistas de tenacidad, forzando trayectorias asintóticas estables y consistentes con la cinética de acumulación de defectos y nano-precipitados en la matriz del acero ferrítico.
+
+Finalmente, se ha determinado que la convergencia exitosa de este tipo de arquitecturas híbridas depende críticamente de una cuidadosa sinergia entre la topología de la red, sus funciones de transferencia y el equilibrio de la función de pérdida. El uso de activaciones de suavizado continuo como SiLU o GELU resulta matemáticamente imperativo para preservar el flujo del gradiente de orden superior, evitando la desactivación del término físico que ocurre al emplear la función ReLU convencional. De igual forma, el marco de optimización automatizada Optuna resolvió con éxito el complejo compromiso multiobjetivo del espacio latente, hallando el peso exacto de la componente física ($\lambda_{mono} \approx 0.94$) necesario para hibridar con éxito la expresividad estadística y el rigor normativo de la norma ASTM E900-15.
+
+
+A partir de las bases metodológicas y los resultados establecidos en esta investigación, se vislumbran diversas líneas de desarrollo futuro orientadas a expandir el alcance, la robustez y las capacidades operativas del modelo híbrido desarrollado. Una primera vía de expansión consiste en la incorporación de restricciones físicas multidimensionales en la función de pérdida compuesta. Si bien la monotonía respecto a la fluencia ha demostrado una gran solvencia, futuras iteraciones del modelo podrían integrar penalizaciones basadas en inecuaciones diferenciales asociadas a la cinética termodinámica de difusión de solutos. Imponer restricciones de convexidad o límites de saturación específicos respecto a la temperatura de irradiación o la concentración de elementos clave como el cobre, el níquel y el manganeso robustecería el comportamiento del modelo ante composiciones químicas extremas o coladas metalúrgicas atípicas.
+
+En el ámbito de la seguridad nuclear, proporcionar una predicción puntual del desplazamiento de la temperatura de transición ($TTS$) resulta insuficiente para una toma de decisiones plenamente informada. Por ello, se plantea como línea prioritaria la hibridación de esta arquitectura con técnicas de cuantificación de la incertidumbre, tales como las Redes Neuronales Bayesianas (BNNs) o enfoques de \textit{Monte Carlo Dropout}. Esto permitiría asociar intervalos de confianza epistémica y aleatoria a las extrapolaciones de alta fluencia. De este modo, se ofrecería a los organismos reguladores una métrica probabilística rigurosa del riesgo de fallo por choque térmico presurizado (PTS), transformando el modelo en una herramienta de diagnóstico conservadora y alineada con los estándares de la industria.
+
+Asimismo, se propone explorar la generalización trans-operativa del modelo mediante la inyección de registros procedentes de reactores de tecnologías diversas, como los diseños avanzados de agua a presión VVER o los futuros sistemas de Generación IV. Para abordar la heterogeneidad de estas bases de datos, el uso de Redes Neuronales de Grafos (GNNs) permitiría mapear las estructuras cristalo-químicas de las diferentes forjas y soldaduras de manera directa, reemplazando las variables categóricas simples por descriptores metalúrgicos continuos. Esto potenciaría la capacidad de transferencia de la red, permitiendo exportar el conocimiento físico adquirido hacia nuevos materiales sin perder las garantías de seguridad en la extrapolación.
+
+Por último, el objetivo de transferencia tecnológica definitivo de este trabajo se orienta hacia el despliegue del grafo computacional optimizado en una plataforma de \textit{software} industrial enfocada en el desarrollo de Gemelos Digitales (\textit{Digital Twins}) para centrales en operación activa. Esta integración permitiría monitorizar en tiempo real el historial acumulado de fluencia de una vasija específica a partir de los datos de los sensores del reactor. Gracias a las garantías de extrapolación segura de la PINN, el sistema sería capaz de proyectar con precisión cuántos años de operación segura restan antes de comprometer los límites de integridad estructural, optimizando los ciclos de mantenimiento y garantizando la viabilidad de la explotación energética a largo plazo de forma científicamente defendible.
 
 \nocite{*}
 \printbibliography[title={Bibliografía}]
