@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.6)  5 JUN 2026 18:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.6)  14 AUG 2026 16:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -24,22 +24,44 @@ File: bk12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
+) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count196
+\Gm@cntv=\count197
+\c@Gm@tempcnt=\count198
+\Gm@bindingoffset=\dimen141
+\Gm@wd@mp=\dimen142
+\Gm@odd@mp=\dimen143
+\Gm@even@mp=\dimen144
+\Gm@layoutwidth=\dimen145
+\Gm@layoutheight=\dimen146
+\Gm@layouthoffset=\dimen147
+\Gm@layoutvoffset=\dimen148
+\Gm@dimlist=\toks18
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks17
-\inpenc@posthook=\toks18
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
 ) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2024/01/07 v24.1 The Babel package
-\babel@savecnt=\count196
-\U@D=\dimen141
+\babel@savecnt=\count199
+\U@D=\dimen149
 \l@unhyphenated=\language89
  (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count197
+\bbl@dirlevel=\count266
  (/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
 Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
-\es@quottoks=\toks19
-\es@quotdepth=\count198
+\es@quottoks=\toks21
+\es@quotdepth=\count267
 Package babel Info: Making " an active character on input line 570.
 Package babel Info: Making . an active character on input line 675.
 Package babel Info: Making < an active character on input line 722.
@@ -47,28 +69,6 @@ Package babel Info: Making > an active character on input line 722.
 )) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
 Package babel Info: Importing font and identification data for spanish
 (babel)             from babel-es.ini. Reported on input line 11.
-) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks20
-) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
-))
-\Gm@cnth=\count199
-\Gm@cntv=\count266
-\c@Gm@tempcnt=\count267
-\Gm@bindingoffset=\dimen142
-\Gm@wd@mp=\dimen143
-\Gm@odd@mp=\dimen144
-\Gm@even@mp=\dimen145
-\Gm@layoutwidth=\dimen146
-\Gm@layoutheight=\dimen147
-\Gm@layouthoffset=\dimen148
-\Gm@layoutvoffset=\dimen149
-\Gm@dimlist=\toks21
 ) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
 ) (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
@@ -481,14 +481,16 @@ Package biblatex Info: ... and expl3
 Package: xparse 2023-10-10 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
-))
+)) (/usr/share/texlive/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty
+Package: anyfontsize 2007/11/22 anyfontsize.sty by pts
+)
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
 \@quotelevel=\count424
 \@quotereset=\count425
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 37.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 38.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (./document.aux
@@ -497,22 +499,20 @@ LaTeX Info: Redefining \% on input line 9.
 )
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Info: Redefining \. on input line 37.
-LaTeX Info: Redefining \% on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -548,6 +548,8 @@ LaTeX Info: Redefining \% on input line 37.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+LaTeX Info: Redefining \. on input line 38.
+LaTeX Info: Redefining \% on input line 38.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count426
@@ -591,13 +593,53 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'document.bbl' found.
  (./document.bbl)
-Package biblatex Info: Reference section=0 on input line 37.
-Package biblatex Info: Reference segment=0 on input line 37.
+Package biblatex Info: Reference section=0 on input line 38.
+Package biblatex Info: Reference segment=0 on input line 38.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 44.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
+)
+<../data/img/uimp-logo.png, id=1, 229.85875pt x 115.43124pt>
+File: ../data/img/uimp-logo.png Graphic file (type png)
+<use ../data/img/uimp-logo.png>
+Package pdftex.def Info: ../data/img/uimp-logo.png  used on input line 48.
+(pdftex.def)             Requested size: 203.83434pt x 102.36711pt.
  [1
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} <../data/img/uimp-logo.png>]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 84.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+
+ []
+
+
+Underfull \hbox (badness 3612) in paragraph at lines 91--92
+\OT1/ptm/m/n/12 Physics-Informed Neu-ral Net-works (PINNs), in-te-gra-ting ther-mody-na-mic mo-no-to-ni-city
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
+ []
+
+
+Underfull \hbox (badness 1735) in paragraph at lines 93--94
+[]\OT1/ptm/m/it/12 Keywords: \OT1/ptm/m/n/12 ra-dia-tion em-brittle-ment, Long-Term Ope-ra-tion (LTO), Ma-chi-ne Lear-ning,
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -612,14 +654,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [3
+ [3
+
 
 
 ])
@@ -637,138 +673,130 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [4]
 Cap\'{\i }tulo 1.
 
-Underfull \hbox (badness 1226) in paragraph at lines 85--86
+Underfull \hbox (badness 1226) in paragraph at lines 105--106
 \OT1/ptm/m/n/12 energ[]eti-cas im-pul-san es-tra-te-gias de Ope-ra-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
 
-Underfull \hbox (badness 1688) in paragraph at lines 87--88
+Underfull \hbox (badness 1688) in paragraph at lines 107--108
 \OT1/ptm/m/n/12 a pre-si[]on es el com-po-nen-te de se-gu-ri-dad
  []
 
 
-Underfull \hbox (badness 2426) in paragraph at lines 87--88
+Underfull \hbox (badness 2426) in paragraph at lines 107--108
 \OT1/ptm/m/n/12 es-truc-tu-ra-les que mer-man las pro-pie-da-des
  []
 
 
-Underfull \hbox (badness 1365) in paragraph at lines 87--88
+Underfull \hbox (badness 1365) in paragraph at lines 107--108
 \OT1/ptm/m/n/12 ori-gi-nal, es-pe-cial-men-te de la pre-sen-cia de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
 
-Underfull \hbox (badness 1303) in paragraph at lines 89--90
-\OT1/ptm/m/n/12 la-cio-nes emp[]^^Pri-cas co-mo la nor-ma ASTM
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+\OT1/ptm/m/n/12 co-rre-la-cio-nes emp[]^^Pri-cas co-mo la nor-ma
  []
 
 
-Underfull \hbox (badness 4096) in paragraph at lines 89--90
-\OT1/ptm/m/n/12 E900-15, que mo-de-la la de-gra-da-ci[]on en
- []
-
-
-Underfull \hbox (badness 1043) in paragraph at lines 89--90
+Underfull \hbox (badness 1043) in paragraph at lines 109--110
 \OT1/ptm/m/n/12 en-tre-na-mien-to. Da-do que en reg[]^^Pme-nes de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5
+[5
 
 
 ]
-Underfull \hbox (badness 1178) in paragraph at lines 95--96
+Underfull \hbox (badness 1178) in paragraph at lines 115--116
 \OT1/ptm/m/n/12 de-gra-da-ci[]on irre-ver-si-ble li-mi-ta la vi-da []util
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
 
-Underfull \hbox (badness 1715) in paragraph at lines 97--98
+Underfull \hbox (badness 1715) in paragraph at lines 117--118
 \OT1/ptm/m/n/12 est[]a []^^Pnti-ma-men-te li-ga-da a la com-po-si-ci[]on
  []
 
 
-Underfull \hbox (badness 2103) in paragraph at lines 97--98
+Underfull \hbox (badness 2103) in paragraph at lines 117--118
 \OT1/ptm/m/n/12 qu[]^^Pmi-ca del ace-ro. Ele-men-tos tra-za y de
  []
 
 
-Underfull \hbox (badness 1215) in paragraph at lines 97--98
+Underfull \hbox (badness 1215) in paragraph at lines 117--118
 \OT1/ptm/m/n/12 to pre-ci-so de c[]omo su qu[]^^Pmi-ca in-ter-act[]ua
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 99--100
+Underfull \hbox (badness 1360) in paragraph at lines 119--120
 \OT1/ptm/m/n/12 ASTM E900-15 el est[]andar pre-do-mi-nan-te.
  []
 
 
-Underfull \hbox (badness 2088) in paragraph at lines 99--100
+Underfull \hbox (badness 2088) in paragraph at lines 119--120
 \OT1/ptm/m/n/12 fi-ca-ci[]on de-ter-mi-nis-ta emp[]^^Pri-ca. Al ba-sar-se
  []
 
 
-Underfull \hbox (badness 1210) in paragraph at lines 99--100
+Underfull \hbox (badness 1210) in paragraph at lines 119--120
 \OT1/ptm/m/n/12 en co-rre-la-cio-nes glo-ba-les, pre-sen-ta in-cer-ti-
  []
 
 
-Underfull \hbox (badness 1968) in paragraph at lines 99--100
+Underfull \hbox (badness 1968) in paragraph at lines 119--120
 \OT1/ptm/m/n/12 dum-bres sig-ni-fi-ca-ti-vas apli-ca-das a co-la-das
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
 
-Underfull \hbox (badness 2418) in paragraph at lines 101--102
+Underfull \hbox (badness 2418) in paragraph at lines 121--122
 \OT1/ptm/m/n/12 co-mo XG-Boost o Per-cep-tro-nes Mul-ti-ca-pa
  []
 
 
-Underfull \hbox (badness 1635) in paragraph at lines 101--102
+Underfull \hbox (badness 1635) in paragraph at lines 121--122
 \OT1/ptm/m/n/12 (MLP), ofre-ce una so-lu-ci[]on pa-ra mo-de-lar
  []
 
 
-Underfull \hbox (badness 3895) in paragraph at lines 101--102
+Underfull \hbox (badness 3895) in paragraph at lines 121--122
 \OT1/ptm/m/n/12 a di-ver-gir. As[]^^P, pue-de ofre-cer re-sul-ta-dos
  []
 
 
-Underfull \hbox (badness 1242) in paragraph at lines 101--102
+Underfull \hbox (badness 1242) in paragraph at lines 121--122
 \OT1/ptm/m/n/12 ma-tem[]ati-ca-men-te []opti-mos pe-ro f[]^^Psi-ca-men-te
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
@@ -784,50 +812,47 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6]
-Underfull \hbox (badness 1622) in paragraph at lines 108--109
+Underfull \hbox (badness 1622) in paragraph at lines 128--129
 []\OT1/ptm/m/n/12 Subestimar la de-gra-da-ci[]on irre-ver-si-ble
  []
 
 
-Underfull \hbox (badness 4819) in paragraph at lines 115--116
+Underfull \hbox (badness 4819) in paragraph at lines 135--136
 \OT1/ptm/m/n/12 ba-sa-do en Re-des Neu-ro-na-les In-for-ma-das
  []
 
 
-Underfull \hbox (badness 2042) in paragraph at lines 115--116
+Underfull \hbox (badness 2042) in paragraph at lines 135--136
 \OT1/ptm/m/n/12 por la F[]^^Psi-ca (PINNs) pa-ra cuan-ti-fi-car la
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 115--116
+Underfull \hbox (badness 2181) in paragraph at lines 135--136
 \OT1/ptm/m/n/12 Es-te es-tu-dio se en-mar-ca en la ne-ce-si-dad
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 115--116
+Underfull \hbox (badness 1325) in paragraph at lines 135--136
 \OT1/ptm/m/n/12 no-ta-ble es-ca-sez de da-tos ex-pe-ri-men-ta-les|
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
 
 
-Underfull \vbox (badness 1895) has occurred while \output is active []
-
-
-Underfull \hbox (badness 2608) in paragraph at lines 122--123
+Underfull \hbox (badness 2608) in paragraph at lines 142--143
 []\OT1/ptm/m/n/12 Desarrollo de mo-de-los de apren-di-za-
  []
 
 
-Underfull \hbox (badness 3690) in paragraph at lines 122--123
+Underfull \hbox (badness 3690) in paragraph at lines 142--143
 \OT1/ptm/m/n/12 je au-tom[]ati-co no in-for-ma-dos: En-tre-
  []
 
 
-Underfull \hbox (badness 2318) in paragraph at lines 122--123
+Underfull \hbox (badness 2318) in paragraph at lines 142--143
 \OT1/ptm/m/n/12 nar y tes-tear al-go-rit-mos de Ma-chi-ne
  []
 
@@ -839,17 +864,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [7]
-Underfull \hbox (badness 2452) in paragraph at lines 126--127
+Underfull \hbox (badness 2452) in paragraph at lines 146--147
 []\OT1/ptm/m/n/12 Optimizaci[]on de hi-per-par[]ame-tros me-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
 \OT1/ptm/m/n/12 dian-te b[]usque-da in-te-li-gen-te: Apli-car
  []
 
 
-Underfull \hbox (badness 1194) in paragraph at lines 126--127
+Underfull \hbox (badness 1194) in paragraph at lines 146--147
 \OT1/ptm/m/n/12 t[]ecni-cas de op-ti-mi-za-ci[]on au-to-ma-ti-za-da
  []
 
@@ -863,131 +888,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [8]
 Cap\'{\i }tulo 2.
 
-Underfull \hbox (badness 5022) in paragraph at lines 139--140
+Underfull \hbox (badness 5022) in paragraph at lines 159--160
 \OT1/ptm/m/n/12 una ba-rre-ra de con-ten-ci[]on pri-ma-ria que
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
-
- []
-
-
-Underfull \hbox (badness 2486) in paragraph at lines 141--142
-\OT1/ptm/m/n/12 de la pa-red in-te-rior su-fre un bom-bar-deo
- []
-
-
-Underfull \hbox (badness 1281) in paragraph at lines 141--142
-\OT1/ptm/m/n/12 con-ti-nuo de neu-tro-nes r[]api-dos pro-ce-den-tes
- []
-
-
-Underfull \hbox (badness 1939) in paragraph at lines 141--142
-\OT1/ptm/m/n/12 pr[]acti-cos, blo-quean el mo-vi-mien-to na-tu-ral
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
-
- []
-
-
-Underfull \vbox (badness 3657) has occurred while \output is active []
-
-
-Underfull \hbox (badness 1127) in paragraph at lines 143--144
-\OT1/ptm/m/n/12 pro-blem[]ati-cos, ya que tien-den a pre-ci-pi-tar
- []
-
-
-Underfull \hbox (badness 1365) in paragraph at lines 143--144
-\OT1/ptm/m/n/12 en-du-re-cen much[]^^Psi-mo la ma-triz f[]erri-ca. A
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
-
- []
-
-
-Underfull \hbox (badness 3547) in paragraph at lines 145--146
-[]\OT1/ptm/m/n/12 A ni-vel ma-crosc[]opi-co, to-do es-te da[]no
- []
-
-
-Underfull \hbox (badness 1237) in paragraph at lines 145--146
-\OT1/ptm/m/n/12 a la frac-tu-ra. En los la-bo-ra-to-rios, es-to se
- []
-
-
-Underfull \hbox (badness 1354) in paragraph at lines 145--146
-\OT1/ptm/m/n/12 pe-ra-tu-ras m[]as al-tas. Di-cho des-pla-za-mien-to
- []
-
-
-Underfull \hbox (badness 1521) in paragraph at lines 145--146
-\OT1/ptm/m/n/12 nor-ma-les o du-ran-te en-fria-mien-tos brus-cos,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9
-
-]
-Underfull \hbox (badness 5726) in paragraph at lines 151--152
-[]\OT1/ptm/m/n/12 La ges-ti[]on del en-ve-je-ci-mien-to nu-clear
- []
-
-
-Underfull \hbox (badness 3291) in paragraph at lines 151--152
-\OT1/ptm/m/n/12 de-pen-de de los pro-gra-mas de vi-gi-lan-cia,
- []
-
-
-Underfull \hbox (badness 1558) in paragraph at lines 151--152
-\OT1/ptm/m/n/12 ace-ro ori-gi-nal en zo-nas de al-to flu-jo. Su
- []
-
-
-Underfull \hbox (badness 1609) in paragraph at lines 151--152
-\OT1/ptm/m/n/12 Es-te est[]andar no es un mo-de-lo f[]^^Psi-co de
- []
-
-
-Underfull \hbox (badness 1275) in paragraph at lines 151--152
-\OT1/ptm/m/n/12 de la Tem-pe-ra-tu-ra de Transici[]on ($\OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 TTS$\OT1/ptm/m/n/12 )
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
-
- []
-
-
-Underfull \hbox (badness 2486) in paragraph at lines 154--155
-\OT1/ptm/m/n/12 re-fle-ja una de-pen-den-cia no li-neal con la
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
-
- []
-
-
-Overfull \hbox (12.1067pt too wide) detected at line 159
-[]
  []
 
 
@@ -996,28 +898,144 @@ Underfull \hbox (badness 10000) in paragraph at lines 159--160
  []
 
 
+Underfull \hbox (badness 2486) in paragraph at lines 161--162
+\OT1/ptm/m/n/12 de la pa-red in-te-rior su-fre un bom-bar-deo
+ []
+
+
+Underfull \hbox (badness 1281) in paragraph at lines 161--162
+\OT1/ptm/m/n/12 con-ti-nuo de neu-tro-nes r[]api-dos pro-ce-den-tes
+ []
+
+
+Underfull \hbox (badness 1939) in paragraph at lines 161--162
+\OT1/ptm/m/n/12 pr[]acti-cos, blo-quean el mo-vi-mien-to na-tu-ral
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
 
 
-Overfull \hbox (4.6919pt too wide) detected at line 162
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 1127) in paragraph at lines 163--164
+\OT1/ptm/m/n/12 pro-blem[]ati-cos, ya que tien-den a pre-ci-pi-tar
+ []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 163--164
+\OT1/ptm/m/n/12 en-du-re-cen much[]^^Psi-mo la ma-triz f[]erri-ca. A
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+
+ []
+
+
+Underfull \hbox (badness 3547) in paragraph at lines 165--166
+[]\OT1/ptm/m/n/12 A ni-vel ma-crosc[]opi-co, to-do es-te da[]no
+ []
+
+
+Underfull \hbox (badness 1237) in paragraph at lines 165--166
+\OT1/ptm/m/n/12 a la frac-tu-ra. En los la-bo-ra-to-rios, es-to se
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 165--166
+\OT1/ptm/m/n/12 pe-ra-tu-ras m[]as al-tas. Di-cho des-pla-za-mien-to
+ []
+
+
+Underfull \hbox (badness 1521) in paragraph at lines 165--166
+\OT1/ptm/m/n/12 nor-ma-les o du-ran-te en-fria-mien-tos brus-cos,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
+
+ []
+
+[9
+
+]
+Underfull \hbox (badness 5726) in paragraph at lines 171--172
+[]\OT1/ptm/m/n/12 La ges-ti[]on del en-ve-je-ci-mien-to nu-clear
+ []
+
+
+Underfull \hbox (badness 3291) in paragraph at lines 171--172
+\OT1/ptm/m/n/12 de-pen-de de los pro-gra-mas de vi-gi-lan-cia,
+ []
+
+
+Underfull \hbox (badness 1558) in paragraph at lines 171--172
+\OT1/ptm/m/n/12 ace-ro ori-gi-nal en zo-nas de al-to flu-jo. Su
+ []
+
+
+Underfull \hbox (badness 1609) in paragraph at lines 171--172
+\OT1/ptm/m/n/12 Es-te est[]andar no es un mo-de-lo f[]^^Psi-co de
+ []
+
+
+Underfull \hbox (badness 1275) in paragraph at lines 171--172
+\OT1/ptm/m/n/12 de la Tem-pe-ra-tu-ra de Transici[]on ($\OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 TTS$\OT1/ptm/m/n/12 )
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--173
+
+ []
+
+
+Underfull \hbox (badness 2486) in paragraph at lines 174--175
+\OT1/ptm/m/n/12 re-fle-ja una de-pen-den-cia no li-neal con la
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
+
+ []
+
+
+Overfull \hbox (12.1067pt too wide) detected at line 179
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+
+ []
+
+
+Overfull \hbox (4.6919pt too wide) detected at line 182
 \OML/cmm/m/it/12 TTS[] \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 ^^A [] [] ^^A \OML/cmm/m/it/12 M
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--169
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
  []
-
-
-Underfull \vbox (badness 7326) has occurred while \output is active []
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1027,109 +1045,128 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
 
-Overfull \hbox (1.28583pt too wide) detected at line 179
+Overfull \hbox (1.28583pt too wide) detected at line 199
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--181
+Underfull \hbox (badness 10000) in paragraph at lines 199--201
 
  []
 
 
-Underfull \hbox (badness 5105) in paragraph at lines 182--183
+Underfull \hbox (badness 5105) in paragraph at lines 202--203
 \OT1/ptm/m/n/12 acep-ta-ci[]on re-gu-la-to-ria ne-ce-sa-ria, pe-ro su
  []
 
 
-Underfull \hbox (badness 2269) in paragraph at lines 182--183
+Underfull \hbox (badness 2269) in paragraph at lines 202--203
 \OT1/ptm/m/n/12 bles al pro-yec-tar la in-te-gri-dad es-truc-tu-ral
  []
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 182--183
+Underfull \hbox (badness 1694) in paragraph at lines 202--203
 \OT1/ptm/m/n/12 ter-mi-nis-ta, asu-mien-do que los co-efi-cien-tes
  []
 
 
-Underfull \hbox (badness 1983) in paragraph at lines 182--183
+Underfull \hbox (badness 1983) in paragraph at lines 202--203
 \OT1/ptm/m/n/12 emp[]^^Pri-cos |ajus-ta-dos so-bre da-tos hist[]ori-
  []
 
 
-Underfull \hbox (badness 2189) in paragraph at lines 182--183
+Underfull \hbox (badness 2189) in paragraph at lines 202--203
 \OT1/ptm/m/n/12 mi-crosc[]opi-ca inhe-ren-te a los pro-ce-sos de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
 
 
-Underfull \hbox (badness 1824) in paragraph at lines 184--185
+Underfull \hbox (badness 1824) in paragraph at lines 204--205
 \OT1/ptm/m/n/12 el mo-de-lo se aden-tra en un te-rri-to-rio de
  []
 
 
-Underfull \hbox (badness 1708) in paragraph at lines 184--185
+Underfull \hbox (badness 1708) in paragraph at lines 204--205
 \OT1/ptm/m/n/12 fluen-cias neutr[]oni-cas don-de la es-ca-sez de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 186--187
-\OT1/ptm/m/n/12 tu-ra-ci[]on se-guir[]an com-port[]ando-se de for-ma
+Underfull \hbox (badness 1117) in paragraph at lines 206--207
+\OT1/ptm/m/n/12 cio-na una re-fe-ren-cia ro-bus-ta pa-ra pre-de-cir
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--188
+Underfull \hbox (badness 2941) in paragraph at lines 206--207
+\OT1/ptm/m/n/12 de fluen-cia ele-va-dos pre-sen-ta una ma-yor
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
+\OT1/ptm/m/n/12 in-cer-ti-dum-bre, es-pe-cial-men-te cuan-do las
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
 []\OT1/ptm/b/n/17.28 Machine Lear-ning y
  []
 
 
-Underfull \hbox (badness 1122) in paragraph at lines 190--191
+Underfull \hbox (badness 1122) in paragraph at lines 212--213
 \OT1/ptm/m/n/12 da-tos de vi-gi-lan-cia, al-go-rit-mos co-mo XG-
  []
 
 
-Underfull \hbox (badness 3179) in paragraph at lines 190--191
+Underfull \hbox (badness 3179) in paragraph at lines 212--213
 \OT1/ptm/m/n/12 ma-pear in-ter-ac-cio-nes no li-nea-les que las
  []
 
 
-Underfull \hbox (badness 1953) in paragraph at lines 190--191
+Underfull \hbox (badness 1953) in paragraph at lines 212--213
 \OT1/ptm/m/n/12 re-gre-sio-nes pa-ram[]etri-cas no lo-gran cap-tar.
  []
 
 
-Underfull \hbox (badness 2205) in paragraph at lines 190--191
+Underfull \hbox (badness 2205) in paragraph at lines 212--213
 \OT1/ptm/m/n/12 Teo-re-ma de Apro-xi-ma-ci[]on Uni-ver-sal pa-ra
  []
 
 
-Underfull \hbox (badness 1939) in paragraph at lines 190--191
+Underfull \hbox (badness 1939) in paragraph at lines 212--213
 \OT1/ptm/m/n/12 ma-pear en-tra-das com-ple-jas ha-cia el va-lor
  []
 
 
-Underfull \hbox (badness 1742) in paragraph at lines 190--191
+Underfull \hbox (badness 1742) in paragraph at lines 212--213
 \OT1/ptm/m/n/12 de $\OML/cmm/m/it/12 TTS$\OT1/ptm/m/n/12 . Sin em-bar-go, el va-lor de es-tas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1139,100 +1176,102 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [11]
-Underfull \hbox (badness 1067) in paragraph at lines 192--193
+Underfull \hbox (badness 1067) in paragraph at lines 214--215
 []\OT1/ptm/m/n/12 El des-af[]^^Po real no es la pre-ci-si[]on, sino
  []
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 192--193
+Underfull \hbox (badness 1694) in paragraph at lines 214--215
 \OT1/ptm/m/n/12 la ge-ne-ra-li-za-ci[]on. Los mo-de-los pu-ra-men-te
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 192--193
+Underfull \hbox (badness 1221) in paragraph at lines 214--215
 \OT1/ptm/m/n/12 es-tos mo-de-los ajus-tan sus pe-sos bus-can-do
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--193
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
 \OT1/ptm/m/n/12 que, aun-que ajus-ta-das ma-tem[]ati-ca-men-te,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--193
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 194--195
+Underfull \hbox (badness 2285) in paragraph at lines 216--217
 \OT1/ptm/m/n/12 del co-no-ci-mien-to ha in-te-gra-do le-yes fun-
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 194--195
+Underfull \hbox (badness 1137) in paragraph at lines 216--217
 \OT1/ptm/m/n/12 da-men-ta-les di-rec-ta-men-te en la ar-qui-tec-tu-ra
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 194--195
+Underfull \hbox (badness 1158) in paragraph at lines 216--217
 \OT1/ptm/m/n/12 in-no-va-ci[]on ra-di-ca en trans-for-mar el en-tre-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--195
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
 \OT1/ptm/m/n/12 co-no-ci-mien-to fe-no-me-nol[]ogi-co sub-ya-cen-te
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--195
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
 
  []
 
 
-Underfull \vbox (badness 1308) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
 
  []
 
 
-Underfull \hbox (badness 1783) in paragraph at lines 197--198
+Underfull \hbox (badness 1783) in paragraph at lines 219--220
 []\OT1/ptm/m/n/12 El t[]ermino $\OMS/cmsy/m/n/12 L[]$ \OT1/ptm/m/n/12 act[]ua co-mo un re-gu-
  []
 
 
-Underfull \hbox (badness 3250) in paragraph at lines 197--198
+Underfull \hbox (badness 3250) in paragraph at lines 219--220
 \OT1/ptm/m/n/12 la-ri-za-dor ma-tem[]ati-co se-ve-ro. Me-dian-te la
  []
 
 
-Underfull \hbox (badness 1817) in paragraph at lines 197--198
-\OT1/ptm/m/n/12 di-fe-ren-cia-ci[]on au-tom[]ati-ca (*Au-to-grad*), la
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+\OT1/ptm/m/n/12 di-fe-ren-cia-ci[]on au-tom[]ati-ca (Au-to-grad, el
  []
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 197--198
-\OT1/ptm/m/n/12 PINN eval[]ua el re-si-duo de las ecua-cio-nes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--200
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
+Underfull \hbox (badness 1259) in paragraph at lines 223--224
+[]\OT1/ptm/m/n/12 El t[]ermino $\OML/cmm/m/it/12 M$ \OT1/ptm/m/n/12 re-pre-sen-ta el n[]ume-ro de
+ []
+
+
+Underfull \hbox (badness 1418) in paragraph at lines 223--224
+\OT1/ptm/m/n/12 de es-tos re-si-duos, $\OMS/cmsy/m/n/12 L[]$ \OT1/ptm/m/n/12 pe-na-li-za las pre-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
 
-Underfull \vbox (badness 6608) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -1243,6 +1282,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [12]
+Underfull \hbox (badness 1412) in paragraph at lines 225--226
+[]\OT1/ptm/m/n/12 A di-fe-ren-cia del ML tra-di-cio-nal, don-de
+ []
+
+
+Underfull \hbox (badness 2020) in paragraph at lines 225--226
+\OT1/ptm/m/n/12 res-trin-gen el apren-di-za-je a un subes-pa-cio
+ []
+
+
+Underfull \hbox (badness 1308) in paragraph at lines 225--226
+\OT1/ptm/m/n/12 in-duc-ti-vo f[]^^Psi-co es lo que per-mi-te que el
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1264,29 +1322,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Cap\'{\i }tulo 3.
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 209.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 233.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15]
-Underfull \hbox (badness 1221) in paragraph at lines 222--223
+) [15]
+Underfull \hbox (badness 1221) in paragraph at lines 246--247
 []\OT1/ptm/b/n/12 Temperatura de irra-dia-ci[]on ($\OML/cmm/m/it/12 T$\OT1/ptm/b/n/12 )\OT1/ptm/m/n/12 : La
  []
 
 
-Underfull \hbox (badness 1062) in paragraph at lines 224--225
+Underfull \hbox (badness 1062) in paragraph at lines 248--249
 []\OT1/ptm/b/n/12 Tipo de pro-duc-to (\OT1/pcr/b/n/12 Product[]Form\OT1/ptm/b/n/12 )\OT1/ptm/m/n/12 :
  []
 
-<../data/img/matriz_correlacion.png, id=63, 722.7pt x 578.16pt>
+<../data/img/matriz_correlacion.png, id=68, 722.7pt x 578.16pt>
 File: ../data/img/matriz_correlacion.png Graphic file (type png)
 <use ../data/img/matriz_correlacion.png>
-Package pdftex.def Info: ../data/img/matriz_correlacion.png  used on input line 234.
+Package pdftex.def Info: ../data/img/matriz_correlacion.png  used on input line 258.
 (pdftex.def)             Requested size: 271.7837pt x 217.427pt.
 
-Overfull \hbox (50.29958pt too wide) in paragraph at lines 234--235
+Overfull \hbox (50.29958pt too wide) in paragraph at lines 258--259
  [][] 
  []
 
@@ -1298,62 +1353,62 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [16 <../data/img/matriz_correlacion.png>]
-Underfull \hbox (badness 1803) in paragraph at lines 248--249
+Underfull \hbox (badness 1803) in paragraph at lines 274--275
 []\OT1/ptm/m/n/12 Para mi-ti-gar es-te fen[]omeno, se ha im-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--249
+Underfull \hbox (badness 10000) in paragraph at lines 274--275
 \OT1/ptm/m/n/12 ple-men-ta-do un es-ca-la-do est[]andar (\OT1/ptm/m/it/12 Z-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--249
+Underfull \hbox (badness 10000) in paragraph at lines 274--275
 \OT1/ptm/m/it/12 score nor-ma-li-za-tion\OT1/ptm/m/n/12 ) uti-li-zan-do la cla-se
  []
 
 
-Underfull \hbox (badness 2856) in paragraph at lines 248--249
+Underfull \hbox (badness 2856) in paragraph at lines 274--275
 \OT1/pcr/m/n/12 StandardScaler \OT1/ptm/m/n/12 de la li-brer[]^^Pa Scikit-
  []
 
 
-Underfull \hbox (badness 2318) in paragraph at lines 248--249
+Underfull \hbox (badness 2318) in paragraph at lines 274--275
 \OT1/ptm/m/n/12 Learn. Es-ta trans-for-ma-ci[]on re-centra ca-da
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--259
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
 []\OT1/ptm/m/n/12 Dado que la va-ria-ble ob-je-ti-vo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--259
-\OT1/pcr/m/n/12 DT41J[]Celsius \OT1/ptm/m/n/12 tam-bi[]en se nor-ma-li-za
+Underfull \hbox (badness 4279) in paragraph at lines 284--285
+\OT1/ptm/m/n/12 DT41J[]Celsius tam-bi[]en se nor-ma-li-za pa-
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 258--259
-\OT1/ptm/m/n/12 pa-ra es-ta-bi-li-zar la con-ver-gen-cia de la red
+Underfull \hbox (badness 4266) in paragraph at lines 284--285
+\OT1/ptm/m/n/12 ra es-ta-bi-li-zar la con-ver-gen-cia de la red
  []
 
 
-Underfull \hbox (badness 2142) in paragraph at lines 258--259
+Underfull \hbox (badness 2142) in paragraph at lines 284--285
 \OT1/ptm/m/n/12 adi-men-sio-nal. Pa-ra que es-tas pre-dic-cio-nes
  []
 
 
-Underfull \hbox (badness 5460) in paragraph at lines 258--259
+Underfull \hbox (badness 5460) in paragraph at lines 284--285
 \OT1/ptm/m/n/12 ad-quie-ran va-lor in-ge-nie-ril y pue-dan ser
  []
 
 
-Underfull \hbox (badness 2762) in paragraph at lines 258--259
+Underfull \hbox (badness 2762) in paragraph at lines 284--285
 \OT1/ptm/m/n/12 re-fe-ren-cia (ba-se-li-ne) de la nor-ma ASTM
  []
 
 
-Underfull \hbox (badness 1308) in paragraph at lines 258--259
+Underfull \hbox (badness 1308) in paragraph at lines 284--285
 \OT1/ptm/m/n/12 E900-15 y uti-li-za-das pa-ra cal-cu-lar erro-res
  []
 
@@ -1365,53 +1420,121 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 260--261
-[]\OT1/ptm/m/n/12 Para es-te fin, la cla-se
+Underfull \hbox (badness 1881) in paragraph at lines 286--287
+[]\OT1/ptm/m/n/12 Para es-te fin, la cla-se Ra-dia-tion-Da-ta-set
  []
 
 
-Underfull \hbox (badness 1990) in paragraph at lines 260--261
-\OT1/pcr/m/n/12 RadiationDataset \OT1/ptm/m/n/12 in-cor-po-ra el m[]eto-
+Underfull \hbox (badness 1286) in paragraph at lines 286--287
+\OT1/ptm/m/n/12 in-cor-po-ra el m[]eto-do per-so-na-li-za-do des-pre-
  []
 
 
-Underfull \hbox (badness 2865) in paragraph at lines 260--261
-\OT1/ptm/m/n/12 do per-so-na-li-za-do \OT1/pcr/m/n/12 despreprocess\OT1/ptm/m/n/12 . Es-te
+Underfull \hbox (badness 1960) in paragraph at lines 286--287
+\OT1/ptm/m/n/12 par[]ame-tros de es-ca-la-do pre-via-men-te guar-
  []
 
 
-Underfull \hbox (badness 3407) in paragraph at lines 260--261
-\OT1/ptm/m/n/12 blo-que de c[]odi-go res-ca-ta los par[]ame-tros
+Underfull \hbox (badness 1062) in paragraph at lines 286--287
+\OT1/ptm/m/n/12 pec[]^^Pfi-ca-men-te, pre-pro-ces-sor.mean y pre-pro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 260--261
-\OT1/ptm/m/n/12 de es-ca-la-do pre-via-men-te guar-da-dos en
+Underfull \hbox (badness 2080) in paragraph at lines 286--287
+\OT1/ptm/m/n/12 ces-sor.scale) lo-ca-li-zan-do din[]ami-ca-men-te el
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 260--261
-\OT1/ptm/m/n/12 la me-mo-ria del \OT1/pcr/m/n/12 preprocessor \OT1/ptm/m/n/12 (es-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 260--261
-\OT1/ptm/m/n/12 pec[]^^Pfi-ca-men-te, \OT1/pcr/m/n/12 preprocessor.mean[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 260--261
-\OT1/ptm/m/n/12 y \OT1/pcr/m/n/12 preprocessor.scale[]\OT1/ptm/m/n/12 ) lo-ca-li-zan-do
- []
-
-
-Underfull \hbox (badness 1342) in paragraph at lines 266--267
+Underfull \hbox (badness 1342) in paragraph at lines 292--293
 []\OT1/ptm/m/n/12 Esta ar-qui-tec-tu-ra de pre-pro-ce-sa-mien-to y
  []
 
 
-Underfull \hbox (badness 1014) in paragraph at lines 268--268
+Underfull \hbox (badness 1014) in paragraph at lines 294--294
 []\OT1/ptm/b/n/17.28 Definici[]on del Ba-se-li-ne
+ []
+
+
+Underfull \vbox (badness 2503) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[18]
+Underfull \hbox (badness 3735) in paragraph at lines 310--311
+[]\OT1/ptm/m/n/12 Un des-af[]^^Po t[]ecni-co en la im-ple-men-ta-
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 310--311
+\OT1/ptm/m/n/12 ci[]on pro-gram[]ati-ca de es-ta ecua-ci[]on ra-di-ca
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 329--330
+[]\OT1/pcr/m/n/12 max[]depth\OT1/ptm/m/n/12 : Li-mi-ta la pro-fun-di-dad
+ []
+
+
+Underfull \hbox (badness 1655) in paragraph at lines 329--330
+\OT1/ptm/m/n/12 m[]axi-ma de ca-da []arbol in-di-vi-dual. Al
+ []
+
+
+Underfull \hbox (badness 1102) in paragraph at lines 329--330
+\OT1/ptm/m/n/12 res-trin-gir es-te par[]ame-tro, se fuer-za al
+ []
+
+
+Underfull \hbox (badness 1248) in paragraph at lines 329--330
+\OT1/ptm/m/n/12 mo-de-lo a apren-der pa-tro-nes ge-ne-ra-les
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--330
+\OT1/ptm/m/n/12 de fra-gi-li-za-ci[]on ac-tuan-do co-mo un
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 333--334
+\OT1/ptm/m/n/12 pe-ri-men-to y fa-ci-li-tar la in-te-gra-ci[]on de es-
+ []
+
+
+Underfull \hbox (badness 2173) in paragraph at lines 333--334
+\OT1/ptm/m/n/12 te mo-de-lo en el flu-jo de in-fe-ren-cia glo-
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 333--334
+\OT1/ptm/m/n/12 bal, se di-se[]n[]o una me-to-do-log[]^^Pa de per-sis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--335
+\OT1/ptm/b/n/14.4 ceptr[]on Mul-ti-ca-pa (MLP
+ []
+
+
+Underfull \hbox (badness 1137) in paragraph at lines 337--338
+[]\OT1/ptm/m/n/12 El se-gun-do mo-de-lo de con-trol emp[]^^Pri-co
+ []
+
+
+Underfull \hbox (badness 1430) in paragraph at lines 337--338
+\OT1/ptm/m/n/12 per-te-ne-ce al do-mi-nio del apren-di-za-je pro-
  []
 
 
@@ -1425,136 +1548,73 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[18]
-Underfull \hbox (badness 3735) in paragraph at lines 282--283
-[]\OT1/ptm/m/n/12 Un des-af[]^^Po t[]ecni-co en la im-ple-men-ta-
- []
-
-
-Underfull \hbox (badness 1189) in paragraph at lines 282--283
-\OT1/ptm/m/n/12 ci[]on pro-gram[]ati-ca de es-ta ecua-ci[]on ra-di-ca
- []
-
-
-Underfull \vbox (badness 4819) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
-[]\OT1/pcr/m/n/12 max[]depth\OT1/ptm/m/n/12 : Li-mi-ta la pro-fun-di-dad
- []
-
-
-Underfull \hbox (badness 1655) in paragraph at lines 301--302
-\OT1/ptm/m/n/12 m[]axi-ma de ca-da []arbol in-di-vi-dual. Al
- []
-
-
-Underfull \hbox (badness 1102) in paragraph at lines 301--302
-\OT1/ptm/m/n/12 res-trin-gir es-te par[]ame-tro, se fuer-za al
- []
-
-
-Underfull \hbox (badness 1248) in paragraph at lines 301--302
-\OT1/ptm/m/n/12 mo-de-lo a apren-der pa-tro-nes ge-ne-ra-les
- []
-
-
-Underfull \hbox (badness 6016) in paragraph at lines 301--302
-\OT1/ptm/m/n/12 de fra-gi-li-za-ci[]on en lu-gar de re-glas
- []
-
-
-Underfull \hbox (badness 1983) in paragraph at lines 301--302
-\OT1/ptm/m/n/12 hiper-espec[]^^Pfi-cas pa-ra co-la-das par-ti-cu-
- []
-
-
-Underfull \hbox (badness 1072) in paragraph at lines 305--306
-\OT1/ptm/m/n/12 pe-ri-men-to y fa-ci-li-tar la in-te-gra-ci[]on de es-
- []
-
-
-Underfull \hbox (badness 2173) in paragraph at lines 305--306
-\OT1/ptm/m/n/12 te mo-de-lo en el flu-jo de in-fe-ren-cia glo-
- []
-
-
-Underfull \hbox (badness 1072) in paragraph at lines 305--306
-\OT1/ptm/m/n/12 bal, se di-se[]n[]o una me-to-do-log[]^^Pa de per-sis-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 307--307
-\OT1/ptm/b/n/14.4 ceptr[]on Mul-ti-ca-pa (MLP
- []
-
-
-Underfull \hbox (badness 1137) in paragraph at lines 309--310
-[]\OT1/ptm/m/n/12 El se-gun-do mo-de-lo de con-trol emp[]^^Pri-co
- []
-
-
-Underfull \hbox (badness 1430) in paragraph at lines 309--310
-\OT1/ptm/m/n/12 per-te-ne-ce al do-mi-nio del apren-di-za-je pro-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
 []\OT1/ptm/m/n/12 El di-se[]no ar-qui-tect[]oni-co de la red
  []
 
 
-Underfull \hbox (badness 2547) in paragraph at lines 311--312
+Underfull \hbox (badness 2547) in paragraph at lines 339--340
 \OT1/pcr/m/n/12 MLPInicial \OT1/ptm/m/n/12 se com-po-ne de una to-po-
  []
 
 
-Underfull \hbox (badness 2343) in paragraph at lines 311--312
-\OT1/ptm/m/n/12 log[]^^Pa \OT1/ptm/m/it/12 feed-forward \OT1/ptm/m/n/12 est[]andar. El vec-tor de
- []
-
-
-Underfull \hbox (badness 4156) in paragraph at lines 311--312
-\OT1/ptm/m/n/12 en-tra-da, que agru-pa la do-sis neutr[]oni-ca,
- []
-
-
-Underfull \hbox (badness 1635) in paragraph at lines 311--312
+Underfull \hbox (badness 1635) in paragraph at lines 339--340
 \OT1/ptm/m/n/12 la tem-pe-ra-tu-ra y la com-po-si-ci[]on qu[]^^Pmi-ca,
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 311--312
+Underfull \hbox (badness 1158) in paragraph at lines 339--340
 \OT1/ptm/m/n/12 no li-nea-les de la sa-tu-ra-ci[]on del da[]no por
  []
 
 
-Underfull \hbox (badness 1184) in paragraph at lines 313--314
-\OT1/ptm/m/n/12 tos pa-ra es-ta red fue la transici[]on de las
+Underfull \hbox (badness 2384) in paragraph at lines 341--342
+[]\OT1/ptm/m/n/12 Un as-pec-to cr[]^^Pti-co en la in-ge-nier[]^^Pa de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--315
+Underfull \hbox (badness 2707) in paragraph at lines 341--342
+\OT1/ptm/m/n/12 da-tos pa-ra es-ta red fue la transici[]on de
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 341--342
+\OT1/ptm/m/n/12 las es-truc-tu-ras de da-tos. Da-do que la ba-
+ []
+
+
+Underfull \hbox (badness 1824) in paragraph at lines 341--342
+\OT1/ptm/m/n/12 se de da-tos se ges-tio-na me-dian-te la cla-
+ []
+
+
+Underfull \hbox (badness 2426) in paragraph at lines 341--342
+\OT1/ptm/m/n/12 hi-zo im-pres-cin-di-ble de-sa-rro-llar una ru-ti-na
+ []
+
+
+Underfull \hbox (badness 2111) in paragraph at lines 341--342
+\OT1/ptm/m/n/12 de ex-trac-ci[]on efi-cien-te. Pa-ra ello, se im-
+ []
+
+
+Underfull \hbox (badness 1264) in paragraph at lines 341--342
+\OT1/ptm/m/n/12 trea el []^^Pndi-ce real de la va-ria-ble ob-je-ti-vo
+ []
+
+
+Underfull \hbox (badness 1490) in paragraph at lines 341--342
+\OT1/ptm/m/n/12 (\OT1/pcr/m/n/12 DT41J[]Celsius\OT1/ptm/m/n/12 ) den-tro del \OT1/ptm/m/it/12 Da-ta-Fra-me
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--343
 []\OT1/ptm/b/n/14.4 Minimizaci[]on del Ries-go
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--315
+Underfull \hbox (badness 10000) in paragraph at lines 343--343
 \OT1/ptm/b/n/14.4 Emp[]^^Pri-co y Jus-ti-fi-ca-ci[]on
  []
 
@@ -1566,10 +1626,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [21]
-Underfull \vbox (badness 1308) has occurred while \output is active []
-
-
-Underfull \hbox (badness 2050) in paragraph at lines 339--340
+Underfull \hbox (badness 2050) in paragraph at lines 367--368
 \OT1/ptm/m/n/12 cla-se \OT1/pcr/m/n/12 nn.Sequential\OT1/ptm/m/n/12 . El di-se[]no ex-po-
  []
 
@@ -1581,53 +1638,33 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [22]
-Underfull \hbox (badness 1796) in paragraph at lines 341--342
+Underfull \hbox (badness 1796) in paragraph at lines 369--370
 []\OT1/ptm/m/n/12 Este en-fo-que de in-ge-nier[]^^Pa de soft-wa-re
  []
 
 
-Underfull \hbox (badness 2903) in paragraph at lines 347--348
+Underfull \hbox (badness 2903) in paragraph at lines 375--376
 []\OT1/ptm/m/n/12 El m[]eto-do \OT1/pcr/m/n/12 forward \OT1/ptm/m/n/12 se en-cuen-tra bi-
  []
 
 
-Underfull \hbox (badness 2671) in paragraph at lines 347--348
+Underfull \hbox (badness 2671) in paragraph at lines 375--376
 \OT1/ptm/m/n/12 ra (\OT1/pcr/m/n/12 self.mlp\OT1/ptm/m/n/12 ) pro-ce-sa los da-tos es-tan-
  []
 
 
-Underfull \hbox (badness 2478) in paragraph at lines 347--348
+Underfull \hbox (badness 2478) in paragraph at lines 375--376
 \OT1/ptm/m/n/12 el mo-de-lo cuen-ta con un blo-que anal[]^^Pti-
  []
 
 
-Underfull \hbox (badness 1067) in paragraph at lines 349--350
+Underfull \hbox (badness 1067) in paragraph at lines 377--378
 \OT1/ptm/m/n/12 nal-men-te, la pre-dic-ci[]on anal[]^^Pti-ca re-sul-tan-te
  []
 
 
-Underfull \hbox (badness 3930) in paragraph at lines 352--354
+Underfull \hbox (badness 3930) in paragraph at lines 380--382
 \OT1/ptm/m/n/12 Metodol[]ogi-ca-men-te, es-to sig-ni-fi-ca que la
- []
-
-
-Underfull \hbox (badness 3407) in paragraph at lines 359--360
-[]\OT1/ptm/m/n/12 Para su-pe-rar es-ta li-mi-ta-ci[]on y con-ver-
- []
-
-
-Underfull \hbox (badness 1400) in paragraph at lines 359--360
-\OT1/ptm/m/n/12 tir la red en una ver-da-de-ra PINN, se ha
- []
-
-
-Underfull \hbox (badness 2913) in paragraph at lines 359--360
-\OT1/ptm/m/n/12 in-tro-du-ci-do un as-pec-to me-to-dol[]ogi-co cla-
- []
-
-
-Underfull \hbox (badness 2065) in paragraph at lines 359--360
-\OT1/ptm/m/n/12 to: la ha-bi-li-ta-ci[]on expl[]^^Pci-ta del mo-tor de
  []
 
 
@@ -1638,14 +1675,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [23]
-Underfull \hbox (badness 4084) in paragraph at lines 363--363
-[]\OT1/ptm/b/n/14.4 Entorno Compu-tacio-nal y
+Underfull \hbox (badness 3407) in paragraph at lines 387--388
+[]\OT1/ptm/m/n/12 Para su-pe-rar es-ta li-mi-ta-ci[]on y con-ver-
  []
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 365--366
-\OT1/ptm/m/n/12 tacio-na-les pa-ra el c[]alcu-lo de de-ri-va-das de
+Underfull \hbox (badness 1400) in paragraph at lines 387--388
+\OT1/ptm/m/n/12 tir la red en una ver-da-de-ra PINN, se ha
  []
+
+
+Underfull \hbox (badness 2913) in paragraph at lines 387--388
+\OT1/ptm/m/n/12 in-tro-du-ci-do un as-pec-to me-to-dol[]ogi-co cla-
+ []
+
+
+Underfull \hbox (badness 2065) in paragraph at lines 387--388
+\OT1/ptm/m/n/12 to: la ha-bi-li-ta-ci[]on expl[]^^Pci-ta del mo-tor de
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1655,14 +1709,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [24]
-Underfull \hbox (badness 1052) in paragraph at lines 375--376
-[]\OT1/ptm/m/n/12 Para sol-ven-tar es-ta de-bi-li-dad es-truc-tu-ral,
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \hbox (badness 1112) in paragraph at lines 375--376
-\OT1/ptm/m/n/12 me-to-dol[]ogi-co de una Red Neu-ro-nal In-for-
- []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1672,7 +1720,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 401--401
+Underfull \hbox (badness 10000) in paragraph at lines 423--423
 []\OT1/ptm/b/n/14.4 Algoritmo y Pe-na-li-za-ci[]on
  []
 
@@ -1688,22 +1736,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [26]
-Underfull \hbox (badness 1521) in paragraph at lines 431--432
+Underfull \hbox (badness 1521) in paragraph at lines 453--454
 []\OT1/ptm/m/n/12 Tradicionalmente, la ca-li-bra-ci[]on de mo-
  []
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 431--432
+Underfull \hbox (badness 1430) in paragraph at lines 453--454
 \OT1/ptm/m/n/12 de-los se ha rea-li-za-do me-dian-te b[]usque-das
  []
 
 
-Underfull \hbox (badness 1199) in paragraph at lines 431--432
+Underfull \hbox (badness 1199) in paragraph at lines 453--454
 \OT1/ptm/m/n/12 exhaus-ti-vas en cuadr[]^^Pcu-la (\OT1/ptm/m/it/12 Grid Search\OT1/ptm/m/n/12 ) o
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3138) has occurred while \output is active []
 
 
 
@@ -1714,37 +1762,37 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [27]
-Underfull \hbox (badness 3240) in paragraph at lines 435--435
+Underfull \hbox (badness 3240) in paragraph at lines 457--457
 []\OT1/ptm/b/n/14.4 Definici[]on del Es-pa-cio de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--445
+Underfull \hbox (badness 10000) in paragraph at lines 466--467
 []\OT1/ptm/b/n/12 Tasa de Apren-di-za-je
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--445
+Underfull \hbox (badness 10000) in paragraph at lines 466--467
 \OT1/ptm/b/n/12 (\OT1/pcr/b/n/12 learning[]rate\OT1/ptm/b/n/12 )\OT1/ptm/m/n/12 : Se de-fi-ni[]o una
  []
 
 
-Underfull \hbox (badness 2626) in paragraph at lines 444--445
+Underfull \hbox (badness 2626) in paragraph at lines 466--467
 \OT1/ptm/m/n/12 b[]usque-da en es-ca-la lo-gar[]^^Ptmi-ca (t[]^^Ppi-
  []
 
 
-Underfull \hbox (badness 2573) in paragraph at lines 444--445
+Underfull \hbox (badness 2573) in paragraph at lines 466--467
 \OT1/ptm/m/n/12 equi-ta-ti-va-men-te []orde-nes de mag-ni-tud,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--447
+Underfull \hbox (badness 10000) in paragraph at lines 468--469
 []\OT1/ptm/b/n/12 Decaimiento de Pe-sos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 446--447
+Underfull \hbox (badness 10000) in paragraph at lines 468--469
 \OT1/ptm/b/n/12 (\OT1/pcr/b/n/12 weight[]decay\OT1/ptm/b/n/12 )\OT1/ptm/m/n/12 : Pa-ra evi-tar el
  []
 
@@ -1756,42 +1804,42 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [28]
-Underfull \hbox (badness 1394) in paragraph at lines 448--449
+Underfull \hbox (badness 1394) in paragraph at lines 470--471
 []\OT1/ptm/b/n/12 Coeficiente de Re-gu-la-ri-za-ci[]on F[]^^Psi-ca
  []
 
 
-Underfull \hbox (badness 1009) in paragraph at lines 451--451
+Underfull \hbox (badness 1009) in paragraph at lines 473--473
 []\OT1/ptm/b/n/14.4 Estrategia de Va-li-da-ci[]on y
  []
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 463--464
+Underfull \hbox (badness 1931) in paragraph at lines 485--486
 \OT1/ptm/m/n/12 tal fren-te a es-te fa-llo cr[]^^Pti-co, se in-te-gra-
  []
 
 
-Underfull \hbox (badness 1092) in paragraph at lines 463--464
+Underfull \hbox (badness 1092) in paragraph at lines 485--486
 \OT1/ptm/m/n/12 sos a ni-vel de len-gua-je. Al fi-na-li-zar ca-da
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 463--464
+Underfull \hbox (badness 1584) in paragraph at lines 485--486
 \OT1/ptm/m/n/12 cias a los ten-so-res lo-ca-les y de los mo-
  []
 
 
-Underfull \hbox (badness 1264) in paragraph at lines 463--464
+Underfull \hbox (badness 1264) in paragraph at lines 485--486
 \OT1/ptm/m/n/12 me-dia-ta-men-te des-pu[]es, se or-de-na a la in-
  []
 
 
-Underfull \hbox (badness 1810) in paragraph at lines 463--464
+Underfull \hbox (badness 1810) in paragraph at lines 485--486
 \OT1/ptm/m/n/12 ter-faz de ace-le-ra-ci[]on va-ciar las me-mo-rias
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 463--464
+Underfull \hbox (badness 2181) in paragraph at lines 485--486
 \OT1/ptm/m/n/12 en cach[]e re-te-ni-das por el con-tro-la-dor de
  []
 
@@ -1814,18 +1862,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Cap\'{\i }tulo 4.
-<../data/img/astm.png, id=114, 714.7503pt x 354.123pt>
+<../data/img/astm.png, id=118, 714.7503pt x 354.123pt>
 File: ../data/img/astm.png Graphic file (type png)
 <use ../data/img/astm.png>
-Package pdftex.def Info: ../data/img/astm.png  used on input line 475.
+Package pdftex.def Info: ../data/img/astm.png  used on input line 497.
 (pdftex.def)             Requested size: 203.83434pt x 201.02005pt.
 
-Underfull \hbox (badness 1264) in paragraph at lines 476--476
+Underfull \hbox (badness 1264) in paragraph at lines 498--498
 []\OT1/ptm/m/n/12 Figura 4.1: |Ecua-ci[]on de la nor-ma ASTM
  []
 
 
-Underfull \hbox (badness 1796) in paragraph at lines 476--476
+Underfull \hbox (badness 1796) in paragraph at lines 498--498
 \OT1/ptm/m/n/12 E900-15 ca-li-bra-da lo-cal-men-te me-dian-te el
  []
 
@@ -1834,21 +1882,18 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: ../data/img/astm.png Graphic file (type png)
 <use ../data/img/astm.png>
-Package pdftex.def Info: ../data/img/astm.png  used on input line 482.
+Package pdftex.def Info: ../data/img/astm.png  used on input line 504.
 (pdftex.def)             Requested size: 203.83434pt x 201.02005pt.
 
-Underfull \hbox (badness 1264) in paragraph at lines 483--483
+Underfull \hbox (badness 1264) in paragraph at lines 505--505
 []\OT1/ptm/m/n/12 Figura 4.2: |Ecua-ci[]on de la nor-ma ASTM
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 493.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-Overfull \hbox (1.26894pt too wide) in paragraph at lines 491--502
+
+Overfull \hbox (1.26894pt too wide) in paragraph at lines 513--524
  [][] 
  []
 
@@ -1858,7 +1903,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [31
 
 ]
-Underfull \hbox (badness 1354) in paragraph at lines 508--508
+Underfull \hbox (badness 1354) in paragraph at lines 530--530
 []\OT1/ptm/b/n/17.28 Evaluaci[]on en Es-ce-na-
  []
 
@@ -1874,18 +1919,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [32 <../data/img/astm.png>]
-<../data/img/comparativa_modelos.png, id=127, 1601.985pt x 1198.4775pt>
+<../data/img/comparativa_modelos.png, id=131, 1601.985pt x 1198.4775pt>
 File: ../data/img/comparativa_modelos.png Graphic file (type png)
 <use ../data/img/comparativa_modelos.png>
-Package pdftex.def Info: ../data/img/comparativa_modelos.png  used on input line 516.
+Package pdftex.def Info: ../data/img/comparativa_modelos.png  used on input line 538.
 (pdftex.def)             Requested size: 226.48413pt x 169.43155pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 516--517
+Overfull \hbox (5.0pt too wide) in paragraph at lines 538--539
  [][] 
  []
 
 
-Underfull \hbox (badness 1436) in paragraph at lines 527--528
+Underfull \hbox (badness 1436) in paragraph at lines 549--550
 \OT1/ptm/m/n/12 tacio-nal h[]^^Pbri-do de-pen-di[]o es-tric-ta-men-te de
  []
 
@@ -1921,9 +1966,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 1308) has occurred while \output is active []
 
 
-Underfull \vbox (badness 1308) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1952,46 +1994,100 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [38
 
 ]
-Underfull \hbox (badness 2277) in paragraph at lines 555--555
+Underfull \hbox (badness 1205) in paragraph at lines 577--577
+\OT1/ptm/m/n/12 de for Pre-dic-ting Radiation-Induced
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 577--577
 [][]\OT1/ptm/m/n/12 Bonny, G., Te-rent-yev, D., & Ba-kaev, A.
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 555--555
+Underfull \hbox (badness 1466) in paragraph at lines 577--577
 \OT1/ptm/m/it/12 Jour-nal of Nu-clear Ma-te-rials\OT1/ptm/m/n/12 , \OT1/ptm/m/it/12 433\OT1/ptm/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 555--555
+Underfull \hbox (badness 1147) in paragraph at lines 577--577
 [][]\OT1/ptm/m/n/12 Karniadakis, G. E., Ke-vre-ki-dis, I. G., Lu,
  []
 
 
-Underfull \hbox (badness 1406) in paragraph at lines 555--555
+Underfull \hbox (badness 1406) in paragraph at lines 577--577
 \OT1/ptm/m/n/12 L. (2021). Physics-informed ma-chi-
  []
 
 
-Underfull \hbox (badness 2080) in paragraph at lines 555--555
+Underfull \hbox (badness 2080) in paragraph at lines 577--577
 \OT1/ptm/m/n/12 Tuckey, P. (2018). Reac-tor pres-su-
  []
 
-
-Underfull \hbox (badness 2512) in paragraph at lines 555--555
+[39]
+Underfull \hbox (badness 2512) in paragraph at lines 577--577
 [][]\OT1/ptm/m/n/12 Pang, G., Lu, L., & Kar-nia-da-kis, G. E.
  []
 
 
-Underfull \hbox (badness 1303) in paragraph at lines 555--555
+Underfull \hbox (badness 1303) in paragraph at lines 577--577
 \OT1/ptm/m/n/12 (2020). fPINNs: Frac-tio-nal physics-
  []
 
 
-Underfull \hbox (badness 1237) in paragraph at lines 555--555
+Underfull \hbox (badness 1237) in paragraph at lines 577--577
 \OT1/ptm/m/it/12 nal on Scien-ti-fic Com-pu-ting\OT1/ptm/m/n/12 , \OT1/ptm/m/it/12 42\OT1/ptm/m/n/12 (4),
  []
 
-[39] (./document.aux
+
+Underfull \hbox (badness 10000) in paragraph at lines 577--577
+[][]\OT1/ptm/m/n/12 Slugen, V., K[]ogel, G., Sperr, P., &
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 577--577
+\OT1/ptm/m/n/12 Triftsh[]auser, W. (2002). Po-si-tron
+ []
+
+
+Underfull \hbox (badness 5954) in paragraph at lines 577--577
+\OT1/ptm/m/n/12 pres-su-re ves-sel steels. \OT1/ptm/m/it/12 Jour-nal of
+ []
+
+
+Underfull \hbox (badness 1097) in paragraph at lines 577--577
+\OT1/ptm/m/it/12 Nu-clear Ma-te-rials\OT1/ptm/m/n/12 , \OT1/ptm/m/it/12 302\OT1/ptm/m/n/12 (2-3), 89[]95.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 577--577
+\OT1/ptm/m/n/12 (2014). Evo-lu-tion of manganese-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 577--577
+\OT1/ptm/m/n/12 nickel-silicon-dominated pha-ses in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 577--577
+\OT1/ptm/m/n/12 highly irra-dia-ted reac-tor pres-su-re
+ []
+
+
+Underfull \hbox (badness 3323) in paragraph at lines 577--577
+\OT1/ptm/m/n/12 ves-sel steels. \OT1/ptm/m/it/12 Ac-ta Ma-te-ria-lia\OT1/ptm/m/n/12 , \OT1/ptm/m/it/12 80\OT1/ptm/m/n/12 ,
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[40
+
+] (./document.aux
 LaTeX Info: Redefining \sptext on input line 9.
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
@@ -2005,18 +2101,18 @@ Package logreq Info: Writing requests to 'document.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14976 strings out of 474222
- 274557 string characters out of 5748734
+ 15117 strings out of 474222
+ 277761 string characters out of 5748734
  1941975 words of memory out of 5000000
- 37066 multiletter control sequences out of 15000+600000
- 579496 words of font info for 84 fonts, out of 8000000 for 9000
+ 37193 multiletter control sequences out of 15000+600000
+ 587808 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,12n,81p,1333b,2811s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on document.pdf (39 pages, 1907138 bytes).
+ 66i,12n,81p,1729b,2811s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on document.pdf (40 pages, 1963615 bytes).
 PDF statistics:
- 214 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
+ 229 PDF objects out of 1000 (max. 8388607)
+ 143 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

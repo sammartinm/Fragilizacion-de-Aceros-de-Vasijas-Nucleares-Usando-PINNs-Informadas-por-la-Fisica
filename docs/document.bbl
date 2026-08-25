@@ -19,6 +19,103 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global}
+    \entry{astmE90015}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=485576da492c1d30068adfd77e2f7a82}{%
+           family={{ASTM International}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{485576da492c1d30068adfd77e2f7a82}
+      \strng{fullhash}{485576da492c1d30068adfd77e2f7a82}
+      \strng{bibnamehash}{485576da492c1d30068adfd77e2f7a82}
+      \strng{authorbibnamehash}{485576da492c1d30068adfd77e2f7a82}
+      \strng{authornamehash}{485576da492c1d30068adfd77e2f7a82}
+      \strng{authorfullhash}{485576da492c1d30068adfd77e2f7a82}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{ASTM E900-15}
+      \field{title}{Standard Guide for Predicting Radiation-Induced Transition Temperature Shift in Reactor Vessel Materials}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.1520/E0900-15
+      \endverb
+    \endentry
+    \entry{bergner2015}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=56e7d0010a663efa1088d3c68500d45b}{%
+           family={Bergner},
+           familyi={B\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=65b5eec1fe4f84c5bac7fd1db773a393}{%
+           family={Gillemot},
+           familyi={G\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=89cf922924f48f6f4d4168e95dc8302a}{%
+           family={Hernández-Mayoral},
+           familyi={H\bibinithyphendelim M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0c596210d6d1f4639fd73b6ff5a17147}{%
+           family={Serrano},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=29a217fab2d303c714c35d01401c083e}{%
+           family={Török},
+           familyi={T\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a03c2e933588420c4c2b806e829a28be}{%
+           family={Ulbricht},
+           familyi={U\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=98468ffa723141962ff0712d988584dd}{%
+           family={Altstadt},
+           familyi={A\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{c8b3a4bf4f490b4c9a9a4fcd66dd1805}
+      \strng{fullhash}{181ee8a5fb44a4e73ac885c362f11306}
+      \strng{bibnamehash}{181ee8a5fb44a4e73ac885c362f11306}
+      \strng{authorbibnamehash}{181ee8a5fb44a4e73ac885c362f11306}
+      \strng{authornamehash}{c8b3a4bf4f490b4c9a9a4fcd66dd1805}
+      \strng{authorfullhash}{181ee8a5fb44a4e73ac885c362f11306}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Nuclear Materials}
+      \field{title}{Contributions of Cu-rich clusters, dislocation loops and nanovoids to the irradiation-induced hardening of Cu-bearing low-Ni reactor pressure vessel steels}
+      \field{volume}{461}
+      \field{year}{2015}
+      \field{pages}{37\bibrangedash 44}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.jnucmat.2015.02.031
+      \endverb
+    \endentry
     \entry{bonny2013}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=4f5a8053b24be7f04efe54f0ea8f9beb}{%
@@ -202,6 +299,77 @@
       \field{year}{2021}
       \field{pages}{422\bibrangedash 440}
       \range{pages}{19}
+    \endentry
+    \entry{ke2017mnsi}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=fe92403ea38e03fccc107d9534f11f62}{%
+           family={Ke},
+           familyi={K\bibinitperiod},
+           given={Huibin},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=72ee34d45be80f421580b72bc87c88c1}{%
+           family={Wells},
+           familyi={W\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1feb7bad3f2759785ce251b3982baebb}{%
+           family={Edmondson},
+           familyi={E\bibinitperiod},
+           given={Philip\bibnamedelima D.},
+           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f6d627a3ffaf0e50854c906abc8dd7d}{%
+           family={Almirall},
+           familyi={A\bibinitperiod},
+           given={Nathan},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0ab8da38933b99f75f73cbe2da762025}{%
+           family={Barnard},
+           familyi={B\bibinitperiod},
+           given={Leland},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e856a132879d93226537e98f6ebe93db}{%
+           family={Odette},
+           familyi={O\bibinitperiod},
+           given={G.\bibnamedelimi Robert},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d9c96a8604deb9b0ba69f71c5a0d305}{%
+           family={Morgan},
+           familyi={M\bibinitperiod},
+           given={Dane},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{75006940706b511e630349d32ebf6d94}
+      \strng{fullhash}{fd5f809efbaf50071f4d774a5bffe2ac}
+      \strng{bibnamehash}{fd5f809efbaf50071f4d774a5bffe2ac}
+      \strng{authorbibnamehash}{fd5f809efbaf50071f4d774a5bffe2ac}
+      \strng{authornamehash}{75006940706b511e630349d32ebf6d94}
+      \strng{authorfullhash}{fd5f809efbaf50071f4d774a5bffe2ac}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Materialia}
+      \field{title}{Thermodynamic and kinetic modeling of Mn-Ni-Si precipitates in low-Cu reactor pressure vessel steels}
+      \field{volume}{138}
+      \field{year}{2017}
+      \field{pages}{10\bibrangedash 26}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1016/j.actamat.2017.07.021
+      \endverb
     \endentry
     \entry{liu2022machine}{article}{}
       \true{moreauthor}
@@ -416,6 +584,7 @@
       \strng{authorbibnamehash}{f5fd3a1ba07445088c2a24112ba7e3f0}
       \strng{authornamehash}{e74020cfbba42010d8cf12378cf51e6f}
       \strng{authorfullhash}{f5fd3a1ba07445088c2a24112ba7e3f0}
+      \field{extraname}{1}
       \field{sortinit}{O}
       \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
       \field{extradatescope}{labelyear}
@@ -429,6 +598,60 @@
       \field{year}{2019}
       \field{pages}{151863}
       \range{pages}{1}
+    \endentry
+    \entry{odette2021precipitation}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=308ffbcb2c0b8b45575ec194f3d1d151}{%
+           family={Odette},
+           familyi={O\bibinitperiod},
+           given={G.\bibnamedelimi R.},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a0c961344b20e59fa430e92611a85e9}{%
+           family={Almirall},
+           familyi={A\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5bf87407aa40dc6cc774445bf1dd7d75}{%
+           family={Wells},
+           familyi={W\bibinitperiod},
+           given={P.\bibnamedelimi B.},
+           giveni={P\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5467fb216200fc3ea3a9de29808aaec4}{%
+           family={Yamamoto},
+           familyi={Y\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{e74020cfbba42010d8cf12378cf51e6f}
+      \strng{fullhash}{5debb7a1e9ba4216a4b9a167cc2b2a39}
+      \strng{bibnamehash}{5debb7a1e9ba4216a4b9a167cc2b2a39}
+      \strng{authorbibnamehash}{5debb7a1e9ba4216a4b9a167cc2b2a39}
+      \strng{authornamehash}{e74020cfbba42010d8cf12378cf51e6f}
+      \strng{authorfullhash}{5debb7a1e9ba4216a4b9a167cc2b2a39}
+      \field{extraname}{2}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Materialia}
+      \field{title}{Precipitation in reactor pressure vessel steels under ion and neutron irradiation: On the role of segregated network dislocations}
+      \field{volume}{212}
+      \field{year}{2021}
+      \field{pages}{116922}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.actamat.2021.116922
+      \endverb
     \endentry
     \entry{pang2020}{article}{}
       \name{author}{3}{}{%
@@ -518,9 +741,231 @@
       \field{year}{2019}
       \field{pages}{686\bibrangedash 707}
       \range{pages}{22}
+    \endentry
+    \entry{slugen2002}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=46690c87ee17a401e67b00cb7c0d322d}{%
+           family={Slugen},
+           familyi={S\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a444cf2eda235ddeedbaed0b570c0d39}{%
+           family={Kögel},
+           familyi={K\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2cb6470e42425b5cd5df356af5e25b4}{%
+           family={Sperr},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=471ff8518caa092bb4b5fd24c57f84cb}{%
+           family={Triftshäuser},
+           familyi={T\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{7bfbb81a70acbe9563dc95470700a21e}
+      \strng{fullhash}{12b3608e97b4cb5042487cd9591499db}
+      \strng{bibnamehash}{12b3608e97b4cb5042487cd9591499db}
+      \strng{authorbibnamehash}{12b3608e97b4cb5042487cd9591499db}
+      \strng{authornamehash}{7bfbb81a70acbe9563dc95470700a21e}
+      \strng{authorfullhash}{12b3608e97b4cb5042487cd9591499db}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Nuclear Materials}
+      \field{number}{2-3}
+      \field{title}{Positron annihilation studies of neutron irradiated and thermally treated reactor pressure vessel steels}
+      \field{volume}{302}
+      \field{year}{2002}
+      \field{pages}{89\bibrangedash 95}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1016/S0022-3115(02)00815-2
+      \endverb
+    \endentry
+    \entry{wells2014mnsi}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=e0941ad1cfc102792e26fd0ecb77037d}{%
+           family={Wells},
+           familyi={W\bibinitperiod},
+           given={Peter\bibnamedelima B.},
+           giveni={P\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=02a90ee6f0702ea1ca62fa15c3a1b779}{%
+           family={Yamamoto},
+           familyi={Y\bibinitperiod},
+           given={Takuya},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=583bf2af8ffa61574a98fc222e7ac660}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Brandon},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bcd4f0c0089cd681c3194d700a4aa5b3}{%
+           family={Milot},
+           familyi={M\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ff4992eee69b731451205adcd674d8ac}{%
+           family={Cole},
+           familyi={C\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f19c4fff5adda4e55f61a3f77d7386a4}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Yuan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e856a132879d93226537e98f6ebe93db}{%
+           family={Odette},
+           familyi={O\bibinitperiod},
+           given={G.\bibnamedelimi Robert},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{0b0e8f58beeb7c240970388bc8937ac9}
+      \strng{fullhash}{b6bc54e3e77632cf73e620c10225c2aa}
+      \strng{bibnamehash}{b6bc54e3e77632cf73e620c10225c2aa}
+      \strng{authorbibnamehash}{b6bc54e3e77632cf73e620c10225c2aa}
+      \strng{authornamehash}{0b0e8f58beeb7c240970388bc8937ac9}
+      \strng{authorfullhash}{b6bc54e3e77632cf73e620c10225c2aa}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Materialia}
+      \field{title}{Evolution of manganese-nickel-silicon-dominated phases in highly irradiated reactor pressure vessel steels}
+      \field{volume}{80}
+      \field{year}{2014}
+      \field{pages}{205\bibrangedash 219}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1016/j.actamat.2014.07.040
+      \endverb
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global}
+    \entry{astmE90015}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=485576da492c1d30068adfd77e2f7a82}{%
+           family={{ASTM International}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{485576da492c1d30068adfd77e2f7a82}
+      \strng{fullhash}{485576da492c1d30068adfd77e2f7a82}
+      \strng{bibnamehash}{485576da492c1d30068adfd77e2f7a82}
+      \strng{authorbibnamehash}{485576da492c1d30068adfd77e2f7a82}
+      \strng{authornamehash}{485576da492c1d30068adfd77e2f7a82}
+      \strng{authorfullhash}{485576da492c1d30068adfd77e2f7a82}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{ASTM E900-15}
+      \field{title}{Standard Guide for Predicting Radiation-Induced Transition Temperature Shift in Reactor Vessel Materials}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.1520/E0900-15
+      \endverb
+    \endentry
+    \entry{bergner2015}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=56e7d0010a663efa1088d3c68500d45b}{%
+           family={Bergner},
+           familyi={B\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=65b5eec1fe4f84c5bac7fd1db773a393}{%
+           family={Gillemot},
+           familyi={G\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=89cf922924f48f6f4d4168e95dc8302a}{%
+           family={Hernández-Mayoral},
+           familyi={H\bibinithyphendelim M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0c596210d6d1f4639fd73b6ff5a17147}{%
+           family={Serrano},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=29a217fab2d303c714c35d01401c083e}{%
+           family={Török},
+           familyi={T\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a03c2e933588420c4c2b806e829a28be}{%
+           family={Ulbricht},
+           familyi={U\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=98468ffa723141962ff0712d988584dd}{%
+           family={Altstadt},
+           familyi={A\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{c8b3a4bf4f490b4c9a9a4fcd66dd1805}
+      \strng{fullhash}{181ee8a5fb44a4e73ac885c362f11306}
+      \strng{bibnamehash}{181ee8a5fb44a4e73ac885c362f11306}
+      \strng{authorbibnamehash}{181ee8a5fb44a4e73ac885c362f11306}
+      \strng{authornamehash}{c8b3a4bf4f490b4c9a9a4fcd66dd1805}
+      \strng{authorfullhash}{181ee8a5fb44a4e73ac885c362f11306}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Nuclear Materials}
+      \field{title}{Contributions of Cu-rich clusters, dislocation loops and nanovoids to the irradiation-induced hardening of Cu-bearing low-Ni reactor pressure vessel steels}
+      \field{volume}{461}
+      \field{year}{2015}
+      \field{pages}{37\bibrangedash 44}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.jnucmat.2015.02.031
+      \endverb
+    \endentry
     \entry{bonny2013}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=4f5a8053b24be7f04efe54f0ea8f9beb}{%
@@ -705,6 +1150,77 @@
       \field{pages}{422\bibrangedash 440}
       \range{pages}{19}
     \endentry
+    \entry{ke2017mnsi}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=fe92403ea38e03fccc107d9534f11f62}{%
+           family={Ke},
+           familyi={K\bibinitperiod},
+           given={Huibin},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=72ee34d45be80f421580b72bc87c88c1}{%
+           family={Wells},
+           familyi={W\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1feb7bad3f2759785ce251b3982baebb}{%
+           family={Edmondson},
+           familyi={E\bibinitperiod},
+           given={Philip\bibnamedelima D.},
+           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f6d627a3ffaf0e50854c906abc8dd7d}{%
+           family={Almirall},
+           familyi={A\bibinitperiod},
+           given={Nathan},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0ab8da38933b99f75f73cbe2da762025}{%
+           family={Barnard},
+           familyi={B\bibinitperiod},
+           given={Leland},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e856a132879d93226537e98f6ebe93db}{%
+           family={Odette},
+           familyi={O\bibinitperiod},
+           given={G.\bibnamedelimi Robert},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d9c96a8604deb9b0ba69f71c5a0d305}{%
+           family={Morgan},
+           familyi={M\bibinitperiod},
+           given={Dane},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{75006940706b511e630349d32ebf6d94}
+      \strng{fullhash}{fd5f809efbaf50071f4d774a5bffe2ac}
+      \strng{bibnamehash}{fd5f809efbaf50071f4d774a5bffe2ac}
+      \strng{authorbibnamehash}{fd5f809efbaf50071f4d774a5bffe2ac}
+      \strng{authornamehash}{75006940706b511e630349d32ebf6d94}
+      \strng{authorfullhash}{fd5f809efbaf50071f4d774a5bffe2ac}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Materialia}
+      \field{title}{Thermodynamic and kinetic modeling of Mn-Ni-Si precipitates in low-Cu reactor pressure vessel steels}
+      \field{volume}{138}
+      \field{year}{2017}
+      \field{pages}{10\bibrangedash 26}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1016/j.actamat.2017.07.021
+      \endverb
+    \endentry
     \entry{liu2022machine}{article}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -882,6 +1398,60 @@
       \field{pages}{311\bibrangedash 322}
       \range{pages}{12}
     \endentry
+    \entry{odette2021precipitation}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=308ffbcb2c0b8b45575ec194f3d1d151}{%
+           family={Odette},
+           familyi={O\bibinitperiod},
+           given={G.\bibnamedelimi R.},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a0c961344b20e59fa430e92611a85e9}{%
+           family={Almirall},
+           familyi={A\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5bf87407aa40dc6cc774445bf1dd7d75}{%
+           family={Wells},
+           familyi={W\bibinitperiod},
+           given={P.\bibnamedelimi B.},
+           giveni={P\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5467fb216200fc3ea3a9de29808aaec4}{%
+           family={Yamamoto},
+           familyi={Y\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{e74020cfbba42010d8cf12378cf51e6f}
+      \strng{fullhash}{5debb7a1e9ba4216a4b9a167cc2b2a39}
+      \strng{bibnamehash}{5debb7a1e9ba4216a4b9a167cc2b2a39}
+      \strng{authorbibnamehash}{5debb7a1e9ba4216a4b9a167cc2b2a39}
+      \strng{authornamehash}{e74020cfbba42010d8cf12378cf51e6f}
+      \strng{authorfullhash}{5debb7a1e9ba4216a4b9a167cc2b2a39}
+      \field{extraname}{1}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Materialia}
+      \field{title}{Precipitation in reactor pressure vessel steels under ion and neutron irradiation: On the role of segregated network dislocations}
+      \field{volume}{212}
+      \field{year}{2021}
+      \field{pages}{116922}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.actamat.2021.116922
+      \endverb
+    \endentry
     \entry{odette2019history}{article}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=308ffbcb2c0b8b45575ec194f3d1d151}{%
@@ -918,6 +1488,7 @@
       \strng{authorbibnamehash}{f5fd3a1ba07445088c2a24112ba7e3f0}
       \strng{authornamehash}{e74020cfbba42010d8cf12378cf51e6f}
       \strng{authorfullhash}{f5fd3a1ba07445088c2a24112ba7e3f0}
+      \field{extraname}{2}
       \field{sortinit}{O}
       \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
       \field{extradatescope}{labelyear}
@@ -1020,6 +1591,131 @@
       \field{year}{2019}
       \field{pages}{686\bibrangedash 707}
       \range{pages}{22}
+    \endentry
+    \entry{slugen2002}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=46690c87ee17a401e67b00cb7c0d322d}{%
+           family={Slugen},
+           familyi={S\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a444cf2eda235ddeedbaed0b570c0d39}{%
+           family={Kögel},
+           familyi={K\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2cb6470e42425b5cd5df356af5e25b4}{%
+           family={Sperr},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=471ff8518caa092bb4b5fd24c57f84cb}{%
+           family={Triftshäuser},
+           familyi={T\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{7bfbb81a70acbe9563dc95470700a21e}
+      \strng{fullhash}{12b3608e97b4cb5042487cd9591499db}
+      \strng{bibnamehash}{12b3608e97b4cb5042487cd9591499db}
+      \strng{authorbibnamehash}{12b3608e97b4cb5042487cd9591499db}
+      \strng{authornamehash}{7bfbb81a70acbe9563dc95470700a21e}
+      \strng{authorfullhash}{12b3608e97b4cb5042487cd9591499db}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Nuclear Materials}
+      \field{number}{2-3}
+      \field{title}{Positron annihilation studies of neutron irradiated and thermally treated reactor pressure vessel steels}
+      \field{volume}{302}
+      \field{year}{2002}
+      \field{pages}{89\bibrangedash 95}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1016/S0022-3115(02)00815-2
+      \endverb
+    \endentry
+    \entry{wells2014mnsi}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=e0941ad1cfc102792e26fd0ecb77037d}{%
+           family={Wells},
+           familyi={W\bibinitperiod},
+           given={Peter\bibnamedelima B.},
+           giveni={P\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=02a90ee6f0702ea1ca62fa15c3a1b779}{%
+           family={Yamamoto},
+           familyi={Y\bibinitperiod},
+           given={Takuya},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=583bf2af8ffa61574a98fc222e7ac660}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Brandon},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bcd4f0c0089cd681c3194d700a4aa5b3}{%
+           family={Milot},
+           familyi={M\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ff4992eee69b731451205adcd674d8ac}{%
+           family={Cole},
+           familyi={C\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f19c4fff5adda4e55f61a3f77d7386a4}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Yuan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e856a132879d93226537e98f6ebe93db}{%
+           family={Odette},
+           familyi={O\bibinitperiod},
+           given={G.\bibnamedelimi Robert},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{0b0e8f58beeb7c240970388bc8937ac9}
+      \strng{fullhash}{b6bc54e3e77632cf73e620c10225c2aa}
+      \strng{bibnamehash}{b6bc54e3e77632cf73e620c10225c2aa}
+      \strng{authorbibnamehash}{b6bc54e3e77632cf73e620c10225c2aa}
+      \strng{authornamehash}{0b0e8f58beeb7c240970388bc8937ac9}
+      \strng{authorfullhash}{b6bc54e3e77632cf73e620c10225c2aa}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Materialia}
+      \field{title}{Evolution of manganese-nickel-silicon-dominated phases in highly irradiated reactor pressure vessel steels}
+      \field{volume}{80}
+      \field{year}{2014}
+      \field{pages}{205\bibrangedash 219}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1016/j.actamat.2014.07.040
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

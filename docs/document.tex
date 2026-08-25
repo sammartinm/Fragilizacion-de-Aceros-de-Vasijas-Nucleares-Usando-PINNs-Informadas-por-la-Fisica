@@ -1,13 +1,13 @@
 \documentclass[a4paper, 12pt, twocolumn]{book}
+\usepackage[margin=2.54cm]{geometry}
 
 % Configuración de idioma y codificación
 \usepackage[utf8]{inputenc}
 \usepackage[spanish,es-tabla]{babel}
 
 % Configuración de márgenes APA (2.54 cm en todos los lados)
-\usepackage[margin=2.54cm]{geometry}
 
-% Tipografía (Times New Roman o similar)
+% Tipografía (Times New Roman o similar para el cuerpo del texto)
 \usepackage{times}
 
 % Interlineado doble
@@ -28,57 +28,77 @@
 % Paquetes matemáticos
 \usepackage{amsmath,amssymb,amsfonts}
 
-\usepackage{booktabs}
-
 % Bibliografía APA
-\usepackage[backend=biber, style=apa]{biblatex} % Carga el paquete (puedes cambiar apa por ieee, numeric, etc.)
+\usepackage[backend=biber, style=apa]{biblatex}
 \addbibresource{referencias.bib}
+
+% Paquete necesario para forzar tamaños de fuente específicos (20pt, 14pt)
+\usepackage{anyfontsize}
 
 \begin{document}
 
 % Portada
 \begin{titlepage}
     \centering
+    % Cambiamos a fuente sin serifa para la portada, simulando el estilo Arial
+    \sffamily 
+    \vspace*{1.5cm}
+    % Logo de la universidad
+    % IMPORTANTE: Descarga la imagen y guárdala junto a este archivo
+    \includegraphics[width=0.45\textwidth]{../data/img/uimp-logo.png}
+    
+    \vspace*{1.5cm}
+    
+    % Título en Español (Tamaño 20)
+    {\fontsize{20}{24}\selectfont \textbf{Extrapolación de la Fragilización de Aceros de Vasijas Nucleares Usando Redes Neuronales Informadas por la Física (PINNs)}\par}
+    
+    \vspace{0.5cm}
+    
+    % Título en Inglés
+    {\Large (Extrapolation of the Embrittlement of Nuclear Vessel Steels Using Physics-Informed Neural Networks (PINNs))\par}
+    
+    \vspace{2cm}
+    
+    {\Large Trabajo de Fin de Máster \par}
+    {\Large para acceder al \par}
+    \vspace{0.2cm}
+    {\Large \textbf{MÁSTER EN CIENCIA DE DATOS Y COMPUTACIÓN AVANZADA} \par}
+    
+    \vspace{2cm}
+    
+    % Autor y Directores alineados a la derecha (Tamaño 14)
+    \begin{flushright}
+        {\fontsize{14}{17}\selectfont Autor: Samuel Martín Martínez \par}
+        {\fontsize{14}{17}\selectfont Director/es: Diego Ferreño Blanco, Victor Calzada Cabano \par}
+        {\fontsize{14}{17}\selectfont Junio - 2026 \par}
+    \end{flushright}
     \vspace*{1cm}
-    
-    {\Large \textbf{Extrapolación de la Fragilización de Aceros de Vasijas 
-    Nucleares Usando Redes Neuronales Informadas por la Física (PINNs)}}
-    
-    \vspace{1.5cm}
-    
-    \textbf{Autor} \\
-    Samuel Martín Martínez
-    
-    \vspace{1cm}
-    
-    \textbf{Profesor/es} \\
-    Diego Ferreño Blanco \\
-    Victor Calzada Cabano
-
-    
-    \vfill
 \end{titlepage}
 
 % Resumen (Abstract)
 \newpage
+\onecolumn
 \section*{Resumen}
 \addcontentsline{toc}{section}{Resumen}
-Loren Ipsum 
 
-\textit{Palabras clave:} palabra1, palabra2, palabra3, palabra4.
+Garantizar la seguridad en la Operación a Largo Plazo (LTO) de las centrales nucleares exige predecir la fragilización de sus vasijas a altas fluencias neutrónicas. Los modelos analíticos tradicionales resultan inflexibles, y el Machine Learning clásico fracasa al extrapolar, arrojando resultados físicamente imposibles. Este Trabajo propone un modelo híbrido mediante Redes Neuronales Informadas por la Física (PINNs), integrando restricciones de monotonía termodinámica en la función de pérdida. Mientras los algoritmos puramente empíricos colapsan al extrapolar (RMSE $>$ 64 °C), la arquitectura PINN alcanza un RMSE de 16.24 °C y un $R^2$ de 0.88. Esta solución combina la precisión del Deep Learning con el rigor normativo, permitiendo extrapolaciones seguras y fiables para la gestión del envejecimiento nuclear.\\
+
+\textit{Palabras clave:} fragilización por irradiación, Operación a Largo Plazo (LTO), Machine Learning, Redes Neuronales Informadas por la Física (PINN), Vasija de Presión del Reactor (RPV).
 
 \section*{Abstract}
 \addcontentsline{toc}{section}{Abstract}
-Loren Ipsum
 
-\textit{Keywords:} keyword1, keyword2, keyword3, keyword4.
+Ensuring safety in the Long-Term Operation (LTO) of nuclear power plants requires predicting reactor pressure vessel embrittlement at high neutron fluences. Traditional analytical models lack flexibility, and classical Machine Learning fails at extrapolation, yielding physically impossible predictions. This Master's Thesis proposes a hybrid model using Physics-Informed Neural Networks (PINNs), integrating thermodynamic monotonicity constraints directly into the loss function. While purely empirical algorithms collapse during extrapolation (RMSE $>$ 64 °C), the PINN architecture achieves an RMSE of 16.24 °C and an $R^2$ of 0.88. This solution successfully combines the accuracy of Deep Learning with regulatory rigor, enabling safe and reliable extrapolations for nuclear aging management.\\
+
+\textit{Keywords:} radiation embrittlement, Long-Term Operation (LTO), Machine Learning, Physics-Informed Neural Networks (PINN), Reactor Pressure Vessel (RPV).
 
 % Cuerpo del documento
 \newpage
+\twocolumn
 
 \tableofcontents
 
-\chapter{Introducción (4 páginas max)}
+\chapter{Introducción}
 
 \section{Motivación}
 
@@ -86,7 +106,7 @@ La energía nuclear es fundamental en el mix energético global al aportar estab
 
 En los reactores de agua ligera, la vasija a presión es el componente de seguridad más crítico e insustituible al encargarse de la contención del núcleo. Durante su vida en servicio, la exposición continua a la fluencia neutrónica de la fisión induce daños microestructurales que merman las propiedades mecánicas del acero. Esta fragilización eleva la temperatura de transición del material y reduce su capacidad de absorber energía, un fenómeno cuya magnitud depende de la radiación acumulada y de la composición química original, especialmente de la presencia de cobre, níquel, manganeso y fósforo.\\
 
-Cuantificar y predecir esta pérdida de tenacidad es vital en el contexto de la LTO, lo que plantea un problema de series temporales y predicción a futuro bajo regímenes de fluencia excepcionalmente altos. Históricamente, este seguimiento se ha realizado mediante correlaciones empíricas como la norma ASTM E900-15, que modela la degradación en función de variables químicas, térmicas y de fluencia. Aunque es una herramienta consolidada, su enfoque determinista puede verse superado por la complejidad y la no linealidad de las interacciones químicas y neutrónicas a gran escala. Por otro lado, los modelos de aprendizaje automático no informados (como XGBoost o Perceptrones Multicapa) destacan al capturar las interacciones no lineales entre las variables metalúrgicas y de fluencia \parencite{liu2022machine}. Sin embargo, su alta precisión se limita a la interpolación debido a una fuerte dependencia de la densidad de los datos de entrenamiento. Dado que en regímenes de alta fluencia la información experimental es escasa, estos modelos fracasan al extrapolar, asimilando patrones sin rigor que derivan en pronósticos físicamente imposibles sobre la degradación real del material.\\
+Cuantificar y predecir esta pérdida de tenacidad es vital en el contexto de la LTO, lo que plantea un problema de series temporales y predicción a futuro bajo regímenes de fluencia sin precedentes experimentales.Históricamente, este seguimiento se ha realizado mediante correlaciones empíricas como la norma ASTM E900-15, que modela la degradación en función de variables químicas, térmicas y de fluencia. Aunque es una herramienta consolidada, su enfoque determinista puede verse superado por la complejidad y la no linealidad de las interacciones químicas y neutrónicas a gran escala. Por otro lado, los modelos de aprendizaje automático no informados (como XGBoost o Perceptrones Multicapa) destacan al capturar las interacciones no lineales entre las variables metalúrgicas y de fluencia \parencite{liu2022machine}. Sin embargo, su alta precisión se limita a la interpolación debido a una fuerte dependencia de la densidad de los datos de entrenamiento. Dado que en regímenes de alta fluencia la información experimental es escasa, estos modelos fracasan al extrapolar, asimilando patrones sin rigor que derivan en pronósticos físicamente imposibles sobre la degradación real del material.\\
 
 Ante la debilidad para extrapolar de los modelos de Machine Learning tradicionales por la falta de datos a altas fluencias y frente a las limitaciones de los modelos puramente analíticos, la motivación de este trabajo se asienta en el desarrollo de un modelo híbrido avanzado. De esta forma, el presente TFM se enfoca en el desarrollo y aplicación de Redes Neuronales Informadas por Física (PINNs, Physics-Informed Neural Networks) \parencite{karniadakis2021}. A diferencia de las aproximaciones clásicas, las PINNs integran el conocimiento fenomenológico a través del modelo analítico (como el descrito por ASTM) directamente en la función de pérdida matemática. De este modo, la red penaliza aquellas predicciones que violen el comportamiento físico subyencente, restringiendo el aprendizaje a soluciones físicamente viables y reales.
 
@@ -132,7 +152,7 @@ Para alcanzar este propósito fundamental, se definen los siguientes objetivos e
 
 A través de la consecución de estos objetivos, se pretende proporcionar una herramienta computacional avanzada que complemente los modelos actuales de vigilancia, ofreciendo predicciones de alta fidelidad que faciliten la toma de decisiones estratégicas en el contexto de la gestión del envejecimiento y la seguridad nuclear a largo plazo.
 
-\chapter{Estado del Arte (5 páginas max)}
+\chapter{Estado del Arte}
 
 \section{Fragilización de Vasijas Nucleares}
 
@@ -183,26 +203,30 @@ Este enfoque es robusto y cuenta con la aceptación regulatoria necesaria, pero 
 
 Más crítico aún es el problema de la incertidumbre de extrapolación. Las regresiones de la norma E900-15 se han calibrado principalmente sobre datos de reactores con ciclos de vida de 40 a 50 años. Al intentar aplicar estas correlaciones a 60 u 80 años de operación, el modelo se adentra en un territorio de fluencias neutrónicas donde la escasez de datos experimentales impide validar la física de los precipitados. \\
 
-El modelo asume que las funciones de saturación seguirán comportándose de forma monótona, ignorando que a fluencias extremas podrían activarse nuevos mecanismos de degradación microestructural, como la formación de precipitados rutilos o cambios en la fase de solutos que la ASTM no contempla. Al forzar los datos en funciones rígidas de potencia, el modelo ignora posibles transiciones de fase o comportamientos no lineales que surgen exclusivamente en el régimen de operación extendida. Ante este escenario, la comunidad científica ha reconocido que la aproximación analítica tradicional ya no es suficiente; requerimos modelos que no solo se ajusten a los datos, sino que comprendan las restricciones termodinámicas del sistema para evitar proyecciones que, aunque estadísticamente posibles, resulten físicamente inviables.
+Aunque la norma ASTM E900-15 proporciona una referencia robusta para predecir la fragilización, su aplicación en regímenes de fluencia elevados presenta una mayor incertidumbre, especialmente cuando las condiciones se alejan del dominio de datos empleado para construir la correlación \cite{astmE90015}. Esta limitación es relevante para escenarios de operación a largo plazo, ya que diversos estudios experimentales han observado que, a altas fluencias, pueden adquirir importancia mecanismos adicionales de degradación, como la formación de precipitados ricos en manganeso, níquel y silicio (Mn-Ni-Si), cuya evolución puede producir un endurecimiento adicional del material \cite{wells2014mnsi,ke2017mnsi}.\\
+
+En este trabajo, la PINN no pretende sustituir la física descrita por la ASTM ni modelar mecanismos microestructurales que no estén representados en los datos disponibles. La norma se utiliza como referencia física sobre la que la red aprende una corrección a partir de los datos experimentales, mientras que la restricción de monotonía evita que dicha corrección genere comportamientos incompatibles con el carácter acumulativo de la fragilización. De este modo, el objetivo es mejorar la capacidad de generalización del modelo sin abandonar el comportamiento físico conocido.
 
 \section{Machine Learning y PINNs}
 
-En años recientes, la ciencia de materiales nucleares ha virado hacia el uso de Machine Learning (ML). Ante la ingente cantidad de datos de vigilancia, algoritmos como XGBoost y los Perceptrones Multicapa (MLP) han demostrado una capacidad superior para mapear interacciones no lineales que las regresiones paramétricas no logran captar. Mientras que XGBoost destaca por su capacidad de encontrar sinergias químicas mediante ensamblajes de árboles, los MLP utilizan el Teorema de Aproximación Universal para mapear entradas complejas hacia el valor de $TTS$. Sin embargo, el valor de estas herramientas en el ámbito nuclear siempre ha sido cuestionado por su naturaleza de "caja negra" (*black-box*): la falta de interpretabilidad y de coherencia física es, a menudo, inaceptable para los estándares de seguridad nuclear \parencite{ma2020}.\\
+En años recientes, la ciencia de materiales nucleares ha virado hacia el uso de Machine Learning (ML). Ante la ingente cantidad de datos de vigilancia, algoritmos como XGBoost y los Perceptrones Multicapa (MLP) han demostrado una capacidad superior para mapear interacciones no lineales que las regresiones paramétricas no logran captar. Mientras que XGBoost destaca por su capacidad de encontrar sinergias químicas mediante ensamblajes de árboles, los MLP utilizan el Teorema de Aproximación Universal para mapear entradas complejas hacia el valor de $TTS$. Sin embargo, el valor de estas herramientas en el ámbito nuclear siempre ha sido cuestionado por su naturaleza de $"$caja negra" (*black-box*): la falta de interpretabilidad y de coherencia física es, a menudo, inaceptable para los estándares de seguridad nuclear \parencite{ma2020}.\\
 
-El desafío real no es la precisión, sino la generalización. Los modelos puramente dirigidos por datos (*data-driven*) presentan una debilidad crítica: el colapso predictivo en la extrapolación. Al entrenarse mediante la minimización del riesgo empírico (ERM), estos modelos ajustan sus pesos buscando reducir el error en el dominio de datos conocido ($\mathcal{D}_{train}$), pero carecen de cualquier mecanismo para validar la coherencia física en el dominio de la Operación a Largo Plazo (LTO). En estos regímenes de alta fluencia, donde los datos experimentales escasean, un modelo convencional tiende a sobreajustarse al ruido estadístico, proyectando trayectorias que, aunque ajustadas matemáticamente, resultan termodinámicamente inviables.\\
+El desafío real no es la precisión, sino la generalización. Los modelos puramente dirigidos por datos (*data-driven*) presentan una debilidad crítica: el colapso predictivo en la extrapolación. Al entrenarse mediante la minimización del riesgo empírico (ERM, el enfoque clásico enfocado en ajustar las predicciones al error estadístico del dataset), estos modelos ajustan sus pesos buscando reducir el error en el dominio de datos conocido ($\mathcal{D}_{train}$), pero carecen de cualquier mecanismo para validar la coherencia física en el dominio de la Operación a Largo Plazo (LTO). En estos regímenes de alta fluencia, donde los datos experimentales escasean, un modelo convencional tiende a sobreajustarse al ruido estadístico, proyectando trayectorias que, aunque ajustadas matemáticamente, resultan termodinámicamente inviables.\\
 
 Para solventar esta limitación, la frontera del conocimiento ha integrado leyes fundamentales directamente en la arquitectura mediante las Redes Neuronales Informadas por la Física (PINNs) \parencite{pang2020}. La innovación radica en transformar el entrenamiento de un problema estadístico a uno de optimización restringida. La red no solo minimiza el error frente a las observaciones ($\mathcal{L}_{data}$), sino que es forzada a satisfacer el conocimiento fenomenológico subyacente mediante un término de penalización física ($\mathcal{L}_{phys}$):\\
 $$\mathcal{L}_{total} = \mathcal{L}_{data} + \lambda_{phys} \mathcal{L}_{phys}$$\\
 
-El término $\mathcal{L}_{phys}$ actúa como un regularizador matemático severo. Mediante la diferenciación automática (*Autograd*), la PINN evalúa el residuo de las ecuaciones rectoras (como las restricciones de la norma ASTM) sobre la arquitectura de la red en cada iteración. Si la predicción $\hat{y}$ viola la física, el residuo de la función $\mathcal{F}$ diverge:\\
+El término $\mathcal{L}_{phys}$ actúa como un regularizador matemático severo. Mediante la diferenciación automática (Autograd, el motor de cálculo de gradientes de PyTorch), la PINN evalúa el residuo de las ecuaciones rectoras (como las restricciones de la norma ASTM) sobre la arquitectura de la red en cada iteración. Si la predicción $\hat{y}$ viola la física, el residuo de la función $\mathcal{F}$ diverge:\\
 
 $$\mathcal{L}_{phys} = \frac{1}{M} \sum_{j=1}^{M} \left| \mathcal{F}(\hat{y}_j, \Phi, T, \dots) \right|^2$$\\
 
-A diferencia del ML tradicional, donde el espacio de hipótesis es libre, las PINNs restringen el aprendizaje a un subespacio donde las leyes físicas se cumplen. Este \textit{inductive bias} físico es lo que permite que el modelo extrapole con seguridad: al obligar a la red a respetar las asíntotas y las saturaciones de daño conocidas, el modelo no puede divergir hacia comportamientos absurdos. \\
+El término \(M\) representa el número de muestras sobre las que se evalúa la restricción física, mientras que \(\mathcal{F}(\hat{y}_j,\Phi,T,\ldots)\) mide el **residuo físico** asociado a cada predicción \(\hat{y}_j\) considerando variables como la fluencia \(\Phi\) y la temperatura \(T\). Al promediar el cuadrado de estos residuos, \(\mathcal{L}_{phys}\) penaliza las predicciones que se alejan del comportamiento físico esperado.\\
 
-Esta hibridación representa el marco predictivo definitivo para el envejecimiento nuclear. Combina la expresividad geométrica del *Deep Learning* para el modelado preciso de coladas específicas con la robustez dogmática de las ecuaciones de materiales. El resultado no es simplemente una herramienta de predicción, sino un modelo que interpola con alta precisión estadística y, de forma crítica, extrapola bajo el estricto gobierno de la física. Para el análisis de integridad estructural a largo plazo, esta aproximación garantiza proyecciones que son, por diseño, científicamente coherentes y regulatoriamente defendibles.
+A diferencia del ML tradicional, donde el espacio de hipótesis es libre, las PINNs restringen el aprendizaje a un subespacio donde las leyes físicas se cumplen. Este error inductivo físico es lo que permite que el modelo extrapole con seguridad: al obligar a la red a respetar las asíntotas y las saturaciones de daño conocidas, el modelo no puede divergir hacia comportamientos absurdos. \\
 
-\chapter{Metodología Experimental (17 páginas max)}
+Esta hibridación representa el marco predictivo definitivo para el envejecimiento nuclear. Combina la capacidad del Deep Learning para captar relaciones complejas y adaptarse a las particularidades de cada colada con las restricciones físicas impuestas por las ecuaciones de materiales. El resultado no es simplemente una herramienta de predicción, sino un modelo que interpola con alta precisión estadística y, de forma crítica, extrapola bajo el estricto gobierno de la física. Para el análisis de integridad estructural a largo plazo, esta aproximación garantiza proyecciones que son, por diseño, científicamente coherentes y regulatoriamente defendibles.
+
+\chapter{Metodología Experimental}
 
 \section{Descripción y Procesamiento del Dataset}
 
@@ -239,11 +263,13 @@ Los algoritmos de aprendizaje automático, por su fundamentación matemática ba
 
 Para garantizar la validez científica de los resultados y evaluar la verdadera capacidad de generalización del modelo frente a datos no observados, se ha implementado el método \texttt{data\_split}. Este método fragmenta el corpus total de 1889 muestras en tres subconjuntos disjuntos: Entrenamiento (\textit{Train}), Validación (\textit{Validation}) y Prueba (\textit{Test}). 
 
-El conjunto de entrenamiento se emplea exclusivamente para la actualización de los pesos sinápticos mediante retropropagación. El conjunto de validación actúa como un entorno de prueba intermedio, fundamental para detener el entrenamiento prematuramente (\textit{Early Stopping}) si se detecta sobreajuste y para guiar la búsqueda de hiperparámetros. Finalmente, se ha reservado un conjunto de prueba puro (típicamente el 20\% de los datos) que permanece estrictamente oculto durante toda la fase de optimización, asegurando que las métricas finales reportadas (como el RMSE) reflejen un rendimiento realista ante futuras aplicaciones en la Operación a Largo Plazo (LTO).
+El conjunto de entrenamiento se emplea exclusivamente para la actualización de los pesos sinápticos mediante retropropagación. El conjunto de validación actúa como un entorno de prueba intermedio, fundamental para detener el entrenamiento prematuramente (\textit{Early Stopping}) si se detecta sobreajuste y para guiar la búsqueda de hiperparámetros. Finalmente, se ha reservado un conjunto de prueba formado por las muestras de mayor fluencia, mientras que el entrenamiento se realiza sobre datos de menor fluencia. De este modo, las métricas finales permiten evaluar de forma directa la capacidad de extrapolación del modelo hacia escenarios de alta fluencia propios de la Operación a Largo Plazo (LTO).
 
 \subsection{Normalización y Prevención de Fuga de Información}
 
-Uno de los aspectos más críticos en el modelado de redes neuronales es el tratamiento de la escala de las variables. En el problema físico que nos ocupa, las magnitudes de entrada son inherentemente dispares: mientras que la fluencia neutrónica ($\Phi$) maneja órdenes de magnitud extremadamente elevados (típicamente en el rango de $10^{19}$ a $10^{20}$ $n/cm^2$), variables químicas como el contenido de fósforo (P) presentan valores minúsculos (del orden de $0.01\%$). Si estos datos crudos se inyectasen directamente en un Perceptrón Multicapa, las variables con mayores magnitudes numéricas dominarían artificialmente el cálculo del gradiente durante el algoritmo de \textit{Backpropagation}, provocando inestabilidades numéricas, oscilaciones en la función de pérdida y convergencias subóptimas.
+Uno de los aspectos más críticos en el modelado de redes neuronales es el tratamiento de la escala de las variables. En el problema físico que nos ocupa, las magnitudes de entrada son inherentemente dispares: mientras que la fluencia neutrónica ($\Phi$) maneja órdenes de magnitud extremadamente elevados (típicamente en el rango de $10^{19}$ a $10^{20}$ $n/cm^2$), variables químicas como el contenido de fósforo (P) presentan valores minúsculos (del orden de $0.01\%$). 
+
+Si estos datos crudos se inyectasen directamente en un Perceptrón Multicapa (MLP), arquitectura que se desarrolla con mayor detalle en la Sección~3.3.2, las variables con mayores magnitudes numéricas dominarían artificialmente el cálculo del gradiente durante el algoritmo de \textit{Backpropagation} (ajuste de los pesos de la red), provocando inestabilidades numéricas, oscilaciones en la función de pérdida y convergencias subóptimas.
 
 Para mitigar este fenómeno, se ha implementado un escalado estándar (\textit{Z-score normalization}) utilizando la clase \texttt{StandardScaler} de la librería Scikit-Learn. Esta transformación re-centra cada característica matemática para que posea una media de cero ($\mu = 0$) y una varianza unitaria ($\sigma = 1$), de acuerdo con la expresión:
 
@@ -251,13 +277,13 @@ Para mitigar este fenómeno, se ha implementado un escalado estándar (\textit{Z
     z = \frac{x - \mu}{\sigma}
 \end{equation}
 
-Es metodológicamente imperativo destacar que el cálculo de los parámetros estadísticos de normalización (la media $\mu$ y la desviación estándar $\sigma$) se realiza \textbf{exclusiva y estrictamente} sobre el conjunto de entrenamiento (mediante el método \texttt{fit}). Posteriormente, estos mismos parámetros estáticos se utilizan para transformar (\texttt{transform}) los conjuntos de validación y prueba. Si el escalado se hubiese ajustado sobre la totalidad del dataset antes de la partición, se habría incurrido en un grave error metodológico conocido como "fuga de información" (\textit{data leakage}). La fuga de información ocurre cuando información estadística del conjunto de prueba contamina el conjunto de entrenamiento, dotando al modelo de una ventaja artificial e invalidando la integridad de los resultados predictivos.
+Constituye buenas prácticas destacar que el cálculo de los parámetros estadísticos de normalización (la media $\mu$ y la desviación estándar $\sigma$) se realiza \textbf{exclusiva y estrictamente} sobre el conjunto de entrenamiento (mediante el método fit). Posteriormente, estos mismos parámetros estáticos se utilizan para transformar (transform) los conjuntos de validación y prueba. Si el escalado se hubiese ajustado sobre la totalidad del dataset antes de la partición, se habría incurrido en un grave error metodológico conocido como "fuga de información" (\textit{data leakage}). La fuga de información ocurre cuando información estadística del conjunto de prueba contamina el conjunto de entrenamiento, dotando al modelo de una ventaja artificial e invalidando la integridad de los resultados predictivos.
 
 \subsection{Transformación Inversa de Predicciones}
 
-Dado que la variable objetivo \texttt{DT41J\_Celsius} también se normaliza para estabilizar la convergencia de la red neuronal, las salidas numéricas inferidas por el modelo pertenecen a un espacio latente adimensional. Para que estas predicciones adquieran valor ingenieril y puedan ser interpretadas, comparadas con el límite de referencia (baseline) de la norma ASTM E900-15 y utilizadas para calcular errores térmicos reales, se hace indispensable revertir la transformación matemática.
+Dado que la variable objetivo DT41J\_Celsius también se normaliza para estabilizar la convergencia de la red neuronal, las salidas numéricas inferidas por el modelo pertenecen a un espacio latente adimensional. Para que estas predicciones adquieran valor ingenieril y puedan ser interpretadas, comparadas con el límite de referencia (baseline) de la norma ASTM E900-15 y utilizadas para calcular errores térmicos reales, se hace indispensable revertir la transformación matemática.
 
-Para este fin, la clase \texttt{RadiationDataset} incorpora el método personalizado \texttt{despreprocess}. Este bloque de código rescata los parámetros de escalado previamente guardados en la memoria del \texttt{preprocessor} (específicamente, \texttt{preprocessor.mean\_} y \texttt{preprocessor.scale\_}) localizando dinámicamente el índice correspondiente a la columna objetivo. A continuación, aplica la transformación algebraica inversa sobre las predicciones escaladas ($y_{scaled}$), proyectándolas de nuevo a su dominio original en grados Celsius:
+Para este fin, la clase RadiationDataset incorpora el método personalizado despreprocess. Este bloque de código rescata los parámetros de escalado previamente guardados en la memoria del preprocessor (específicamente, preprocessor.mean y preprocessor.scale) localizando dinámicamente el índice correspondiente a la columna objetivo. A continuación, aplica la transformación algebraica inversa sobre las predicciones escaladas ($y_{scaled}$), proyectándolas de nuevo a su dominio original en grados Celsius:
 
 \begin{equation}
     y_{real} = (y_{scaled} \times \sigma_{target}) + \mu_{target}
@@ -267,16 +293,18 @@ Esta arquitectura de preprocesamiento y postprocesamiento garantiza un flujo de 
 
 \section{Definición del Baseline Físico}
 
-En cualquier investigación fundamentada en el desarrollo de arquitecturas de aprendizaje profundo predictivo, resulta metodológicamente imperativo establecer un límite de referencia analítico (conocido en la literatura como \textit{baseline}) antes de proceder al entrenamiento de modelos complejos. En el contexto de la gestión del envejecimiento nuclear, este punto de referencia no puede ser arbitrario; debe representar el estado del arte normativo actual. Por consiguiente, se ha implementado computacionalmente la norma empírica ASTM E900-15 como métrica de control y límite base de predicción.
+En cualquier investigación fundamentada en el desarrollo de arquitecturas de aprendizaje profundo predictivo, constituye buenas prácticas, en el caso de que exista, establecer establecer un límite de referencia analítico antes de proceder al entrenamiento de modelos complejos. En el contexto de la gestión del envejecimiento nuclear, este punto de referencia no puede ser arbitrario; debe representar el estado del arte normativo actual. Por consiguiente, se ha implementado computacionalmente la norma empírica ASTM E900-15 como métrica de control y límite base de predicción.
 
 Para materializar este estándar analítico, se ha desarrollado el script \texttt{formula.py}, cuyo núcleo computacional reside en la función algorítmica \texttt{astm\_e900\_15}. El propósito de este módulo es ingerir el vector de variables independientes (composición química, temperatura y dosis neutrónica) y proyectarlo sobre las ecuaciones fenomenológicas de la normativa, obteniendo así una predicción puramente determinista sobre el conjunto de prueba. 
 
 Desde una perspectiva de ingeniería de software y eficiencia computacional, la formulación matemática de la norma no se ha implementado mediante bucles iterativos tradicionales. En su lugar, se ha procedido a una vectorización completa de las ecuaciones empleando la librería NumPy de Python. La vectorización permite que las operaciones aritméticas se ejecuten en paralelo sobre matrices y tensores de datos completos a nivel de lenguaje C subyacente, acelerando drásticamente el proceso de inferencia y asegurando la escalabilidad del código ante grandes volúmenes de datos de vigilancia.
 
-De acuerdo con la base fenomenológica de la norma ASTM E900-15, la implementación vectorizada calcula el desplazamiento total de la temperatura de transición ($\Delta TTS$) como la superposición aditiva de dos mecanismos de degradación microestructural independientes:
+De acuerdo con la formulación de la norma ASTM E900-15, el desplazamiento de la temperatura de transición se obtiene a partir de las contribuciones asociadas a los distintos mecanismos de fragilización y de su dependencia con la composición química y las condiciones de irradiación (\cite{astmE90015}).
+
 \begin{equation}
     \Delta TTS = TTS_1 + TTS_2
 \end{equation}
+
 Donde el término $TTS_1$ cuantifica el daño en la matriz férrica inducido por la creación de pares de Frenkel y lazos de dislocación (dependiente del fósforo, manganeso y níquel), mientras que el término $TTS_2$ parametriza el endurecimiento por precipitación de clústeres ricos en cobre.
 
 Un desafío técnico en la implementación programática de esta ecuación radica en la naturaleza de la variable de entrada \texttt{Product\_Form}. El comportamiento de la degradación difiere térmicamente si el componente analizado proviene de una soldadura ('W'), de un proceso de forja ('F') o de una placa ('P'). Para integrar esta heurística sin romper la eficiencia de la vectorización matemática, se ha diseñado una lógica de control fundamentada en la función \texttt{np.select}. 
@@ -285,20 +313,20 @@ Esta instrucción permite mapear dinámicamente tensores de variables categóric
 
 Una vez calculado el tensor de predicciones analíticas, es necesario establecer un marco de evaluación cuantitativo. Para ello, y con vistas a la futura fase de experimentación con redes neuronales, se han seleccionado dos métricas estadísticas fundamentales. En primer lugar, el Error Cuadrático Medio (RMSE, por sus siglas en inglés), el cual penaliza severamente las grandes desviaciones predictivas, otorgando un indicador directo del error en la escala original del problema (grados Celsius). En segundo lugar, el Coeficiente de Determinación ($R^2$), empleado para cuantificar qué proporción de la varianza en la fragilización térmica es explicada por la norma.
 
-La consecución de esta fase analítica trasciende la mera validación normativa; constituye un anclaje metodológico indispensable. Resulta imposible medir el grado de innovación, robustez y mejora real que aportan las Redes Neuronales Informadas por Física (PINNs) si no se cuenta con un punto de control del error sólidamente establecido. Al fijar el desempeño de la norma ASTM E900-15 como \textit{baseline} físico, se delimita la frontera del conocimiento actual; cualquier reducción del RMSE obtenida posteriormente por los algoritmos de Machine Learning demostrará empíricamente la viabilidad y superioridad del enfoque propuesto en este Trabajo de Fin de Máster para la Operación a Largo Plazo de centrales nucleares.
+Esta fase analítica sirve como referencia de comparación para evaluar de forma objetiva la mejora aportada por los modelos posteriores. Resulta imposible medir el grado de innovación, robustez y mejora real que aportan las Redes Neuronales Informadas por Física (PINNs) si no se cuenta con un punto de control del error sólidamente establecido. Al fijar el desempeño de la norma ASTM E900-15 como \textit{baseline} físico, se delimita la frontera del conocimiento actual; cualquier reducción del RMSE obtenida posteriormente por los algoritmos de Machine Learning demostrará empíricamente la viabilidad y superioridad del enfoque propuesto en este Trabajo de Fin de Máster para la Operación a Largo Plazo de centrales nucleares.
 
 \section{Modelos ML no Informados}
 
-Para evaluar de forma exhaustiva el rendimiento de las arquitecturas híbridas (PINNs), el diseño experimental de esta investigación exige la construcción previa de un marco comparativo fundamentado exclusivamente en los datos. Por consiguiente, se ha implementado una batería de modelos de control puramente empíricos (\textit{data-driven}) carentes de restricciones fenomenológicas. El propósito de esta fase metodológica es evaluar la capacidad de los algoritmos de Machine Learning tradicionales para capturar las interacciones no lineales entre las variables químicas y neutrónicas sin la intervención de sesgos inductivos físicos. Estos modelos base han sido codificados y encapsulados bajo el paradigma de programación orientada a objetos en el módulo \texttt{models.py}.
+Para evaluar de forma exhaustiva el rendimiento de las arquitecturas híbridas (PINNs), el diseño experimental de esta investigación exige comparar previamente dichas arquitecturas basándose exclusivamente en los datos. Por consiguiente, se ha implementado una batería de modelos de control puramente empíricos (\textit{data-driven}) carentes de restricciones fenomenológicas. El propósito de esta fase metodológica es evaluar la capacidad de los algoritmos de Machine Learning tradicionales para capturar las interacciones no lineales entre las variables químicas y neutrónicas sin la intervención de restricciones fisicas.
 
 \subsection{Modelo de Ensamblaje: XGBoost}
 
-El primer algoritmo seleccionado para establecer esta línea base algorítmica es un modelo de ensamblaje de árboles de decisión potenciado por gradiente, implementado mediante la clase \texttt{BaselineXGBoost}. La elección de XGBoost (\textit{eXtreme Gradient Boosting}) obedece a su contrastada superioridad y robustez en el modelado de datos tabulares heterogéneos, siendo especialmente hábil para descubrir sinergias complejas entre elementos aleantes (como el Cobre y el Níquel) sin requerir que estas interacciones se definan a priori de forma analítica.
+El primer algoritmo seleccionado para establecer esta línea base algorítmica es un modelo de ensamblaje de árboles de decisión potenciado por gradiente. Este tipo de método combina múltiples árboles simples, de forma que cada nuevo árbol intenta corregir los errores cometidos por los anteriores, obteniendo finalmente una predicción conjunta más precisa y robusta. La elección de XGBoost (\textit{eXtreme Gradient Boosting}) se debe a su buen rendimiento en datos tabulares y a su capacidad para capturar relaciones no lineales e interacciones entre variables. En este problema, esto permite modelar cómo la combinación de distintos elementos aleantes, como el Cobre y el Níquel, puede influir conjuntamente en la fragilización, sin necesidad de especificar previamente una ecuación que describa dicha relación.
 
 El diseño de la clase \texttt{BaselineXGBoost} permite una instanciación flexible, aunque parte de un conjunto de hiperparámetros base cuidadosamente seleccionados para controlar la capacidad del modelo y evitar el sobreajuste inicial. Entre estos parámetros destacan:
 \begin{itemize}
     \item \texttt{n\_estimators}: Define el número total de árboles de decisión (estimadores débiles) que compondrán el ensamblaje secuencial. Un número elevado permite un aprendizaje más profundo de los residuos, pero incrementa el riesgo de memorización del ruido estadístico.
-    \item \texttt{max\_depth}: Limita la profundidad máxima de cada árbol individual. Al restringir este parámetro, se fuerza al modelo a aprender patrones generales de fragilización en lugar de reglas hiper-específicas para coladas particulares, actuando como un mecanismo de regularización estructural.
+    \item \texttt{max\_depth}: Limita la profundidad máxima de cada árbol individual. Al restringir este parámetro, se fuerza al modelo a aprender patrones generales de fragilización actuando como un mecanismo de regularización estructural.
     \item \texttt{learning\_rate} (o $\eta$): Escala la contribución de cada nuevo árbol al ensamblaje final. Un valor reducido obliga al algoritmo a requerir más estimadores para converger, lo que habitualmente resulta en una generalización más suave y robusta frente a datos no observados.
 \end{itemize}
 
@@ -306,17 +334,17 @@ Para garantizar la reproducibilidad del experimento y facilitar la integración 
 
 \subsection{Aprendizaje Profundo: Perceptrón Multicapa (MLP Inicial)}
 
-El segundo modelo de control empírico pertenece al dominio del aprendizaje profundo (\textit{Deep Learning}). Se ha implementado una red neuronal artificial, denominada \texttt{MLPInicial}, utilizando el \textit{framework} PyTorch. A diferencia del enfoque de partición del espacio del XGBoost, el Perceptrón Multicapa utiliza el Teorema de Aproximación Universal mediante transformaciones geométricas del espacio de características, lo que ofrece un punto de comparación directo a nivel topológico con la futura arquitectura PINN.
+El segundo modelo de control empírico pertenece al dominio del aprendizaje profundo (\textit{Deep Learning}). Se ha implementado una red neuronal artificial, denominada \texttt{MLPInicial}, utilizando el \textit{framework} PyTorch. A diferencia de XGBoost, que construye la predicción mediante una combinación de árboles de decisión, el Perceptrón Multicapa (MLP) aprende relaciones entre las variables a través de sucesivas capas de neuronas. Gracias a esta estructura, puede representar relaciones complejas y no lineales entre la composición del material, la temperatura, la fluencia y la fragilización observada. Además, al compartir la misma estructura básica de red neuronal que la posterior PINN, el MLP permite evaluar de forma directa qué mejora se obtiene al añadir las restricciones físicas al proceso de aprendizaje.
 
-El diseño arquitectónico de la red \texttt{MLPInicial} se compone de una topología \textit{feed-forward} estándar. El vector de entrada, que agrupa la dosis neutrónica, la temperatura y la composición química, atraviesa una secuencia de capas densamente conectadas (\texttt{nn.Linear} en PyTorch). Para permitir que el modelo mapee las dinámicas no lineales de la saturación del daño por radiación, se insertan funciones de activación entre las capas ocultas, evaluándose empíricamente funciones modernas y estabilizadas como ReLU (\textit{Rectified Linear Unit}) o GELU (\textit{Gaussian Error Linear Unit}). 
+El diseño arquitectónico de la red \texttt{MLPInicial} se compone de una topología \textit{feed-forward} estándar (proceso en el que los datos avanzan capa por capa por una red neuronal hasta producir una salida). El vector de entrada, que agrupa la dosis neutrónica, la temperatura y la composición química, atraviesa una secuencia de capas densamente conectadas (\texttt{nn.Linear} en PyTorch). Para permitir que el modelo mapee las dinámicas no lineales de la saturación del daño por radiación, se insertan funciones de activación entre las capas ocultas, evaluándose empíricamente funciones modernas y estabilizadas como ReLU (\textit{Rectified Linear Unit}) o GELU (\textit{Gaussian Error Linear Unit}). 
 
-Un aspecto crítico en la ingeniería de datos para esta red fue la transición de las estructuras de datos. Dado que la base de datos se gestiona mediante la clase personalizada \texttt{RadiationDataset} (que genera instancias de \texttt{Subset} de PyTorch al realizar las particiones de entrenamiento y prueba), se hizo imprescindible desarrollar una rutina de extracción eficiente. Para ello, se implementó la función \texttt{subset\_to\_numpy} en el módulo \texttt{dataset.py}. Esta función rastrea el índice real de la variable objetivo (\texttt{DT41J\_Celsius}) dentro del \textit{DataFrame} original subyacente y desempaqueta los objetos \texttt{Subset} en matrices de NumPy puras ($X, y$). Esta transformación actúa como un puente vital, permitiendo que los datos se inyecten de forma transparente y masiva en los tensores computacionales requeridos por el optimizador de la red neuronal.
+Un aspecto crítico en la ingeniería de datos para esta red fue la transición de las estructuras de datos. Dado que la base de datos se gestiona mediante la clase personalizada \texttt{RadiationDataset}, se hizo imprescindible desarrollar una rutina de extracción eficiente. Para ello, se implementó la función \texttt{subset\_to\_numpy} en el módulo \texttt{dataset.py}. Esta función rastrea el índice real de la variable objetivo (\texttt{DT41J\_Celsius}) dentro del \textit{DataFrame} original subyacente y desempaqueta los objetos \texttt{Subset} en matrices de NumPy puras ($X, y$). Esta transformación convierte la información categórica en valores numéricos que pueden ser procesados por la red neuronal. De este modo, variables como el tipo de producto pueden incorporarse junto con el resto de características del material durante el entrenamiento del modelo.
 
 \subsection{Minimización del Riesgo Empírico y Justificación Metodológica}
 
 El entrenamiento de ambos modelos (tanto el ensamblaje de árboles como la red neuronal profunda) se rige bajo el paradigma clásico de la Minimización del Riesgo Empírico (ERM, por sus siglas en inglés). En esta formulación matemática, la función de pérdida carece absolutamente de cualquier penalización asociada a la física de materiales. El optimizador actualiza los pesos de la red basándose única y exclusivamente en la discrepancia estadística entre el valor de fragilización real ($y_i$) y el predicho ($\hat{y}_i$).
 
-Para problemas de regresión continua como la estimación del desplazamiento térmico, la formulación matemática minimizada es el Error Cuadrático Medio (MSE):
+Para problemas de regresión continua como la estimación del desplazamiento térmico, la formulación matemática minimizada es el MSE:
 
 \begin{equation}
     \mathcal{L}_{MSE} = \frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2
@@ -354,25 +382,17 @@ Metodológicamente, esto significa que la PINN no predice la fragilización tota
 
 \subsection{Motor de Diferenciación Automática (Autograd)}
 
-La inyección de restricciones físicas en la red neuronal requiere evaluar cómo cambian las predicciones del modelo ante variaciones en las entradas termodinámicas; específicamente, la derivada de la fragilización respecto a la fluencia neutrónica ($\frac{\partial \hat{y}}{\partial \Phi}$). Para las redes neuronales estándar, los algoritmos de retropropagación (\textit{Backpropagation}) solo calculan gradientes con respecto a los pesos y sesgos internos de las capas.
+La inyección de restricciones físicas en la red neuronal requiere evaluar cómo cambian las predicciones del modelo ante variaciones en las entradas termodinámicas; específicamente, la derivada de la fragilización respecto a la fluencia neutrónica ($\frac{\partial \hat{y}}{\partial \Phi}$). Para las redes neuronales estándar, los algoritmos de retropropagación backpropagation solo calculan gradientes con respecto a los pesos y sesgos internos de las capas.
 
 Para superar esta limitación y convertir la red en una verdadera PINN, se ha introducido un aspecto metodológico clave en el diseño del bucle de entrenamiento: la habilitación explícita del motor de diferenciación automática \textit{Autograd} de PyTorch sobre los datos empíricos. Esto se logra invocando la instrucción computacional \texttt{X\_batch.requires\_grad\_(True)} sobre el tensor de entrada que alimenta a la red en cada iteración (\textit{epoch}).
 
 Al forzar esta directiva, PyTorch construye dinámicamente un grafo computacional acíclico dirigido en la memoria gráfica, registrando cada operación matemática (desde la primera capa lineal hasta el sumatorio residual final) mediante la regla de la cadena del cálculo diferencial. Este grafo latente permite, posteriormente en la función de pérdida (\texttt{pinn\_loss}), utilizar \texttt{torch.autograd.grad} para obtener el gradiente exacto y analítico de la salida respecto a la fluencia neutrónica (columna indexada en \texttt{fluence\_idx=6}). Sin la activación de este rastreo tensorial desde la matriz de características de entrada, la aplicación de penalizaciones físicas basadas en la monotonía sería matemáticamente irrealizable.
 
-\subsection{Entorno Computacional y Aceleración de Hardware}
-
-La construcción dinámica de grafos computacionales para el cálculo de derivadas de orden superior y el ensamblaje de arquitecturas residuales demandan un elevado coste computacional. Por consiguiente, la metodología experimental ha sido desplegada sobre una infraestructura de alto rendimiento, diseñada explícitamente para el cálculo matricial masivamente paralelo.
-
-Para garantizar la reproducibilidad transplataforma y la estabilidad del sistema frente a largas sesiones de optimización, el ecosistema de investigación se configuró en un entorno de arranque dual (\textit{Dual Boot}) combinando los sistemas operativos Microsoft Windows y Linux Ubuntu. Esta dualidad permite ejecutar las librerías científicas en entornos UNIX nativos, maximizando la eficiencia en la gestión de memoria y los procesos de recolección de basura (*Garbage Collection*).
-
-A nivel de hardware, los experimentos, la instanciación de los tensores y la optimización de los gradientes físicos se ejecutaron sobre una Unidad de Procesamiento Gráfico (GPU) de arquitectura avanzada NVIDIA RTX 5060. Esta tarjeta fue orquestada a través de un procesador central Intel Core i7 de 12\textsuperscript{a} generación, apoyado por 32 GB de memoria RAM de alta velocidad para prevenir cuellos de botella en la transferencia perimetral de los *DataLoaders*. La integración entre el modelo de PyTorch y el hardware se realizó mediante la plataforma de computación paralela CUDA (\textit{Compute Unified Device Architecture}), asegurando que tanto las operaciones matriciales de la propagación hacia adelante como el cálculo iterativo del motor \textit{Autograd} se aceleraran en la memoria VRAM, reduciendo el tiempo de convergencia de la arquitectura híbrida a márgenes operativamente viables.
-
 \section{Función de Pérdida Personalizada}
 
-En el paradigma clásico del aprendizaje profundo (\textit{Deep Learning}), el entrenamiento de una red neuronal se rige casi exclusivamente por el principio de Minimización del Riesgo Empírico (ERM). Bajo este marco, el algoritmo de optimización actualiza los parámetros internos del modelo con el único propósito de reducir la discrepancia estadística entre las predicciones y las observaciones empíricas del conjunto de entrenamiento. Sin embargo, en problemas de ciencia de materiales y seguridad nuclear, donde los datos en regímenes extremos (como las altas fluencias neutrónicas) son escasos, esta dependencia exclusiva de los datos resulta inaceptable. Los modelos puramente empíricos tienden a sobreajustarse al ruido local y, al extrapolar, pueden generar predicciones físicamente absurdas, como sugerir que el acero recupera su tenacidad tras recibir mayores dosis de radiación.
+En el paradigma clásico del aprendizaje profundo (\textit{Deep Learning}), el entrenamiento de una red neuronal se rige casi exclusivamente por el principio de ERM. Bajo este marco, el algoritmo de optimización actualiza los parámetros internos del modelo con el único propósito de reducir la discrepancia estadística entre las predicciones y las observaciones empíricas del conjunto de entrenamiento. Sin embargo, en problemas de ciencia de materiales y seguridad nuclear, donde los datos en regímenes extremos (como las altas fluencias neutrónicas) son escasos, esta dependencia exclusiva de los datos resulta inaceptable. Los modelos puramente empíricos tienden a sobreajustarse al ruido local y, al extrapolar, pueden generar predicciones físicamente absurdas, como sugerir que el acero recupera su tenacidad tras recibir mayores dosis de radiación.
 
-Para solventar esta debilidad estructural, la innovación central de este Trabajo de Fin de Máster radica en la redefinición del problema de optimización mediante el diseño metodológico de una Red Neuronal Informada por la Física (PINN). Esta metamorfosis algorítmica se materializa en la función \texttt{pinn\_loss} (implementada en el módulo \texttt{models.py}), la cual transforma la función de pérdida unidimensional en una función objetivo compuesta, forzando al modelo a aprender no solo de los datos tabulares, sino también de las leyes fundamentales de la termodinámica.
+Para solventar esta debilidad estructural, la innovación central de este Trabajo de Fin de Máster radica en la redefinición del problema de optimización mediante el diseño metodológico de una Red Neuronal Informada por la Física (PINN). Esto se materializa en la función \texttt{pinn\_loss} (implementada en el módulo \texttt{models.py}), la cual transforma la función de pérdida unidimensional en una función objetivo compuesta, forzando al modelo a aprender no solo de los datos tabulares, sino también de las leyes fundamentales de la termodinámica.
 
 \subsection{Formulación Matemática de la Pérdida Combinada}
 
@@ -382,29 +402,31 @@ El diseño metodológico impone que la red neuronal satisfaga simultáneamente d
     \mathcal{L}_{total} = \lambda_{data}\mathcal{L}_{data} + \lambda_{mono}\mathcal{L}_{mono}
 \end{equation}
 
-El primer término, $\mathcal{L}_{data}$, corresponde a la pérdida puramente empírica evaluada mediante el Error Cuadrático Medio (MSE) sobre el lote de datos (\textit{batch}) actual. Su objetivo es anclar las predicciones del modelo a la realidad experimental histórica. Por su parte, el término $\mathcal{L}_{mono}$ introduce el sesgo inductivo físico. 
+El primer término, $\mathcal{L}_{data}$, corresponde a la pérdida puramente empírica evaluada mediante el MSE sobre el lote de datos (\textit{batch}) actual. Su objetivo es anclar las predicciones del modelo a la realidad experimental histórica. Por su parte, el término $\mathcal{L}_{mono}$ introduce el sesgo inductivo físico. 
 
-Los escalares $\lambda_{data}$ y $\lambda_{mono}$ actúan como hiperparámetros de regularización e interjuegan un papel crítico en la dinámica de optimización del gradiente descendente. Dado que la topología espacial de la pérdida de datos y la pérdida física pueden presentar curvaturas y órdenes de magnitud drásticamente diferentes, estos coeficientes ponderadores previenen que la restricción termodinámica ahogue el aprendizaje empírico, o viceversa, asegurando una convergencia estable.
+Los escalares $\lambda_{data}$ y $\lambda_{mono}$ actúan como hiperparámetros de regularización y desempeñan un papel de interacción crítico en la dinámica de optimización. Dado que la topología espacial de la pérdida de datos y la pérdida física pueden presentar curvaturas y órdenes de magnitud drásticamente diferentes, estos coeficientes ponderadores previenen que la restricción física impuesta ahogue el aprendizaje empírico, o viceversa, asegurando una convergencia estable.
 
 \subsection{La Restricción Física: Monotonía respecto a la Fluencia}
 
-A diferencia de otras arquitecturas PINN en la literatura que incorporan Ecuaciones Diferenciales Parciales (PDEs) completas en su función de pérdida, este trabajo adopta un enfoque físico fundamental y altamente robusto: la imposición de la monotonía respecto a la fluencia neutrónica ($\Phi$). 
+A diferencia de otras arquitecturas PINN en la literatura que incorporan Ecuaciones Diferenciales Parciales (PDEs) completas en su función de pérdida, este trabajo adopta un enfoque físico fundamental y altamente robusto. 
 
-Físicamente, la fragilización por radiación es un proceso de daño acumulativo. El bombardeo neutrónico incesante genera cascadas de colisiones en la red cristalina del hierro, produciendo pares de Frenkel (vacantes e intersticiales) que, asistidos por la temperatura, difunden y se aglomeran formando lazos de dislocación y nano-precipitados ricos en cobre (Cu), níquel (Ni) y manganeso (Mn). Estos defectos actúan como barreras infranqueables para el deslizamiento de las dislocaciones. Por imperativo termodinámico y cinético, un aumento en la dosis de radiación recibida (manteniendo constantes la temperatura y la composición química) solo puede traducirse en una mayor densidad de defectos, y por tanto, en un incremento (o saturación asintótica) del desplazamiento de la temperatura de transición ($\Delta TTS$). Una disminución del daño ante un aumento de radiación viola el segundo principio de la termodinámica en este sistema cerrado.
+Físicamente, la fragilización por radiación es un proceso de daño acumulativo. El bombardeo neutrónico genera cascadas de colisiones en la red cristalina del hierro, produciendo defectos puntuales como vacantes e intersticiales que pueden agruparse posteriormente y formar, entre otras estructuras, lazos de dislocación \cite{slugen2002}. Además, la irradiación favorece la difusión y agrupación de elementos de aleación, dando lugar a precipitados ricos en cobre y a precipitados ricos en manganeso, níquel y silicio (Mn-Ni-Si) \cite{odette2021precipitation}. Estas estructuras actúan como obstáculos al movimiento de las dislocaciones, aumentando el endurecimiento y favoreciendo la fragilización del acero \cite{bergner2015}. Manteniendo constantes la temperatura y la composición química, **una mayor dosis de radiación provoca más defectos en el acero y, por tanto, una mayor fragilización**. Como consecuencia, el desplazamiento de la temperatura de transición ($\Delta TTS$) aumenta con la radiación, aunque puede llegar a estabilizarse a dosis muy altas. Físicamente, la fragilización por irradiación es un proceso de daño acumulativo. Al aumentar la fluencia neutrónica, se generan y acumulan defectos en la estructura del acero, por lo que, manteniendo constantes la temperatura y la composición química, el daño debe aumentar o alcanzar un valor de saturación. Por ello, una predicción en la que el material recuperase espontáneamente sus propiedades al recibir una mayor dosis de radiación sería incompatible con el comportamiento físico esperado.
 
-Por lo tanto, la restricción física exige matemáticamente que la derivada parcial de la predicción de la red neuronal ($\hat{y}$) con respecto a la fluencia neutrónica ($\Phi$) sea estrictamente mayor o igual a cero en todo el dominio del espacio de características:
+Esta condición física puede trasladarse directamente al comportamiento matemático de la red. Si el daño por irradiación debe aumentar o, como máximo, mantenerse constante al alcanzar la saturación, la predicción del modelo no puede disminuir cuando aumenta la fluencia neutrónica. Por ello, manteniendo constantes el resto de variables, se exige que la derivada parcial de la predicción de la red ($\hat{y}$) respecto a la fluencia ($\Phi$) sea mayor o igual a cero:
 
 \begin{equation}
     \frac{\partial \hat{y}}{\partial \Phi} \geq 0
 \end{equation}
 
+Esta derivada representa cómo cambia el daño predicho ante un pequeño aumento de la fluencia. Un valor positivo indica un aumento de la fragilización, mientras que un valor nulo representa una posible saturación del daño; un valor negativo implicaría, en cambio, una recuperación del material al aumentar la radiación, comportamiento que se considera físicamente inadmisible en el modelo.
+
 \subsection{Algoritmo y Penalización Diferencial Continua}
 
-La implementación computacional de este principio requiere calcular la sensibilidad de la salida del modelo respecto a sus variables de entrada sin recurrir a aproximaciones numéricas imprecisas (como diferencias finitas). Para ello, el algoritmo implementado hace uso intensivo del motor de diferenciación automática \textit{Autograd} de PyTorch (\texttt{torch.autograd.grad}). 
+La implementación computacional de este principio requiere calcular cómo cambia la predicción de la red cuando varía una de sus entradas, en este caso la fluencia neutrónica. Para ello, se utiliza la diferenciación automática, que permite obtener directamente esta variación sin tener que estimarla comparando predicciones realizadas con valores de entrada ligeramente distintos.
 
-Durante el paso hacia adelante (\textit{forward pass}), el grafo computacional registra meticulosamente la cadena de operaciones que conectan el tensor de entrada con la predicción escalar $\hat{y}$. Posteriormente, \textit{Autograd} aplica la regla de la cadena (\textit{chain rule}) hacia atrás para obtener la matriz Jacobiana exacta de las salidas respecto a las entradas. Dado que el tensor estandarizado de entrada contiene las características en un orden predefinido, el algoritmo extrae específicamente el gradiente unidimensional correspondiente a la fluencia neutrónica, aislando la columna que ocupa la sexta posición posicional (índice programático \texttt{fluence\_idx = 6}).
+Durante el forward pass, el grafo computacional registra la cadena de operaciones que conectan el tensor de entrada con la predicción escalar $\hat{y}$. Posteriormente, \textit{Autograd} aplica la regla de la cadena (\textit{chain rule}) hacia atrás para obtener la matriz Jacobiana (tabla de derivadas parciales que muestra cómo cambia cada salida de una función al variar ligeramente cada una de sus entradas) exacta de las salidas respecto a las entradas. Dado que el tensor estandarizado de entrada contiene las características en un orden predefinido, el algoritmo extrae específicamente el gradiente unidimensional correspondiente a la fluencia neutrónica, aislando la columna que ocupa la sexta posición posicional (índice programático \texttt{fluence\_idx = 6}).
 
-Una vez aislado el vector de derivadas parciales evaluado en las muestras del lote, es necesario construir una función de penalización que solo afecte al modelo cuando se viole la restricción termodinámica. Para lograr esto de forma diferenciable y compatible con los optimizadores basados en momento (como Adam), se ha diseñado una penalización empleando la función de activación de Unidad Lineal Rectificada (ReLU). La ecuación exacta programada en la función \texttt{pinn\_loss} se formula de la siguiente manera:
+Una vez aislado el vector de derivadas parciales evaluado en las muestras del lote, es necesario construir una función de penalización que solo afecte al modelo cuando se viole la restricción física impuesta. Para lograr esto de forma diferenciable y compatible con los optimizadores basados en momento (métodos de entrenamiento que acumulan parte de los gradientes anteriores para suavizar las actualizaciones de los pesos y acelerar la convergencia), se ha diseñado una penalización empleando la función de activación de Unidad Lineal Rectificada (ReLU). La ecuación exacta programada en la función \texttt{pinn\_loss} se formula de la siguiente manera:
 
 \begin{equation}
     \mathcal{L}_{mono} = \frac{1}{N} \sum_{i=1}^{N} \text{ReLU}\left(- \frac{\partial \hat{y}_i}{\partial \Phi_i}\right)^2
@@ -462,7 +484,7 @@ Uno de los cuellos de botella técnicos más severos al optimizar PINNs es la fu
 
 Para blindar la infraestructura experimental frente a este fallo crítico, se integraron rutinas explícitas de gestión de recursos a nivel de lenguaje. Al finalizar cada \textit{trial} evaluado por Optuna, el diseño de software fuerza la eliminación de las referencias a los tensores locales y de los modelos instanciados, disparando seguidamente el recolector de basura nativo de Python mediante el comando \texttt{gc.collect()}. Inmediatamente después, se ordena a la interfaz de aceleración vaciar las memorias en caché retenidas por el controlador de hardware mediante llamadas explícitas (como \texttt{torch.cuda.empty\_cache()}). Estas decisiones de diseño aseguraron una huella de memoria estable y constante, garantizando la exploración ininterrumpida de cientos de configuraciones arquitectónicas complejas de forma secuencial y desatendida.
 
-\chapter{Resultados y Discusión (8 páginas min)}
+\chapter{Resultados y Discusión}
 
 El presente capítulo aborda la evaluación cuantitativa y fenomenológica de los modelos desarrollados, contrastando las aproximaciones analíticas normativas con los algoritmos de aprendizaje automático puros y el marco híbrido propuesto basado en Redes Neuronales Informadas por la Física (PINNs). Para simular de manera estricta un escenario de Operación a Largo Plazo (LTO) y evaluar el riesgo de extrapolación, el dataset global de 1889 muestras fue dividido de forma secuencial en función de la fluencia neutrónica ($\Phi$). Se reservó el 75\% de los datos (1416 muestras de bajas y medias fluencias) para el entrenamiento y validación arquitectónica, mientras que el 25\% restante (473 muestras correspondientes a los regímenes de irradiación más elevados y extremos) se aisló por completo como conjunto de prueba (\textit{Test Set}) para validar la robustez del modelo en horizontes temporales extendidos.
 
@@ -532,7 +554,7 @@ Finalmente, el comportamiento del hiperparámetro de ponderación física ($\lam
 
 Por otro lado, valores sobredimensionados de la fuerza física ($\lambda_{mono} \ge 2.0$) forzaban al optimizador Adam a priorizar el residuo diferencial sobre el error empírico, convirtiendo a la red en un clon rígido y dogmático de la ecuación ASTM que subajustaba la variabilidad química real de las probetas Charpy. El valor balanceado de $\approx 0.94$ hallado por Optuna garantizó el equilibrio exacto: la flexibilidad estadística para mapear las complejas interacciones no lineales del cobre, níquel y manganeso, constreñida bajo el límite infranqueable de la segunda ley de la termodinámica.
 
-\chapter{Conclusiones y Trabajo Futuro (3 páginas max)}
+\chapter{Conclusiones y Trabajo Futuro}
 
 El desarrollo, implementación y validación del marco predictivo híbrido presentado en este Trabajo de Fin de Máster permiten extraer conclusiones de gran relevancia científica y tecnológica para el ámbito de la seguridad nuclear y el diseño de algoritmos avanzados de aprendizaje computacional. En primera instancia, se ha comprobado empíricamente el colapso predictivo absoluto que sufren los modelos tradicionales dirigidos exclusivamente por datos (\textit{data-driven}), como XGBoost, al adentrarse en regímenes de alta fluencia neutrónica no observados durante el entrenamiento. Al alcanzar un RMSE inasumible de $64.086\ ^\circ\text{C}$ en el conjunto de prueba, queda demostrado que la Minimización del Riesgo Empírico clásica es inherentemente incapaz de asimilar criterios de coherencia fenomenológica, priorizando el ajuste del ruido estadístico local por encima de las leyes de la termodinámica y divergiendo hacia trayectorias físicamente imposibles en el dominio de extrapolación.
 

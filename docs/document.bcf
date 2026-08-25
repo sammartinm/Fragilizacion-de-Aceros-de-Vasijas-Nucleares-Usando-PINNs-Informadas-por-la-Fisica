@@ -3066,9 +3066,16 @@
     <bcf:citekey order="5" intorder="1">raissi2019physics</bcf:citekey>
     <bcf:citekey order="6" intorder="1">bonny2013</bcf:citekey>
     <bcf:citekey order="7" intorder="1">eason2013</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">ma2020</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">pang2020</bcf:citekey>
-    <bcf:citekey order="10" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">astmE90015</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">wells2014mnsi</bcf:citekey>
+    <bcf:citekey order="9" intorder="2">ke2017mnsi</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">ma2020</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">pang2020</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">astmE90015</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">slugen2002</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">odette2021precipitation</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">bergner2015</bcf:citekey>
+    <bcf:citekey order="16" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">
